@@ -1,4 +1,57 @@
-a {
-	font: monospace;
-	font-size: 3em;
+body {
+	margin: 0;
+	padding: 0;
+}
+#container {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+#hero {
+	width: 100vw;
+	height: 100vh;
+	background: url(../img/hero-1.jpg) no-repeat center center; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	margin: 0;
+}
+#program-squares {
+	margin-top: 10px;
+}
+.p-square {
+	width: calc(25vw - (30px / 4));
+	height: calc(25vw - 10px);
+	background-color: #509891;
+	float: left;
+}
+.rMargin {
+	margin-right: 10px;
+}
+#full-logo {
+	max-width: 40%;
+}
+#FS:hover {
+	background-color: #979340;
+}
+#EO:hover {
+	background-color: #DC664B;
+}
+#FA:hover {
+	background-color: #9F4A78;
+}
+#FM:hover {
+	background-color: #D6813E;
+}
+
+h3 {
+	font-family: sans-serif;;
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 1.3em;
+	color: white;
+	padding-top: 30%;
+	line-height: 1.4em;
+	letter-spacing: .1em;
 }
