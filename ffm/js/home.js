@@ -22,3 +22,27 @@ $(document).ready(function() {
         $('#full-logo').css( "padding-left", w3 );
 	  	});
 	});
+
+//fix nav bar
+$(document).ready(function() {
+    var nav1 = $('#hero').height();
+    var nav2 = $('.p-square').height();
+    var nav3 = (nav1 +nav2 +10);
+      $(window).scroll(function () {
+        nav1 = $('#hero').height();
+        nav2 = $('.p-square').height();
+        nav3 = (nav1 +nav2 +10);
+        //if you hard code, then use console
+        //.log to determine when you want the 
+        //nav bar to stick.  
+          console.log(nav2);
+          console.log(nav3);
+        if ($(window).scrollTop() > nav3) {
+
+            $('#sticky-nav').slideDown(500);
+        }
+        if ($(window).scrollTop() < (nav3+1)) {
+            $('#sticky-nav').slideUp(500);
+        }
+      });
+  });

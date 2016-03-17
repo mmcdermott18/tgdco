@@ -1,0 +1,845 @@
+/* Global Reset
+------------------------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Clear Floated Elements
+------------------------------------------------------------------------------*/
+.clearfix:after, .sample#postnormal .text:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0; 
+}
+html {
+  min-width: 100%;
+  margin: 0;
+  background: white;
+}
+
+body {
+  min-width: 100%;
+  background: white;
+  font-family: "helvetica neue", helvetica, arial, sans-serif;
+  -webkit-text-size-adjust: 100%; 
+}
+
+a {
+  color: inherit;
+  text-decoration: none; 
+}
+
+#container-simon {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/*----------------------------------- HEADER -------------------------------*/
+
+header {
+  background-color: tomato;
+  z-index: 3;
+  clear: both;
+  border-bottom: 3px white solid;
+}
+
+.align {
+  width: 90%;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+h1 {
+  font-family: 'Fira Mono', monospace;
+  font-size: 1.2em;
+  line-height: 1.4em;
+  color: tomato;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+header h1 {
+  margin: 0;
+  color: whitesmoke;
+}
+
+a.headerlink:link {
+  color: whitesmoke;
+  font-family: 'Fira Mono', monospace;
+  font-weight: 400;
+  text-decoration: none;
+}     
+a.headerlink:visited {
+  color: whitesmoke;
+  text-decoration: none;
+}  
+a.headerlink:hover {
+  color: whitesmoke;
+  text-decoration: none;
+  /*display: inline-block;
+  line-height: 1em;*/
+  border-bottom: 1px dotted whitesmoke;
+}  
+a.headerlink:active {
+  color: whitesmoke;
+  text-decoration: none;
+  }
+
+/*----------------------------------- NORMAL LINKS -------------------------------*/
+
+a:link {
+  color: royalblue;
+  text-decoration: none;
+}     
+a:visited {
+  color: royalblue;
+  text-decoration: none;
+}  
+a:hover {
+  color: royalblue;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 1em;
+  border-bottom: 1px dotted royalblue;
+}  
+a:active {
+  color: royalblue;
+  text-decoration: none;
+  }
+
+/*----------------------------------- SLIDE 1 -------------------------------*/
+
+#slide1 {
+  background: tomato;
+  padding: 250px 0;
+}
+
+#slide1 .text {
+    margin: 0 auto;
+    width: 1250px; 
+  }
+
+#slide1 h1 {
+    color: black;
+    font: 900 87px/84px "open sans";
+  }
+#slide1 span {
+  background: none;
+}
+#slide1 .reveal {
+  color: tomato;   
+  -webkit-transition: color ease-out 5s;
+  transition: color ease-out 5s;
+}
+
+#slide1 .reveal:hover {
+  color: black;
+}
+
+#slide1 h1 span.kern {
+  margin: 0 0 0 -5px; 
+}
+
+#slide1 h2 {
+  color: black;
+  font: 900 24px/84px "open sans";
+  text-align: center;
+}
+
+@media only screen and (max-width: 1300px) {
+#slide1 {
+  background: tomato;
+  padding: 50px 0;
+}
+
+#slide1 .text {
+    margin: 0 auto;
+    width: 80%; 
+}
+
+#slide1 h1 {
+    color: black;
+    font: 900 5vw/5vw "open sans";
+    text-align: center;
+}
+#slide1 span {
+  background: none;
+}
+
+#slide1 .reveal {
+  color: black;   
+}
+
+#slide1 h1 span.kern {
+  margin: 0 0 0 -5px; 
+}
+
+#slide1 h2 {
+  color: black;
+  font: 900 4vw/8vw "open sans";
+  text-align: center;
+}
+}
+
+/*----------------------------------- SLIDE 2 -------------------------------*/
+
+#slide2 {
+  background: white;
+  padding: 250px 0; 
+}
+
+#slide2 #gallery {
+  width: 732px;
+  margin: 0 auto; 
+}
+
+#slide2 #photo {
+  width: 500px;
+  height: 400px;
+  border: 6px black solid;
+  margin: 0 20px 0 0;
+  float: left; 
+}
+
+#slide2 .caption {
+  width: 200px;
+  margin-top: 250px;
+  float: left;
+}
+
+#slide2 .caption1 {
+  width: 200px;
+  height: 3px;
+  background: black;
+  margin: 2px 0 0 0; 
+}
+
+#slide2 .caption2 {
+  width: 140px;
+  height: 3px;
+  background: black;
+  margin: 2px 0 10px 0; 
+}
+
+@media only screen and (max-width: 770px) {
+  #slide2 {
+  background: white;
+  padding: 50px 0; 
+}
+
+#slide2 #gallery {
+  width: 250px;
+  margin: 0 auto; 
+}
+
+#slide2 #photo {
+  width: 250px;
+  height: 150px;
+  border: 6px black solid;
+  margin: 0 auto; 
+}
+
+#slide2 .caption {
+  width: 200px;
+  margin-top: 25px;
+}
+
+#slide2 .caption1 {
+  width: 200px;
+  height: 3px;
+  background: black;
+  margin: 2px 0 0 0; 
+}
+
+#slide2 .caption2 {
+  width: 140px;
+  height: 3px;
+  background: black;
+  margin: 2px 0 10px 0; 
+}
+}
+/*----------------------------------- SLIDE 3 -------------------------------*/
+
+#slide3 {
+  background: #2A2C39;
+  padding: 250px 0; 
+}
+
+#slide3 .text {
+  width: 950px; 
+  margin: 0 auto;
+  /*padding: 0 20px;*/
+}
+
+#slide3 h2 {
+  color: #E9E9EB;
+  font: 800 20px/1.4 "open sans";
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  text-align: center;
+  letter-spacing: 3px; 
+}
+
+#slide3 h3 {
+  color: #fff;
+  font: 400 36px/1.4 "gentium book basic";
+  margin: 0 0 20px 0;
+  text-align: center; 
+}
+
+#slide3 .space {
+  margin: 0 -2px 0 6px;
+  position: relative;
+  top: 2px;
+  background: none;
+}
+@media only screen and (max-width: 950px) {
+  #slide3 {
+  background: #2A2C39;
+  padding: 50px 0; 
+}
+
+#slide3 .text {
+  width: 80%;
+  margin: 0 auto; 
+  overflow: hidden;
+}
+
+#slide3 h2 {
+  color: #E9E9EB;
+  font: 800 16px/1.4 "open sans";
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+  text-align: center;
+  letter-spacing: 3px; 
+}
+
+#slide3 h3 {
+  color: #fff;
+  font: 400 24px/1.4 "gentium book basic";
+  margin: 0 0 20px 0;
+  text-align: center; 
+}
+
+#slide3 .space {
+  margin: 0 -3px 0 4px;
+  position: relative;
+  top: 2px;
+  background: none;
+}
+}
+
+/*----------------------------------- SLIDE 4 (6,8,10,12) -------------------------------*/
+
+.slide4 {
+  background: white;
+  padding: 250px 0;
+}
+
+.slide4 #images1 {
+  width: 1513px;
+  margin: 5px auto;
+}
+
+.slide4 #images2 {
+  width: 1028px;
+  margin: 10px auto;
+}
+
+.slide4 #images3 {
+  width: 1740px;
+  margin: 10px auto;
+}
+
+.slide4 #images4 {
+  width: 1660px;
+  margin: 5px auto;
+}
+
+.slide4 #images5 {
+  width: 1598px;
+  margin: 10px auto;
+}
+
+.slide4 #images6 {
+  width: 1645px;
+  margin: 5px auto;
+}
+
+.slide4 #images7 {
+  width: 1142px;
+  margin: 10px auto;
+}
+
+.slide4 #images8 {
+  width: 734px;
+  margin: 0 auto;
+  -webkit-transition: transform 5s;
+  transition: transform 5s;
+}
+
+.slide4 #images8:hover {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.slide4 #images9 {
+  width: 1723px;
+  margin: 10px auto;
+}
+
+.slide4 img {
+  height: 250px;
+  margin: 0 5px;
+}
+
+.slide4 .selfie {
+  height: 500px;
+  margin: 0 5px;
+}
+
+@media only screen and (max-width: 1700px) {
+  .hide {
+    display: none;
+  }
+
+  .slide4 #images1 {
+    width: 1122px;
+    margin: 5px auto;
+  }
+
+  .slide4 #images2 {
+    width: 1028px;
+    margin: 10px auto;
+  }
+
+  .slide4 #images3 {
+    width: 1393px;
+    margin: 10px auto;
+  }
+
+  .slide4 #images4 {
+    width: 1291px;
+    margin: 5px auto;
+  }
+
+  .slide4 #images5 {
+    width: 1067px;
+    margin: 10px auto;
+  }
+
+  .slide4 #images6 {
+    width: 957px;
+    margin: 5px auto;
+  }
+
+  .slide4 #images7 {
+    width: 1142px;
+    margin: 10px auto;
+  }
+  .slide4 #images9 {
+    width: 1333px;
+    margin: 10px auto;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .hide2 {
+    display: none;
+  }
+  .slide4 {
+    background: white;
+    padding: 100px 0;
+  }
+
+  .slide4 #images1 {
+    width: 733px;
+    margin: 5px auto;
+  }
+
+  .slide4 #images2 {
+    width: 684px;
+    margin: 10px auto;
+  }
+
+  .slide4 #images3 {
+    width: 717px;
+    margin: 10px auto;
+  }
+
+  .slide4 #images4 {
+    width: 713px;
+    margin: 5px auto;
+  }
+
+  .slide4 #images5 {
+    width: 608px;
+    margin: 10px auto;
+  }
+
+  .slide4 #images6 {
+    width: 749px;
+    margin: 5px auto;
+  }
+
+  .slide4 #images7 {
+    width: 777px;
+    margin: 10px auto;
+  }
+  .slide4 #images9 {
+    width: 800px;
+    margin: 10px auto;
+  }
+  .slide4 #images8 {
+    width: 367px;
+    margin: 0 auto;
+  }
+  .slide4 .selfie {
+    height: 250px;
+    margin: 0 5px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .hide3 {
+    display: none;
+  }
+  .slide4 #images1 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slide4 #images2 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slide4 #images3 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slide4 #images4 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slide4 #images5 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slide4 #images6 {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .slide4 #images7 {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .slide4 #images9 {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .slide4 #images8 {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .slide4 .selfie {
+    width: 100%;
+    height: initial;
+    margin: 0 5px;
+  }
+
+.slide4 img {
+  width: 100%;
+  height: initial;
+  margin: 5px 0;
+}
+}
+/*-----------------------------------SLIDE 5 -------------------------------*/
+
+#slide5 {
+  background: lightsalmon;
+  padding: 100px 0; 
+}
+
+#slide5 .text {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 970px; 
+}
+
+#slide5 h1 {
+  color: #222;
+  font: 800 64px/64px "open sans";
+  margin: 0 0 32px 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#slide5 h1 span {
+  font: 400 60px/60px "gentium book basic";
+  font-style: italic;
+  text-transform: none;
+  background: none; 
+}
+
+@media only screen and (max-width: 1000px) {
+  #slide5 .text {
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 90%; 
+  }
+
+  #slide5 h1 {
+    color: #222;
+    font: 800 5vw/5vw "open sans";
+    margin: 0 0 3vw 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  #slide5 h1 span {
+    font: 400 4vw/4vw "gentium book basic";
+    font-style: italic;
+    text-transform: none;
+    background: none; 
+  }
+
+}
+
+/*----------------------------------- SLIDE 7 -------------------------------*/
+
+#slide7 {
+  background: #0ac5f4;
+  padding: 200px 0; 
+}
+
+#slide7 .text {
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+  width: 800px; 
+}
+
+#slide7 li {
+  color: #fff;
+  font: 100 64px/1.2em Lato;
+  text-transform: uppercase; 
+}
+
+@media only screen and (max-width: 1000px) {
+  #slide7 {
+  background: #0ac5f4;
+  padding: 50px 0; 
+  }
+
+  #slide7 .text {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+    width: 90%; 
+  }
+
+  #slide7 li {
+    color: #fff;
+    font: 300 8vw/8.4vw Lato;
+    text-transform: uppercase; 
+  }
+
+}
+
+/*----------------------------------- SLIDE 9 -------------------------------*/
+
+#slide9 {
+  background: lightgreen;
+  padding: 350px 0; 
+}
+
+#slide9 .text {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 386px; 
+}
+
+#slide9 h1 {
+  color: #333;
+  font: 700 24px/1.4em "gentium book basic";
+  font-style: italic;
+  margin: 0 0 10px 0;
+  text-indent: -7px; 
+}
+@media only screen and (max-width:1000px) {
+  #slide9 {
+    background: lightgreen;
+    padding: 150px 0; 
+  }
+}
+
+@media only screen and (max-width:500px) {
+  #slide9 {
+  background: lightgreen;
+  padding: 50px 0; 
+}
+
+#slide9 .text {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 328px; 
+}
+
+#slide9 h1 {
+  color: #333;
+  font: 700 20px/1.4em "gentium book basic";
+  font-style: italic;
+  margin: 0 0 10px 0;
+  text-indent: -7px; 
+}
+}
+/*----------------------------------- SLIDE 11 -------------------------------*/
+
+#slide11 {
+  background: darkslategray;
+  padding: 150px 0; 
+}
+
+#slide11 .text {
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  width: 860px; 
+}
+
+#slide11 h1 {
+  font: 400 24px/1.4em "gentium book basic";
+  padding: 28px 0 0 0;
+  text-indent: -11px; 
+  color: white;
+}
+
+@media only screen and (max-width: 900px) {
+  #slide11 {
+    background: darkslategray;
+    padding: 75px 0; 
+  }
+
+  #slide11 .text {
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    width: 90%; 
+  }
+
+  #slide11 h1 {
+    font: 400 16px/1.4em "gentium book basic";
+    padding: 0 0 0 0;
+    text-indent: -8px; 
+    color: white;
+  }
+}
+
+/*----------------------------------- SLIDE 13 -------------------------------*/
+
+#slide13 {
+  background: lightgray;
+  padding: 150px 0; 
+}
+
+#slide13 .text {
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: left;
+  width: 700px; 
+}
+
+#slide13 h1 {
+  color: black;
+  font: 800 64px/1.4em "open sans";
+  text-align: center;
+  margin: 0 0 100px 0;
+}
+
+#slide13 p {
+  color: black;
+  font: 400 12px/1.4em "open sans";
+  text-align: left;
+}
+
+@media only screen and (max-width: 710px) {
+  #slide13 {
+    background: lightgray;
+    padding: 50px 0; 
+  }
+
+  #slide13 .text {
+    margin: 0 auto;
+    padding: 0 20px;
+    text-align: left;
+    width: 90%; 
+  }
+
+  #slide13 h1 {
+    color: black;
+    font: 800 48px/1.4em "open sans";
+    text-align: center;
+    margin: 0 0 25px 0;
+  }
+
+  #slide13 p {
+    color: black;
+    font: 400 12px/1.4em "open sans";
+    text-align: left;
+  }
+}
+
+
+
