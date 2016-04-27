@@ -46,3 +46,24 @@ $(document).ready(function() {
         }
       });
   });
+
+//cycle announcements
+$(document).ready(function() {
+    $('#announcement').click(function () {
+      if ($('#announcement').hasClass("red")) {
+        $('#announcement').removeClass("red");
+        $('#announcement').addClass("purple");
+        $('#announcement h1').text('give to matching dollars today!')
+      }
+      else {
+        $('#announcement').removeClass("purple");
+        $('#announcement').addClass("red");
+        $('#announcement h1').text('All markets closed due to weather!')
+      }
+    });
+  });
+$(document).ready(function() {
+    $('html').keypress(function () {
+        $('#announcement').toggleClass("hide");
+    });
+  });
