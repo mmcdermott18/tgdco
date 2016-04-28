@@ -39,7 +39,7 @@ body {
 	margin-top: 10px;
 }
 .p-square {
-	width: calc(25vw - (30px / 4));
+	width: calc(25vw - (45px / 4)); /*was 30px*/
 	height: calc(25vw - 10px);
 	background-color: #6D635B; /*brown*/
 	float: left;
@@ -312,7 +312,7 @@ fieldset {
 	padding: 90px 20vw;
 }
 .twothird {
-	width: calc(60vw - 10px);
+	width: calc(58.8vw - 10px); /*was 60vw*/
 	margin-right: 10px;
 	float: left;
 }
@@ -353,7 +353,7 @@ fieldset {
 	margin: 0;
 }
 .left-image {
-	width: 40vw;
+	width: 38.5vw; /*was 40vw*/
 	float: left
 }
 .left-image img {
