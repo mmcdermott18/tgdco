@@ -312,7 +312,7 @@ fieldset {
 	padding: 90px 20vw;
 }
 .twothird {
-	width: calc(58.8vw - 10px); /*was 60vw*/
+	width: calc(58vw - 10px); /*was 60vw*/
 	margin-right: 10px;
 	float: left;
 }
