@@ -97,6 +97,14 @@ body {
 .green {
 	background-color: #979340; /*green*/
 }
+.bluegreen {
+	background-color: #5EA39A; /*teal*/
+	/*background-color: rgb(94,163,154);*/
+}
+.light-bluegreen {
+	background-color: #86C6BD; /*light-bluegreen*/
+	/*background-color: rgb(134,198,189);*/
+}
 .red {
 	background-color: #DC664B; /*red*/
 }
@@ -105,6 +113,19 @@ body {
 }
 .orange {
 	background-color: #D6813E; /*orange*/
+}
+.brown {
+	background-color: #6D635B; /*brown*/
+	/*background-color: rgb(109,99,91);*/
+}
+#color-container {
+	width: 90vw;
+	margin: 0 auto;
+}
+.square {
+	width: 30vw;
+	height: 30vw;
+	float: left;
 }
 .nav-square {
 	width: 150px;
