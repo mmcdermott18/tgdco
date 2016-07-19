@@ -114,6 +114,12 @@ li.pro {
 li.sec {
 	padding-left: 10px;
 }
+li.heading {
+	font-family: 'Fira Mono', monospace;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 1px;
+}
 .align {
 	width: 90%;
 	margin: 0 auto;
@@ -162,6 +168,16 @@ img {
 .web-png {
 	width: 100%;
 	max-width: 1024px;
+	margin: 0 auto;
+}
+.desktop-png {
+	width: 100%;
+	max-width: 1440px;
+	margin: 0 auto;
+}
+.mobile-png {
+	width: 100%;
+	max-width: 320px;
 	margin: 0 auto;
 }
 @media only screen and (max-width: 1050px) {
