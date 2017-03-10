@@ -1,4 +1,4 @@
-var tStart = $('#intro').outerHeight() - 100 // Start transition 100px from top
+var tStart = $('#intro').outerHeight() - 300 // Start transition 100px from top
   , tEnd = $('#intro').outerHeight()   // End at 500px
   , cStart = [231, 189, 30]  // Gold
   , cEnd = [0, 167, 181]   // Lime
