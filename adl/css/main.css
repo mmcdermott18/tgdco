@@ -89,6 +89,13 @@ header {
 	width: 1000px;
 	margin: 25px auto;
 }
+.full-content {
+	width: 1440px;
+	position: relative;
+	right: 220px;
+	margin: 25px 0;
+}
+
 .weird-content {
 	position: relative;
 	right: 411px;
