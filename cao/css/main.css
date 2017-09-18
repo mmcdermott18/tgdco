@@ -12,9 +12,8 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 18px;
     line-height: 1.4;
-    font-family: "leitura-news",serif;
 }
 
 /*
@@ -97,9 +96,44 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+p {margin-bottom: 1.3em;}
+
+h1, h2, h3, h4 {
+  margin: 1.414em 0 0.5em;
+  font-weight: inherit;
+  line-height: 1.2;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 3.998rem;
+  font-weight: 900;
+}
+
+h2 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 2.827rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    text-align: center;
+}
+
+h3 {font-size: 1.999rem;}
+
+h4 {font-size: 1.414rem;}
+
+small, .font_small, li {font-size: 0.707rem;}
+
 html, body {
     padding: 0;
     margin: 0;
+    font-family: 'Neuton', serif;
+    background-color: PapayaWhip;
+    color: #674d3c;
+    box-sizing: border-box;
 }
 #container {
     width: 100vw;
@@ -108,73 +142,204 @@ html, body {
 }
 header#desktop {
     width: 100vw;
-    height: 100px;
+    height: 60px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: tomato;
+    background-color: #674d3c;
+    z-index: 10;
 }
 #desktop .nav-logo {
-
+    padding: 0 0 0 20px;
+    color: white;
+    float: left;
+}
+.nav-logo p .type-logo {
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+}
+.nav-logo p .type-logo a {
+    cursor: pointer;
+    color: PapayaWhip;
+    text-decoration: none;
 }
 #desktop .nav-menu {
-
+    float: right;
+    padding: 7px 20px 0 0;
+}
+.nav-menu ul {
+    list-style: none;
+    font-weight: 900;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.nav-menu ul li {
+    float: left;
+    padding: 0 10px;
+}
+.nav-menu ul li a {
+    /*-webkit-transition: all .3s ease;*/
+    /*transition: all .3s ease;*/
+    cursor: pointer;
+    color: PapayaWhip;
+    text-decoration: none;
+}
+.nav-menu ul li a:hover {
+    color: PapayaWhip;
+    border-bottom: 2px solid PapayaWhip;
+}
+.nav-menu ul li a.active {
+    border-bottom: 2px solid PapayaWhip;
 }
 header #mobile {
     display: none;
 }
 #hero {
     width: 100vw;
-    height: calc(100vh - 100px);
-    margin: 100px 0 0 0;
+    height: calc(100vh - 60px);
+    margin: 60px 0 0 0;
     background-color: dodgerblue;
+    background: url(../img/horizontal.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 #hero-logo {
-    width: 400px;
-    height: 200px;
+    position: relative;
     margin: 0 auto;
-    background-color: rebeccapurple;
+    top: calc((100vh - 300px) / 2);
+    text-align: center;
+    color: PapayaWhip;
+}
+#hero-logo h1 {
+    font-family: 'Neuton', serif;
+    font-size: 5rem;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+#hero-logo h3 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 900;
+    padding-top: 0;
+    margin-top: 0;
 }
 #main-content {
-    width: 80vw;
-    margin: 0 auto;
-    background-color: teal;
+    width: 100vw;
 
 }
 #introduction {
-
+    width: 80vw;
+    margin: 0 auto;
+    padding: 100px 0;
 }
 .text {
-    -webkit-columns: 2 200px;
-    -moz-columns: 2 200px;
-    columns: 2 200px;
+    
 }
-.text h2 {
-    -webkit-column-span: all; 
-    column-span: all; 
+.text img {
+    width: 40vw;
+    padding-right: 20px;
+    /*position: relative;*/
+    right: 300px;
 }
-#process {
+.text h3 {
+    margin: 0 20vw 0 20vw;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+    padding-bottom: 1.4rem;
+}
 
+.text p {
+    margin: 0 20vw;
+    padding-bottom: 1.4rem;
+}
+.text p.intro {
+    font-style: italic;
+    font-size: 1.414rem;
+}
+.bio {
+    width: 40vw;
+    margin: 0 auto;
+}
+.bio-image {
+    width: calc(35% - 20px);
+    float: left;
+    margin: 0 20px 0 0;
+}
+.bio-image img {
+    width: 100%;
+}
+.bio-meta {
+    width: 65%;
+    float: left;
+}
+.bio-meta ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+#process {
+    width: 100vw;
+    background-color: #674d3c;
+    color: PapayaWhip;
+    padding: 100px 0;
 }
 #process-graphic {
-
+    width: 80vw;
+    margin: 0 auto;
+    overflow: scroll;
+}
+#test-graphic {
+    width: 4000px;
+    height: 500px;
+    background: #663399;
+    background: -moz-linear-gradient(left, #663399 0%, #ff6347 100%);
+    background: -webkit-linear-gradient(left, #663399 0%,#ff6347 100%);
+    background: linear-gradient(to right, #663399 0%,#ff6347 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#663399', endColorstr='#ff6347',GradientType=1 );
 }
 #process-icons {
+    width: 80vw;
+    padding-top: 100px;
+    margin: 0 auto;
 
 }
 .icon {
-
+    width: calc(20vw - 4px);
+    height: calc(20vw - 4px);
+    float: left;
+    background-color: PapayaWhip;
+    border: 2px solid #674d3c;
+    cursor: pointer;
+}
+.icon:hover {
+    background-color: darkolivegreen;
 }
 #snapshot {
-
+    width: 100vw;
+    padding: 100px 0;
 }
 #case-map {
-
+    width: 80vw;
+    margin: 0 auto;
 }
 footer {
-
+    width: 100vw;
+    height: 300px;
+    background-color: #674d3c;;
 }
-
+h1, h2, h3, h4, h5, h6, li {
+    font-family: 'Lato', sans-serif;
+}
 
 
 
@@ -273,6 +438,8 @@ footer {
 .clearfix:after {
     clear: both;
 }
+.left {float:left;}
+.right {float:right;}
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
