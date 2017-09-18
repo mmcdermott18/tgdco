@@ -324,6 +324,12 @@ header #mobile {
 .icon:hover {
     background-color: darkolivegreen;
 }
+.icon-info{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background-color: rebeccapurple;
+}
 #snapshot {
     width: 100vw;
     padding: 100px 0;
