@@ -1,19 +1,4 @@
 
-/* ==========================================================================
-   Colors
-   Cream - #E3DBCA
-   Brown - #5C4637
-   Compliance Main - #104A66
-   Complaince Secondary - #007698
-   Dispute Resolution Main - #4E6134
-   Dispute Resolution Secondary - #799B3D
-   Advisory Main - #7D301D
-   Advisory Secondary - #F47B38
-   Outreach Main - #B67529
-   Outreach Secondary - #FDBF56
-   ========================================================================== */
-
-
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
 
 /*
@@ -113,6 +98,28 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*Colors*/
+.cream {color: #E3DBCA;}
+.brown {color: #5C4637; border-color: #5C4637;}
+.comp-main {color: #104A66; border-color: #104A66;}
+.comp-sec {color: #007698;}
+.dr-main {color: #4E6134; border-color: #4E6134;}
+.dr-sec {color: #799B3D;}
+.ad-main {color: #7D301D; border-color: #7D301D;}
+.ad-sec {color: #F47B38;}
+.out-main {color: #B67529; border-color: #B67529;}
+.out-sec {color: #FDBF56;}
+.cream-bg {background-color: #E3DBCA;}
+.brown-bg {background-color: #5C4637;}
+.comp-main-bg {background-color: #104A66;}
+.comp-sec-bg {background-color: #007698;}
+.dr-main-bg {background-color: #4E6134;}
+.dr-sec-bg {background-color: #799B3D;}
+.ad-main-bg {background-color: #7D301D;}
+.ad-sec-bg {background-color: #F47B38;}
+.out-main-bg {background-color: #B67529;}
+.out-sec-bg {background-color: #FDBF56;}
+
 p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
@@ -147,8 +154,8 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: 'Neuton', serif;
-    background-color: PapayaWhip;
-    color: #674d3c;
+    background-color: #E3DBCA;
+    color: #5C4637;
     box-sizing: border-box;
 }
 #container {
@@ -162,7 +169,7 @@ header#desktop {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #674d3c;
+    background-color: #5C4637;
     z-index: 10;
 }
 #desktop .nav-logo {
@@ -178,7 +185,7 @@ header#desktop {
 }
 .nav-logo p .type-logo a {
     cursor: pointer;
-    color: PapayaWhip;
+    color: #E3DBCA;
     text-decoration: none;
 }
 #desktop .nav-menu {
@@ -199,15 +206,15 @@ header#desktop {
     /*-webkit-transition: all .3s ease;*/
     /*transition: all .3s ease;*/
     cursor: pointer;
-    color: PapayaWhip;
+    color: #E3DBCA;
     text-decoration: none;
 }
 .nav-menu ul li a:hover {
-    color: PapayaWhip;
-    border-bottom: 2px solid PapayaWhip;
+    color: #E3DBCA;
+    border-bottom: 2px solid #E3DBCA;
 }
 .nav-menu ul li a.active {
-    border-bottom: 2px solid PapayaWhip;
+    border-bottom: 2px solid #E3DBCA;
 }
 header #mobile {
     display: none;
@@ -228,7 +235,7 @@ header #mobile {
     margin: 0 auto;
     top: calc((100vh - 300px) / 2);
     text-align: center;
-    color: PapayaWhip;
+    color: #E3DBCA;
 }
 #hero-logo h1 {
     font-family: 'Neuton', serif;
@@ -247,7 +254,6 @@ header #mobile {
     width: 100vw;
     height: calc(100vh - 60px);
     margin: 60px 0 0 0;
-    background-color: dodgerblue;
     background: url(../img/horizontal.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -257,12 +263,11 @@ header #mobile {
 #assessment-hero-logo {
     position: absolute;
     bottom: 40px;
-    border-bottom: 4px solid papayawhip;
+    border-bottom: 4px solid;
     left: 40px;
 }
 #assessment-hero-logo h1 {
     text-transform: uppercase;
-    color: papayawhip;
     letter-spacing: 1px;
     margin: 0;
     padding: 0;
@@ -270,12 +275,20 @@ header #mobile {
 
 #main-content {
     width: 100vw;
-
+}
+#snapshot-content {
+    width: 100vw;
+    padding-top: 60px;
 }
 #introduction {
     width: 80vw;
     margin: 0 auto;
     padding: 100px 0;
+}
+#process-introduction {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 25px 0;
 }
 .text {
     
@@ -330,8 +343,8 @@ header #mobile {
 
 #process {
     width: 100vw;
-    background-color: #674d3c;
-    color: PapayaWhip;
+    background-color: #5C4637;
+    color: #E3DBCA;
     padding: 100px 0;
 }
 #process-graphic {
@@ -358,8 +371,8 @@ header #mobile {
     width: calc(20vw - 4px);
     height: calc(20vw - 4px);
     float: left;
-    background-color: PapayaWhip;
-    border: 2px solid #674d3c;
+    background-color: #E3DBCA;
+    border: 2px solid #5C4637;
     cursor: pointer;
 }
 .icon:hover {
@@ -382,21 +395,80 @@ header #mobile {
     width: 100vw;
     padding: 100px 0;
 }
+#snapshot-map {
+    width: 100vw;
+    padding: 0 0 100px;
+}
 #case-map {
     width: 80vw;
     margin: 0 auto;
 }
 .process-snapshot {
-    width: 80vw
+    width: 80vw;
+    height: 400px;
     margin: 0 auto;
+    border: 4px solid;
 }
 .process-snapshot img {
     width: 100%;
 }
+#section-a, #section-b, #section-c {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 0 0 25px 0;
+}
+#section-b-context {
+    margin: 0 20vw;
+    margin-bottom: 1.3rem;
+}
+.context-text {
+    padding: 15px;
+    font-family: 'Lato', sans-serif;
+    font-size: .8rem;
+}
+.text .context-text p {
+    margin: 0;
+}
+.text .context-text p:last-of-type {
+    padding: 0;
+}
+.text .context-text h4 {
+    margin: 0;
+    padding-bottom: 1.3rem;
+}
+.page-break {
+    width: 100vw;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+.page-break-img {
+    width: 100%;
+}
+#infographics-container {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.infographic {
+    height: 40vw;
+    width: 40vw;
+    float: left;
+    cursor: pointer;
+}
+.infographic:hover {
+    opacity: .7;
+}
+.background-container {
+    width: 100vw;
+}
+#budget {
+    width: 80vw;
+    margin: 50px auto;
+}
 footer {
     width: 100vw;
     height: 300px;
-    background-color: #674d3c;;
+    background-color: #5C4637;;
 }
 h1, h2, h3, h4, h5, h6, li {
     font-family: 'Lato', sans-serif;
