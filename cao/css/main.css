@@ -104,6 +104,7 @@ textarea {
 .comp-sec {color: #007698;}
 .dr-main {color: #4E6134; border-color: #4E6134;}
 .dr-sec {color: #799B3D;}
+.dr-tert {color: #DCDDC3; border-color: #DCDDC3;}
 .ad-main {color: #7D301D; border-color: #7D301D;}
 .ad-sec {color: #F47B38;}
 .out-main {color: #B67529; border-color: #B67529;}
@@ -114,6 +115,7 @@ textarea {
 .comp-sec-bg {background-color: #007698;}
 .dr-main-bg {background-color: #4E6134;}
 .dr-sec-bg {background-color: #799B3D;}
+.dr-tert-bg {background-color: #DCDDC3;}
 .ad-main-bg {background-color: #7D301D;}
 .ad-sec-bg {background-color: #F47B38;}
 .out-main-bg {background-color: #B67529;}
@@ -311,7 +313,15 @@ header #mobile {
     font-weight: bold;
     padding-bottom: 1.4rem;
 }
-
+.text h5 {
+    margin: 0 20vw 0 20vw;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: .5rem;
+    border-bottom: 2px dotted;
+}
 .text p {
     margin: 0 20vw;
     padding-bottom: 1.4rem;
@@ -393,7 +403,7 @@ header #mobile {
 .icon img {
     max-width: 100%;
 }
-.icon-info{
+.icon-info {
     display: none;
     width: 100vw;
     height: 100vh;
@@ -422,7 +432,7 @@ header #mobile {
     width: 80vw;
     height: 400px;
     margin: 0 auto;
-    border: 4px solid;
+    border: 2px dotted;
 }
 .process-snapshot img {
     width: 100%;
@@ -432,22 +442,45 @@ header #mobile {
     margin: 0 auto;
     padding: 0 0 25px 0;
 }
-#section-b-context {
-    margin: 0 20vw;
-    margin-bottom: 1.3rem;
+.tgdco-button {
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    text-align: right;
+}
+.tgdco-button:hover {
+    border-bottom: 2px solid;
+}
+.tgdco-close {
+    position: relative;
+    right: 0;
+    cursor: pointer;
+}
+.tgdco-open{left:0px !important;}
+.tgdco-transition{
+  -webkit-transition: left 0.3s ease-out;  
+     -moz-transition: left 0.3s ease-out;  
+       -o-transition: left 0.3s ease-out;  
+          transition: left 0.3s ease-out; 
+}
+#box-1 {
+    position: fixed;
+    left: -100%;
+    width: 100%;
+    overflow-y: scroll;
+    z-index: 100;
 }
 .context-text {
-    padding: 15px;
+    padding: 50px 100px;
     font-family: 'Lato', sans-serif;
     font-size: .8rem;
 }
-.text .context-text p {
+#box-1 .context-text p {
     margin: 0;
 }
-.text .context-text p:last-of-type {
+#box-1 .context-text p:last-of-type {
     padding: 0;
 }
-.text .context-text h4 {
+#box-1 .context-text h3 {
     margin: 0;
     padding-bottom: 1.3rem;
 }
