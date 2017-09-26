@@ -377,8 +377,8 @@ header #mobile {
 
 }
 .icon {
-    width: calc(20vw - 4px);
-    height: calc(20vw - 4px);
+    width: calc(20% - 4px);
+    height: calc(20% - 4px);
     float: left;
     /*background-color: #E3DBCA;*/
     border: 2px solid #5C4637;
@@ -400,6 +400,9 @@ header #mobile {
 #pi-10:hover {
     background-color: #FDBF56;
 }
+.pi-1-close, .pi-2-close, .pi-3-close, .pi-4-close, .pi-5-close, .pi-6-close, .pi-7-close, .pi-8-close, .pi-9-close, .pi-10-close {
+    cursor: pointer;
+}
 .icon img {
     max-width: 100%;
 }
@@ -411,9 +414,13 @@ header #mobile {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: #5C4637;;
     overflow-y: scroll;
-    padding: 50px 10px;
+}
+.icon-link a {
+    text-decoration: none;
+}
+.icon-link a:hover {
+    text-decoration: none;
 }
 .scrollLock {overflow: hidden;}
 #snapshot {
@@ -442,6 +449,13 @@ header #mobile {
     margin: 0 auto;
     padding: 0 0 25px 0;
 }
+span.box-1-callout, span.box-2-callout, span.icon-link {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    border-bottom: 2px dotted;
+    font-weight: 700;
+    font-size: .8rem;
+}
 .tgdco-button {
     text-transform: uppercase;
     letter-spacing: .05em;
@@ -462,25 +476,29 @@ header #mobile {
        -o-transition: left 0.3s ease-out;  
           transition: left 0.3s ease-out; 
 }
-#box-1 {
+#box-1, #box-2 {
     position: fixed;
     left: -100%;
     width: 100%;
     overflow-y: scroll;
     z-index: 100;
 }
+.icon-info .context-text {
+    padding: 50px 20vw;
+}
 .context-text {
     padding: 50px 100px;
     font-family: 'Lato', sans-serif;
     font-size: .8rem;
 }
-#box-1 .context-text p {
+.context-text p {
     margin: 0;
+    padding-bottom: 1rem;
 }
-#box-1 .context-text p:last-of-type {
+.context-text p:last-of-type {
     padding: 0;
 }
-#box-1 .context-text h3 {
+.context-text h3 {
     margin: 0;
     padding-bottom: 1.3rem;
 }
