@@ -223,7 +223,7 @@ header #mobile {
     height: calc(100vh - 60px);
     margin: 60px 0 0 0;
     background-color: dodgerblue;
-    background: url(../img/horizontal.jpg) no-repeat center center fixed; 
+    background: url(../img/cao-hero.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -319,7 +319,7 @@ header #mobile {
     margin: 0 auto;
 }
 .bio-image {
-    width: calc(35% - 20px);
+    width: calc(55% - 20px);
     float: left;
     margin: 0 20px 0 0;
 }
@@ -327,7 +327,7 @@ header #mobile {
     width: 100%;
 }
 .bio-meta {
-    width: 65%;
+    width: 45%;
     float: left;
 }
 .bio-meta ul {
@@ -350,14 +350,9 @@ header #mobile {
     margin: 0 auto;
     overflow: scroll;
 }
-#test-graphic {
-    width: 4000px;
-    height: 500px;
-    background: #663399;
-    background: -moz-linear-gradient(left, #663399 0%, #ff6347 100%);
-    background: -webkit-linear-gradient(left, #663399 0%,#ff6347 100%);
-    background: linear-gradient(to right, #663399 0%,#ff6347 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#663399', endColorstr='#ff6347',GradientType=1 );
+#process-graphic img {
+    width: auto;
+    height: 100%;
 }
 #process-icons {
     width: 80vw;
@@ -369,12 +364,28 @@ header #mobile {
     width: calc(20vw - 4px);
     height: calc(20vw - 4px);
     float: left;
-    background-color: #E3DBCA;
+    /*background-color: #E3DBCA;*/
     border: 2px solid #5C4637;
     cursor: pointer;
+    transition: background-color ease .5s;
 }
-.icon:hover {
-    background-color: darkolivegreen;
+#pi-1:hover, #pi-2:hover {
+    background-color: #C7C4BA;;
+}
+#pi-3:hover, #pi-4:hover, #pi-5:hover {
+    background-color: #799B3D;
+}
+#pi-6:hover, #pi-7:hover, #pi-8:hover {
+    background-color: #007698;
+}
+#pi-9:hover {
+    background-color: #F47B38;
+}
+#pi-10:hover {
+    background-color: #FDBF56;
+}
+.icon img {
+    max-width: 100%;
 }
 .icon-info{
     display: none;
@@ -384,7 +395,7 @@ header #mobile {
     top: 0;
     left: 0;
     z-index: 100;
-    background-color: darkolivegreen;
+    background-color: #5C4637;;
     overflow-y: scroll;
     padding: 50px 10px;
 }
