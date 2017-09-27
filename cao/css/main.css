@@ -13,7 +13,7 @@
 
 html {
     color: #222;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.4;
 }
 
@@ -113,6 +113,7 @@ textarea {
 .brown-bg {background-color: #5C4637;}
 .comp-main-bg {background-color: #104A66;}
 .comp-sec-bg {background-color: #007698;}
+.comp-tert-bg {background-color: #B2CFD4;}
 .dr-main-bg {background-color: #4E6134;}
 .dr-sec-bg {background-color: #799B3D;}
 .dr-tert-bg {background-color: #DCDDC3;}
@@ -268,10 +269,12 @@ header #mobile {
 }
 .process-hero-logo {
     position: absolute;
-    bottom: 40px;
-    border-bottom: 4px solid;
-    left: 40px;
-    background: none;
+    bottom: 0;
+    /*border-bottom: 4px solid;*/
+    left: 0;
+    /*background: none;*/
+    width: 100%;
+    padding: 25px 25px 50px;
 }
 .process-hero-logo h1 {
     text-transform: uppercase;
@@ -279,9 +282,14 @@ header #mobile {
     margin: 0;
     padding: 0;
 }
+.process-hero-logo h4 {
+    font-family: 'Noto Serif', serif;
+    margin: 0;
+}
 
 #main-content {
     width: 100vw;
+    padding: 25px 0 0 0;
 }
 #snapshot-content {
     width: 100vw;
@@ -306,6 +314,10 @@ header #mobile {
     /*position: relative;*/
     right: 300px;
 }
+.text img.large {
+    width: 100%;
+    padding: 25px 0;
+}
 .text h3 {
     margin: 0 20vw 0 20vw;
     text-align: left;
@@ -322,6 +334,13 @@ header #mobile {
     margin-bottom: .5rem;
     border-bottom: 2px dotted;
 }
+.text h6 {
+    margin: 0 20vw 0 20vw;
+    text-align: left;
+    font-weight: bold;
+    margin-bottom: .5rem;
+    font-size: .9rem;
+}
 .text p {
     margin: 0 20vw;
     padding-bottom: 1.4rem;
@@ -329,6 +348,17 @@ header #mobile {
 .text p.intro {
     font-weight: 700;
     font-size: 1rem;
+}
+.text strong {
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.text span.italic {
+    font-family: 'Noto Serif', serif;
+    font-style: italic;
+    font-weight: 700;
+    font-size: .9rem;
 }
 .bio {
     width: 40vw;
@@ -437,19 +467,60 @@ header #mobile {
 }
 .process-snapshot {
     width: 80vw;
-    height: 400px;
     margin: 0 auto;
+    padding-bottom: 35px;
     border: 2px dotted;
 }
-.process-snapshot img {
+.process-snapshot h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+.process-snapshot .ast {
+    width: calc((80vw / 3));
+}
+.process-snapshot .comp-top, .process-snapshot .dr-left {
+    width: calc((80vw / 3));
+    border-right: 2px dotted;
+    box-sizing: border-box;
+}
+.process-snapshot .comp-breakdown, .process-snapshot .dr-breakdown {
+    width: calc((80vw / 3) * 2);
+}
+.process-snapshot .comp-bottom {
+    width: calc((80vw / 3));
+}
+.process-snapshot .comp-closed {
+    width: calc((80vw / 2));
+}
+.process-snapshot .dr-right-top {
     width: 100%;
+}
+.process-snapshot .dr-right-bottom {
+    width: 50%;
+}
+.process-snapshot .stat {
+    float: left;
+    text-align: center;
+}
+.process-snapshot .stat p {
+    margin: 0;
+    padding: 0;
+    font-size: .8rem;
+    font-weight: 700;
+}
+.process-snapshot .stat p .stat-number {
+    font-family: 'Noto Serif', serif;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
 }
 #section-a, #section-b, #section-c {
     width: 80vw;
     margin: 0 auto;
     padding: 0 0 25px 0;
 }
-span.box-1-callout, span.box-2-callout, span.icon-link {
+span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
     font-family: 'Noto Serif', serif;
     font-style: italic;
     border-bottom: 2px dotted;
@@ -476,7 +547,7 @@ span.box-1-callout, span.box-2-callout, span.icon-link {
        -o-transition: left 0.3s ease-out;  
           transition: left 0.3s ease-out; 
 }
-#box-1, #box-2 {
+#box-1, #box-2, #box-3 {
     position: fixed;
     left: -100%;
     width: 100%;
@@ -505,7 +576,7 @@ span.box-1-callout, span.box-2-callout, span.icon-link {
 .page-break {
     width: 100vw;
     overflow: hidden;
-    margin-bottom: 25px;
+    /*margin-bottom: 25px;*/
 }
 .page-break-img {
     width: 100%;
@@ -532,9 +603,27 @@ span.box-1-callout, span.box-2-callout, span.icon-link {
     margin: 50px auto;
 }
 footer {
-    width: 100vw;
-    height: 300px;
-    background-color: #5C4637;;
+    width: (100vw - 40px);
+    padding: 25px 20px;
+    font-size: .8rem;
+}
+footer h5 {
+    text-transform: uppercase;
+}
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+footer ul li {
+    padding-bottom: 5px;
+}
+footer strong {
+    padding-right: 15px;
+}
+.contact, .more-info {
+    width: calc(50vw - 20px);
+    float: left;
 }
 
 

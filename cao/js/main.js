@@ -183,6 +183,18 @@ function slideOuts() {
     $('#box-2').toggleClass('tgdco-open');
     $('body').toggleClass('scrollLock');
   });
+  $('#box-3').css('top',headHeight);
+  $('#box-3').css('height',boxHeight);
+  $('.box-3-callout').click(function() {
+    $( document ).on( 'keydown', function ( e ) {
+      if ( e.keyCode === 27 ) {
+        $('#box-3').removeClass('tgdco-open');
+        $('body').removeClass('scrollLock');
+      }
+    });
+    $('#box-3').toggleClass('tgdco-open');
+    $('body').toggleClass('scrollLock');
+  });
 }
 function breakHeight() {
   var h = $('.page-break-img').outerHeight();
