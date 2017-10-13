@@ -166,10 +166,12 @@ function slideOuts() {
       if ( e.keyCode === 27 ) {
         $('#box-1').removeClass('tgdco-open');
         $('body').removeClass('scrollLock');
+        $('#container').removeClass('moveIt');
       }
     });
     $('#box-1').toggleClass('tgdco-open');
     $('body').toggleClass('scrollLock');
+    $('#container').toggleClass('moveIt');
   });
   $('#box-2').css('top',headHeight);
   $('#box-2').css('height',boxHeight);
@@ -178,10 +180,12 @@ function slideOuts() {
       if ( e.keyCode === 27 ) {
         $('#box-2').removeClass('tgdco-open');
         $('body').removeClass('scrollLock');
+        $('#container').removeClass('moveIt');
       }
     });
     $('#box-2').toggleClass('tgdco-open');
     $('body').toggleClass('scrollLock');
+    $('#container').toggleClass('moveIt');
   });
   $('#box-3').css('top',headHeight);
   $('#box-3').css('height',boxHeight);
@@ -190,10 +194,12 @@ function slideOuts() {
       if ( e.keyCode === 27 ) {
         $('#box-3').removeClass('tgdco-open');
         $('body').removeClass('scrollLock');
+        $('#container').removeClass('moveIt');
       }
     });
     $('#box-3').toggleClass('tgdco-open');
     $('body').toggleClass('scrollLock');
+    $('#container').toggleClass('moveIt');
   });
 }
 function breakHeight() {
@@ -212,13 +218,9 @@ function processHeight() {
   var phwh = $(window).height();
   var phhh = $('header').outerHeight();
   var phnh = (phwh - phhh);
-  console.log('img height ' + phh);
-  console.log('window height ' + phwh);
   if (phh > phwh) {
     $('#process-graphic').css('height', phnh);
-    console.log('page break set as ' + phnh);
   } else {
     $('#process-graphic').css('height',phh);
-    console.log('page break set as ' + phh);
   }
 }
