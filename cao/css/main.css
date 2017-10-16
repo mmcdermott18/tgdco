@@ -129,6 +129,8 @@ textarea {
 .out-main-bg {background-color: #B67529;}
 .out-sec-bg {background-color: #FDBF56;}
 
+a {transition: color .5s ease;}
+a:hover {color: black;}
 p {margin-bottom: 1.3em;}
 
 h1, h2, h3, h4 {
@@ -183,7 +185,7 @@ header#desktop {
     background-color: #AEA79F;
     z-index: 10;
 }
-#desktop .nav-logo {
+.nav-logo {
     padding: 0 0 0 20px;
     color: white;
     float: left;
@@ -199,7 +201,7 @@ header#desktop {
     color: white;
     text-decoration: none;
 }
-#desktop .nav-menu {
+.nav-menu {
     float: right;
     padding: 7px 20px 0 0;
 }
@@ -227,7 +229,7 @@ header#desktop {
 .nav-menu ul li a.active {
     border-bottom: 2px solid white;
 }
-header #mobile {
+header#mobile {
     display: none;
 }
 #hero {
@@ -267,6 +269,7 @@ header #mobile {
 #dispute-resolution {background-image: url(../img/cao-disputeresolution.jpg);}
 #outreach{background-image: url(../img/cao-outreach.jpg);}
 .process-hero {
+    position: relative;
     width: 100vw;
     height: calc(100vh - 60px);
     margin: 60px 0 0 0;
@@ -454,6 +457,9 @@ blockquote {
     color: white;
     padding: 100px 0;
 }
+#process p.center {
+    text-align: center;
+}
 #process-graphic {
     width: 80vw;
     margin: 0 auto;
@@ -509,11 +515,20 @@ blockquote {
     z-index: 100;
     overflow-y: scroll;
 }
-.icon-link a {
+.icon-link {
+    margin-top: 20px;
+}
+.icon-link a, .icon-link a:visited {
     text-decoration: none;
+    color: white;
+    border: 2px solid white;
+    padding: 5px 10px;
+    transition: all .5s ease;
 }
 .icon-link a:hover {
     text-decoration: none;
+    background-color: white;
+    color: black;
 }
 .scrollLock {overflow: hidden;}
 #snapshot {
@@ -585,10 +600,14 @@ blockquote {
 }
 span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
     font-family: 'Lato', sans-serif;
-    font-style: italic;
-    border-bottom: 2px dotted;
+    /*font-style: italic;*/
+    /*border-bottom: 2px dotted;*/
+    padding: 4px 7px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
     font-weight: 700;
     font-size: .8rem;
+    cursor: pointer;
 }
 .moveIt {
     position: absolute;
@@ -619,7 +638,7 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
     left: -100%;
     width: 50%;
     overflow-y: scroll;
-    z-index: 100;
+    z-index: 0;
 }
 .icon-info .context-text {
     padding: 50px 20vw;
@@ -634,7 +653,7 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
     padding-bottom: 1rem;
 }
 .context-text p:last-of-type {
-    padding: 0;
+    padding: 30px 0;
 }
 .context-text h3 {
     margin: 0;
@@ -821,8 +840,101 @@ footer strong {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
+@media only screen and (max-width: 1024px) {
     /* Style adjustments for viewports that meet the condition */
+    .nav-menu ul li {
+        /*float: left;*/
+        padding: 0 5px;
+    }
+    #box-1, #box-2, #box-3 {
+        position: fixed;
+        left: -100%;
+        width: 75vw;
+        overflow-y: scroll;
+        z-index: 0;
+    }
+    .moveIt {
+        position: absolute;
+        left: 75vw !important;
+    }
+    .text h3, .text h5, .text h6, .text p {
+        margin: 0;
+    }
+    .text h5 {
+        margin-bottom: 1rem;
+    }
+    #process-introduction, #section-a, #section-b, #section-c {
+        width: calc(100vw - 50px);
+        padding: 25px;
+    }
+    .context-text {
+        padding: 50px 25px;
+        font-family: 'Lato', sans-serif;
+        font-size: .8rem;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    /* Style adjustments for viewports that meet the condition */
+    header#desktop {display: none;}
+    header#mobile {
+        display: block;
+        width: 100vw;
+        min-height: 60px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: #AEA79F;
+        z-index: 10;
+    }
+    #mobile .menu-bars {
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    #mobile .nav-menu {
+        float: right;
+        text-align: right;
+        padding: 11px 20px 0 0;
+    }
+    .nav-menu-list {
+        display: none;
+    }
+    #mobile .nav-menu ul li {
+        float: none;
+        padding: 10px 0;
+    }
+    .menu-open {
+        display: block;
+    }
+    #box-1, #box-2, #box-3 {
+        position: fixed;
+        left: -100%;
+        width: 90vw;
+        overflow-y: scroll;
+        z-index: 0;
+    }
+    .moveIt {
+        position: absolute;
+        left: 90vw !important;
+    }
+    .text h3, .text h5, .text h6, .text p {
+        margin: 0;
+    }
+    .text h5 {
+        margin-bottom: 1rem;
+    }
+    #process-introduction, #section-a, #section-b, #section-c {
+        width: calc(100vw - 50px);
+        padding: 25px;
+    }
+    .context-text {
+        padding: 50px 25px;
+        font-family: 'Lato', sans-serif;
+        font-size: .8rem;
+    }
+
 }
 
 @media print,
