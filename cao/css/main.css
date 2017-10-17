@@ -233,18 +233,21 @@ header#mobile {
     display: none;
 }
 #hero {
+    position: relative;
     width: 100vw;
     height: calc(100vh - 60px);
     margin: 60px 0 0 0;
     background-color: dodgerblue;
-    background: url(../img/cao-hero.jpg) no-repeat center center fixed; 
+    background: url(../img/cao-hero.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
 }
+
 #hero-logo {
-    position: relative;
+    position: absolute;
+    width: 100%;
     margin: 0 auto;
     top: calc((100vh - 300px) / 2);
     text-align: center;
@@ -263,17 +266,18 @@ header#mobile {
     padding-top: 0;
     margin-top: 0;
 }
-#assessment {background-image: url(../img/cao-assessment.jpg);}
-#advisory {background-image: url(../img/cao-advisory.jpg);}
-#compliance {background-image: url(../img/cao-compliance.jpg);}
-#dispute-resolution {background-image: url(../img/cao-disputeresolution.jpg);}
-#outreach{background-image: url(../img/cao-outreach.jpg);}
+#assessment.process-hero {background: url(../img/cao-assessment.jpg) no-repeat center center;}
+#advisory.process-hero {background: url(../img/cao-advisory.jpg) no-repeat center center;}
+#compliance.process-hero {background: url(../img/cao-compliance.jpg) no-repeat center center;}
+#dispute-resolution.process-hero {background: url(../img/cao-disputeresolution.jpg) no-repeat center center;}
+#outreach.process-hero {background: url(../img/cao-outreach.jpg) no-repeat center center;}
 .process-hero {
     position: relative;
     width: 100vw;
     height: calc(100vh - 60px);
     margin: 60px 0 0 0;
-    background: no-repeat center center fixed; 
+}
+#advisory.process-hero, #assessment.process-hero, #compliance.process-hero, #dispute-resolution.process-hero, #outreach.process-hero {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -305,6 +309,7 @@ header#mobile {
 #main-content {
     width: 100vw;
     padding: 25px 0 0 0;
+    background-color: white;
 }
 #snapshot-content {
     width: 100vw;
@@ -313,7 +318,7 @@ header#mobile {
 #introduction {
     width: 80vw;
     margin: 0 auto;
-    padding: 100px 0;
+    padding: 25px 0;
 }
 #process-introduction {
     width: 80vw;
@@ -355,6 +360,7 @@ header#mobile {
 blockquote {
     text-align: left;
     font-size: 2rem;
+    font-weight: 700;
     margin: 0;
     padding: 25px 20vw 50px 20vw;
 }
@@ -363,13 +369,11 @@ blockquote {
 }
 .text img {
     width: 40vw;
-    padding-right: 20px;
-    /*position: relative;*/
-    right: 300px;
+    padding: 0 20vw 25px;
 }
 .text img.large {
     width: 100%;
-    padding: 25px 0;
+    padding: 0 0 25px 0;
 }
 .text h3 {
     margin: 0 20vw 0 20vw;
@@ -426,30 +430,15 @@ blockquote {
     font-size: .9rem;
 }
 .bold {font-weight: bold;}
-.bio {
-    width: 40vw;
-    margin: 0 auto;
-}
-.bio-image {
-    width: calc(55% - 20px);
-    float: left;
-    margin: 0 20px 0 0;
-}
-.bio-image img {
+.bio img {
     width: 100%;
 }
-.bio-meta {
-    width: 45%;
-    float: left;
-}
-.bio-meta ul {
+.bio ul {
     list-style: none;
     margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-    font-weight: 900;
-    letter-spacing: 1px;
+    padding: 25px 0 0 0;
 }
+.bio ul li {font-size: 1rem;}
 
 #process {
     width: 100vw;
@@ -530,7 +519,7 @@ blockquote {
     background-color: white;
     color: black;
 }
-.scrollLock {overflow: hidden;}
+.scrollLock {overflow: hidden; touch-action: none;}
 #snapshot {
     width: 100vw;
     padding: 100px 0;
@@ -554,27 +543,36 @@ blockquote {
     letter-spacing: 1px;
     text-align: center;
 }
-.process-snapshot .ast {
-    width: calc((80vw / 3));
+.process-snapshot .dr-breakdown {
+    width: calc((80vw / 4));
+    border-right: 2px dotted;
+    box-sizing: border-box;
 }
-.process-snapshot .comp-top, .process-snapshot .dr-left {
+.process-snapshot .dr-breakdown:last-of-type {
+    border: none;
+}
+.process-snapshot .ast, .process-snapshot .comp-top, .process-snapshot .dr-right, .process-snapshot .dr-center, .process-snapshot .dr-left {
     width: calc((80vw / 3));
     border-right: 2px dotted;
     box-sizing: border-box;
 }
-.process-snapshot .comp-breakdown, .process-snapshot .dr-breakdown {
+.process-snapshot .dr-right {
+    border: none;
+}
+.process-snapshot .comp-breakdown, .process-snapshot .ast-breakdown {
     width: calc((80vw / 3) * 2);
 }
 .process-snapshot .comp-bottom {
     width: calc((80vw / 3));
+    margin-bottom: 25px;
 }
 .process-snapshot .comp-closed {
     width: calc((80vw / 2));
 }
-.process-snapshot .dr-right-top {
+.process-snapshot .ast-right-top {
     width: 100%;
 }
-.process-snapshot .dr-right-bottom {
+.process-snapshot .ast-right-bottom {
     width: 50%;
 }
 .process-snapshot .stat {
@@ -593,12 +591,22 @@ blockquote {
     margin: 0;
     padding: 0;
 }
+.process-snapshot .stat p .stat-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 3rem;
+    margin: 0;
+    padding: 0;
+    line-height: 3.2rem;
+}
+.stat img {
+    width: 40%;
+}
 #section-a, #section-b, #section-c {
     width: 80vw;
     margin: 0 auto;
     padding: 50px 0;
 }
-span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
+span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link, span.letter-1-callout, span.letter-2-callout {
     font-family: 'Lato', sans-serif;
     /*font-style: italic;*/
     /*border-bottom: 2px dotted;*/
@@ -633,7 +641,7 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
        -o-transition: left 0.3s ease-out;  
           transition: left 0.3s ease-out; 
 }
-#box-1, #box-2, #box-3 {
+#box-1, #box-2, #box-3, #letter-1, #letter-2 {
     position: fixed;
     left: -100%;
     width: 50%;
@@ -646,13 +654,13 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
 .context-text {
     padding: 50px 100px;
     font-family: 'Lato', sans-serif;
-    font-size: .8rem;
+    font-size: 1rem;
 }
 .context-text p {
     margin: 0;
     padding-bottom: 1rem;
 }
-.context-text p:last-of-type {
+.icon-info .context-text p:last-of-type {
     padding: 30px 0;
 }
 .context-text h3 {
@@ -668,12 +676,15 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
     margin-bottom: .5rem;
     border-bottom: 2px dotted;
 }
-.page-break {
+.page-break, .page-hero {
     width: 100vw;
     overflow: hidden;
     /*margin-bottom: 25px;*/
 }
 .page-break-img {
+    width: 100%;
+}
+.page-hero-img {
     width: 100%;
 }
 #infographics-container {
@@ -713,8 +724,8 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link {
     margin: 50px auto;
 }
 footer {
-    width: (100vw - 40px);
-    padding: 25px 20px;
+    width: (100vw - 50px);
+    padding: 25px;
     font-size: .8rem;
 }
 footer h5 {
@@ -732,20 +743,9 @@ footer strong {
     padding-right: 15px;
 }
 .contact, .more-info {
-    width: calc(50vw - 20px);
+    width: calc(50vw - 25px);
     float: left;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* ==========================================================================
@@ -846,7 +846,7 @@ footer strong {
         /*float: left;*/
         padding: 0 5px;
     }
-    #box-1, #box-2, #box-3 {
+    #box-1, #box-2, #box-3, #letter-1, #letter-2 {
         position: fixed;
         left: -100%;
         width: 75vw;
@@ -856,6 +856,10 @@ footer strong {
     .moveIt {
         position: absolute;
         left: 75vw !important;
+    }
+    .text img {
+        width: 100%;
+        padding: 0 0 25px 0;
     }
     .text h3, .text h5, .text h6, .text p {
         margin: 0;
@@ -872,11 +876,85 @@ footer strong {
         font-family: 'Lato', sans-serif;
         font-size: .8rem;
     }
-
+    .case-highlight {
+        width: calc(100vw - 50px);
+        padding: 25px;
+    }
+    .case-left {
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin: 0;
+    }
+    .case-right {
+        width: 100%;
+        float: none;
+        padding: 0;
+        margin: 0;
+    }
+    .process-snapshot .dr-breakdown, .process-snapshot .ast, .process-snapshot .comp-top, .process-snapshot .dr-right, .process-snapshot .dr-center, .process-snapshot .dr-left {
+        width: 90%;
+        margin: 20px 5% 0;
+        padding: 0 0 20px 0;
+        box-sizing: border-box;
+        border-right: none;
+        border-bottom: 2px dotted;
+    }
+    .dr-breakdown:first-of-type, .process-snapshot .dr-left {
+        margin-top: 0;
+    }
+    .dr-breakdown:last-of-type, .process-snapshot .dr-right  {
+        border: none;
+    }
+    .process-snapshot .comp-breakdown, .process-snapshot .ast-breakdown, .process-snapshot .ast-right-top, .process-snapshot .comp-bottom, .process-snapshot .comp-closed, .process-snapshot .ast-right-bottom {
+        width: 100%;
+    }
+    .ast-right-bottom {
+        padding-bottom: 25px;
+    }
+    .ast-right-bottom:last-of-type {
+        padding-bottom: 0;
+    }
+    .process-snapshot .stat {
+        float: none;
+        text-align: center;
+    }
+    .process-snapshot .stat p {
+        margin: 0;
+        padding: 0;
+        font-size: .8rem;
+        font-weight: 700;
+    }
+    .process-snapshot .stat p .stat-number {
+        font-family: 'Lato', sans-serif;
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;
+    }
+    .process-snapshot .stat p .stat-text {
+        font-family: 'Lato', sans-serif;
+        font-size: 3rem;
+        margin: 0;
+        padding: 0;
+        line-height: 3.2rem;
+    }
+    .stat img {
+        width: 30%;
+    }
 }
 
 @media only screen and (max-width: 768px) {
     /* Style adjustments for viewports that meet the condition */
+    h1 {font-size: 1.6rem;}
+    h3 {font-size: 1.3rem;}
+    h4 {font-size: .8rem;}
+
+    #hero, .process-hero {
+        height: 400px;
+    }
+    #hero-logo {
+        top: 100px;
+    }
     header#desktop {display: none;}
     header#mobile {
         display: block;
@@ -908,12 +986,18 @@ footer strong {
     .menu-open {
         display: block;
     }
-    #box-1, #box-2, #box-3 {
+    #box-1, #box-2, #box-3, #letter-1, #letter-2 {
         position: fixed;
         left: -100%;
         width: 90vw;
         overflow-y: scroll;
         z-index: 0;
+    }
+    .context-text {
+        padding: 25px;
+    }
+    .context-text p {
+        font-size: 1rem;
     }
     .moveIt {
         position: absolute;
@@ -929,10 +1013,15 @@ footer strong {
         width: calc(100vw - 50px);
         padding: 25px;
     }
-    .context-text {
-        padding: 50px 25px;
-        font-family: 'Lato', sans-serif;
+    .process-hero-logo {
+        padding: 25px;
+    }
+    .process-hero-logo h4 {
         font-size: .8rem;
+    }
+    .contact, .more-info {
+        width: 100%;
+        float: none;
     }
 
 }
