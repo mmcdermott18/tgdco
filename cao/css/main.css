@@ -129,6 +129,10 @@ textarea {
 .out-main-bg {background-color: #B67529;}
 .out-sec-bg {background-color: #FDBF56;}
 
+.wordbreak {
+    word-break: none;
+}
+
 a {transition: color .5s ease;}
 a:hover {color: black;}
 p {margin-bottom: 1.3em;}

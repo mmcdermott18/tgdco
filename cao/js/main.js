@@ -67,20 +67,11 @@ function slideOuts() {
         $('#letter-1').removeClass('tgdco-open');
         $('body').removeClass('scrollLock');
         $('#container').removeClass('moveIt');
-        $('*').css('background-color', 'initial');
       }
     });
     $('#letter-1').toggleClass('tgdco-open');
     $('body').toggleClass('scrollLock');
     $('#container').toggleClass('moveIt');
-    if ($('body').hasClass('scrollLock')) {
-      $('*').css('background-color', 'blue');
-      $('body').on('touchstart touchmove', function(e) {
-        e.preventDefault();
-      });
-    } else {
-      $('*').css('background-color', 'initial');
-    }
   });
   $('#letter-2').css('top',headHeight);
   $('#letter-2').css('height',boxHeight);
