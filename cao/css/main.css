@@ -117,6 +117,7 @@ textarea {
 .black-bg {background-color: black;}
 .brown-bg {background-color: #5C4637;}
 .grey-bg {background-color: #AEA79F;}
+.dark-grey-bg {background-color: #8b8176}
 .comp-main-bg {background-color: #104A66;}
 .comp-sec-bg {background-color: #007698;}
 .comp-tert-bg {background-color: #B2CFD4;}
@@ -159,7 +160,7 @@ h2 {
     text-align: center;
 }
 
-h3 {font-size: 1.999rem; font-family: 'Lato', sans-serif;}
+h3 {font-size: 1.999rem;}
 
 h4 {font-size: 1.414rem;}
 
@@ -168,7 +169,7 @@ small, .font_small, li {font-size: 0.707rem;}
 html, body {
     padding: 0;
     margin: 0;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arimo', sans-serif;
     /*background-color: white;*/
     color: black;
     box-sizing: border-box;
@@ -258,7 +259,7 @@ header#mobile {
     color: white;
 }
 #hero-logo h1 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-size: 5rem;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -303,7 +304,7 @@ header#mobile {
     padding: 0;
 }
 .process-hero-logo h4 {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arimo', sans-serif;
     margin: 0;
     font-weight: bold;
     font-size: 1rem;
@@ -364,6 +365,7 @@ header#mobile {
 blockquote {
     text-align: left;
     font-size: 2rem;
+    line-height: 2.3rem;
     font-weight: 700;
     margin: 0;
     padding: 25px 20vw 50px 20vw;
@@ -428,7 +430,7 @@ blockquote {
     letter-spacing: 1px;
 }
 .text span.italic {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-style: italic;
     font-weight: 700;
     font-size: .9rem;
@@ -590,13 +592,13 @@ blockquote {
     font-weight: 700;
 }
 .process-snapshot .stat p .stat-number {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-size: 3rem;
     margin: 0;
     padding: 0;
 }
 .process-snapshot .stat p .stat-text {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-size: 3rem;
     margin: 0;
     padding: 0;
@@ -610,11 +612,29 @@ blockquote {
     margin: 0 auto;
     padding: 50px 0;
 }
-span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link, span.letter-1-callout, span.letter-2-callout {
-    font-family: 'Lato', sans-serif;
+span.box-1-callout, span.box-2-callout, span.box-3-callout, span.letter-1-callout, span.letter-2-callout {
+    font-family: 'Arimo', sans-serif;
     /*font-style: italic;*/
     /*border-bottom: 2px dotted;*/
     padding: 4px 7px;
+    text-transform: uppercase;
+    border: 2px solid;
+    letter-spacing: 1px;
+    font-weight: 700;
+    font-size: .8rem;
+    cursor: pointer;
+    transition: background-color .5s ease;
+}
+.letter-1-callout:hover, .letter-2-callout:hover {
+    background-color: #AEA79F;
+}
+span.box-1-callout:hover, span.box-2-callout:hover {
+    background-color: #DCDDC3;
+}
+span.box-3-callout:hover {
+    background-color: #B2CFD4;   
+}
+span.icon-link {
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 700;
@@ -624,6 +644,9 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link, span
 .moveIt {
     position: absolute;
     left: 50vw !important;
+}
+.noClick {
+    pointer-events: none;
 }
 .tgdco-button {
     text-transform: uppercase;
@@ -657,7 +680,7 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.icon-link, span
 }
 .context-text {
     padding: 50px 100px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Arimo', sans-serif;
     font-size: 1rem;
 }
 .context-text p {
@@ -747,11 +770,66 @@ footer strong {
     padding-right: 15px;
 }
 .contact, .more-info {
-    width: calc(50vw - 25px);
+    width: calc(50vw - 37.5px);
     float: left;
 }
+.contact {
+    margin-right: 25px;
+}
+.bevel, .content { border-width: 15px }
+.bevel, .content { border-color: #007698; border-style:solid; }
 
+.bvc {
+    width: 20%; /* width of overall box, variable or fixed */ 
+    margin: 0;
+    float: left;
+    position: relative;
+    margin-bottom: 15px;
+    margin-right: 40px;
+}
 
+.bvc .tr, .bvc .tl, .bvc .br, .bvc .bl { height: 0px; /*width: 100%;*/ }
+.bvc .tr, .bvc .tl { border-top: 0; }
+.bvc .br, .bvc .bl { border-bottom: 0; }
+.bvc .tr, .bvc .br { border-right-color: transparent; }
+.bvc .tl, .bvc .bl { border-left-color: transparent; }
+.no_bevel { height: 0px; width: 100%; border-bottom: 0; }
+
+.content {
+    /*width: 100%;*/
+    border-top: 0;
+    border-bottom: 0;
+}
+.content .process-snapshot {
+    width: 100%;
+    border: none;
+}
+.content .process-snapshot .comp-top {
+    width: 100%;
+    border: none;
+}
+.content .process-snapshot .comp-breakdown {
+    width: 100%;
+    border: none;
+    border-top: 2px dotted white;
+    margin-top: 12px;
+}
+.content .process-snapshot .comp-bottom {
+    width: 100%;
+    margin-bottom: 25px;
+    border: none;
+}
+.process-snapshot .comp-closed {
+    width: 100%;
+    border: none;
+}
+.process-snapshot h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin: 25px 0 12px;
+    padding-bottom: 12px;
+}
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -877,7 +955,7 @@ footer strong {
     }
     .context-text {
         padding: 50px 25px;
-        font-family: 'Lato', sans-serif;
+        font-family: 'Arimo', sans-serif;
         font-size: .8rem;
     }
     .case-highlight {
@@ -930,13 +1008,13 @@ footer strong {
         font-weight: 700;
     }
     .process-snapshot .stat p .stat-number {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Arimo', sans-serif;
         font-size: 3rem;
         margin: 0;
         padding: 0;
     }
     .process-snapshot .stat p .stat-text {
-        font-family: 'Lato', sans-serif;
+        font-family: 'Arimo', sans-serif;
         font-size: 3rem;
         margin: 0;
         padding: 0;
@@ -1027,7 +1105,14 @@ footer strong {
         width: 100%;
         float: none;
     }
-
+    .contact {
+        margin-right: 0;
+    }
+    .bvc {
+        width: 100%; /* width of overall box, variable or fixed */ 
+        float: none;
+        margin: 0;
+    }
 }
 
 @media print,

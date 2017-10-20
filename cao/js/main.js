@@ -67,11 +67,13 @@ function slideOuts() {
         $('#letter-1').removeClass('tgdco-open');
         $('body').removeClass('scrollLock');
         $('#container').removeClass('moveIt');
+        $('.letter-container').removeClass('noClick');
       }
     });
     $('#letter-1').toggleClass('tgdco-open');
     $('body').toggleClass('scrollLock');
     $('#container').toggleClass('moveIt');
+    $('.letter-container').toggleClass('noClick');
   });
   $('#letter-2').css('top',headHeight);
   $('#letter-2').css('height',boxHeight);
@@ -81,11 +83,13 @@ function slideOuts() {
         $('#letter-2').removeClass('tgdco-open');
         $('body').removeClass('scrollLock');
         $('#container').removeClass('moveIt');
+        $('.letter-container').removeClass('noClick');
       }
     });
     $('#letter-2').toggleClass('tgdco-open');
     $('body').toggleClass('scrollLock');
     $('#container').toggleClass('moveIt');
+    $('.letter-container').toggleClass('noClick');
   });
 }
 function breakHeight() {
