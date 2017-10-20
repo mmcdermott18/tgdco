@@ -108,9 +108,9 @@ textarea {
 .dr-main {color: #4E6134; border-color: #4E6134;}
 .dr-sec {color: #799B3D;}
 .dr-tert {color: #DCDDC3; border-color: #DCDDC3;}
-.ad-main {color: #7D301D; border-color: #7D301D;}
-.ad-sec {color: #F47B38;}
-.ad-tert {color: #fbd2ad;}
+.ad-main {color: #A94D48; border-color: #A94D48;}
+.ad-sec {color: #DB6943;}
+.ad-tert {color: #FFE4CA;}
 .out-main {color: #B67529; border-color: #B67529;}
 .out-sec {color: #FDBF56;}
 .white-bg {background-color: white;}
@@ -124,9 +124,9 @@ textarea {
 .dr-main-bg {background-color: #4E6134;}
 .dr-sec-bg {background-color: #799B3D;}
 .dr-tert-bg {background-color: #DCDDC3;}
-.ad-main-bg {background-color: #7D301D;}
-.ad-sec-bg {background-color: #F47B38;}
-.ad-tert-bg {background-color: #fbd2ad;}
+.ad-main-bg {background-color: #A94D48;}
+.ad-sec-bg {background-color: #DB6943;}
+.ad-tert-bg {background-color: #FFE4CA;}
 .out-main-bg {background-color: #B67529;}
 .out-sec-bg {background-color: #FDBF56;}
 
@@ -191,24 +191,20 @@ header#desktop {
     z-index: 10;
 }
 .nav-logo {
-    padding: 0 0 0 20px;
+    padding: 8px 0 0 20px;
     color: white;
     float: left;
 }
-.nav-logo p .type-logo {
-    font-weight: bold;
-    padding: 0;
-    margin: 0;
-    line-height: 0;
+.nav-logo img {
+    width: 85px;
 }
-.nav-logo p .type-logo a {
+.nav-logo a {
     cursor: pointer;
-    color: white;
     text-decoration: none;
 }
 .nav-menu {
     float: right;
-    padding: 7px 20px 0 0;
+    padding: 14px 20px 0 0;
 }
 .nav-menu ul {
     list-style: none;
@@ -258,11 +254,9 @@ header#mobile {
     text-align: center;
     color: white;
 }
-#hero-logo h1 {
-    font-family: 'Arimo', sans-serif;
-    font-size: 5rem;
-    margin-bottom: 0;
-    padding-bottom: 0;
+#hero-logo img {
+    width: 300px;
+    padding-left: 30px;
 }
 #hero-logo h3 {
     text-transform: uppercase;
@@ -355,6 +349,11 @@ header#mobile {
     padding-bottom: 1.4rem;
     margin-top: 0;
 }
+.case-highlight h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
 .case-highlight img {
     max-width: 100%;
 }
@@ -364,11 +363,14 @@ header#mobile {
 }
 blockquote {
     text-align: left;
-    font-size: 2rem;
-    line-height: 2.3rem;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
     font-weight: 700;
     margin: 0;
     padding: 25px 20vw 50px 20vw;
+}
+.case-highlight blockquote {
+    padding: 25px 0;
 }
 .text {
     
@@ -525,6 +527,13 @@ blockquote {
     background-color: white;
     color: black;
 }
+.icon-info ol {
+    padding: 0 0 0 18px;
+    margin: 0;
+}
+.icon-info ol li {
+    font-size: 1rem;
+}
 .scrollLock {overflow: hidden; touch-action: none;}
 #snapshot {
     width: 100vw;
@@ -589,6 +598,7 @@ blockquote {
     margin: 0;
     padding: 0;
     font-size: .8rem;
+    letter-spacing: 1px;
     font-weight: 700;
 }
 .process-snapshot .stat p .stat-number {
@@ -625,7 +635,7 @@ span.box-1-callout, span.box-2-callout, span.box-3-callout, span.letter-1-callou
     cursor: pointer;
     transition: background-color .5s ease;
 }
-.letter-1-callout:hover, .letter-2-callout:hover {
+span.letter-1-callout:hover, span.letter-2-callout:hover {
     background-color: #AEA79F;
 }
 span.box-1-callout:hover, span.box-2-callout:hover {
@@ -768,6 +778,10 @@ footer ul li {
 }
 footer strong {
     padding-right: 15px;
+}
+footer img {
+    float: left;
+    margin-right: 25px;
 }
 .contact, .more-info {
     width: calc(50vw - 37.5px);
@@ -924,9 +938,13 @@ footer strong {
 
 @media only screen and (max-width: 1024px) {
     /* Style adjustments for viewports that meet the condition */
+    .nav-menu ul {
+        padding: 0px;
+    }
     .nav-menu ul li {
         /*float: left;*/
         padding: 0 5px;
+        /*font-size: .65rem;*/
     }
     #box-1, #box-2, #box-3, #letter-1, #letter-2 {
         position: fixed;
@@ -1056,7 +1074,7 @@ footer strong {
     #mobile .nav-menu {
         float: right;
         text-align: right;
-        padding: 11px 20px 0 0;
+        padding: 14px 20px 0 0;
     }
     .nav-menu-list {
         display: none;
@@ -1107,6 +1125,9 @@ footer strong {
     }
     .contact {
         margin-right: 0;
+    }
+    footer img {
+        margin-right: 10px;
     }
     .bvc {
         width: 100%; /* width of overall box, variable or fixed */ 
