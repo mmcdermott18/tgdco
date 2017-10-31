@@ -794,6 +794,13 @@ footer img {
     margin: 25px 0 12px;
     padding-bottom: 12px;
 }
+.highlight-text {
+    font-size: 1rem;
+    font-weight: bold;
+}
+.highlight-number {
+    font-size: 3rem;
+}
 blockquote {
     text-align: left;
     font-size: 1.4rem;
