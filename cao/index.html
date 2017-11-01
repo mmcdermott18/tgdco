@@ -10,21 +10,38 @@
         <!-- Place favicon.ico in the root directory -->
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
-        <link href="https://fonts.googleapis.com/css?family=Arimo:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,800" rel="stylesheet">
         <script src="https://use.fontawesome.com/ceaf8078d7.js"></script>
     </head>
-    <body class="dark-grey-bg">
+    <body>
         <!--[if lte IE 9]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div id="container" class="tgdco-transition">
-            <header id="desktop">
-                <div class="nav-logo">
-                    <a href="index.html"><img src="img/cao-logo-alt.png"></a>
-                </div>
-                <div class="nav-menu">
+        <header id="desktop">
+            <div class="nav-logo">
+                <a href="index.html"><img src="img/cao-logo-alt.png"></a>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a class="active" href="index.html">Home</a></li>
+                    <li><a href="about/index.html">About CAO</a></li>
+                    <li><a href="assessment/index.html">Assessment</a></li>
+                    <li><a href="dispute-resolution/index.html">Dispute Resolution</a></li>
+                    <li><a href="compliance/index.html">Compliance</a></li>
+                    <li><a href="advisory/index.html">Advisory</a></li>
+                    <li><a href="outreach/index.html">Outreach</a></li>
+                </ul>
+            </div>
+        </header>
+        <header id="mobile">
+            <div class="nav-logo">
+                <a href="index.html"><img src="img/cao-logo-alt.png"></a>
+            </div>
+            <div class="nav-menu">
+                <span class="menu-bars"><i class="fa fa-bars" aria-hidden="true"></i></span>
+                <div class="nav-menu-list">
                     <ul>
                         <li><a class="active" href="index.html">Home</a></li>
                         <li><a href="about/index.html">About CAO</a></li>
@@ -35,68 +52,64 @@
                         <li><a href="outreach/index.html">Outreach</a></li>
                     </ul>
                 </div>
-            </header>
-            <header id="mobile">
-                <div class="nav-logo">
-                    <a href="index.html"><img src="img/cao-logo-alt.png"></a>
-                </div>
-                <div class="nav-menu">
-                    <span class="menu-bars"><i class="fa fa-bars" aria-hidden="true"></i></span>
-                    <div class="nav-menu-list">
-                        <ul>
-                            <li><a class="active" href="index.html">Home</a></li>
-                            <li><a href="about/index.html">About CAO</a></li>
-                            <li><a href="assessment/index.html">Assessment</a></li>
-                            <li><a href="dispute-resolution/index.html">Dispute Resolution</a></li>
-                            <li><a href="compliance/index.html">Compliance</a></li>
-                            <li><a href="advisory/index.html">Advisory</a></li>
-                            <li><a href="outreach/index.html">Outreach</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </header>
-            <div id="hero" class="process-hero">
-                <div class="page-hero">
-                </div>
-                <div id="hero-logo">
-                    <img src="img/cao-logo.png">
-                    <h3 class="ar-2017">2017</h3>
-                    <h3 class="ar-annual">Annual</h3>
-                    <h3 class="ar-report">Report</h3>
-                </div>
             </div>
-            <div id="main-content">
-                <div id="introduction">
+        </header>
+        <div id="hero" class="process-hero">
+            <div class="page-hero">
+            </div>
+            <div id="hero-logo">
+                <img src="img/cao-logo.png">
+                <h3 class="ar-2017">2017</h3>
+                <h3 class="ar-annual">Annual</h3>
+                <h3 class="ar-report">Report</h3>
+            </div>
+        </div>
+        <div id="container" class="home-page">
+            <div id="introduction" class="white-bg">
+                <div class="section">
                     <div class="text">
                         <h3>A Headline for the introduction?</h3>
                         <p class="intro">The Office of the Compliance Advisor Ombudsman (CAO) is the independent accountability mechanism for the International Finance Corporation (IFC) and the Multilateral Investment Guarantee Agency (MIGA), members of the World Bank Group.</p>
                         <p>CAO is mandated to address complaints from people affected by IFC and MIGA projects in a manner that is fair, objective, and equitable and to enhance the environmental and social outcomes of IFC and MIGA projects. CAO is an independent office that reports to the President of the World Bank Group. For more information about CAO, visit <a href="http://www.cao-ombudsman.org/" class="brown">www.cao&#8209;ombudsman.org</a></p>
                     </div>
                 </div>
-                <div class="mission texture light-grey-bg">
-                    <h5>Mission</h5>
-                    <p>CAO’s mission is to serve as a fair, trusted, and effective independent recourse mechanism and to improve the environmental and social accountability of IFC and MIGA.</p>
+            </div>
+            <div id="main-content">
+                <div id="mission">
+                    <div class="section">
+                        <div class="text white">
+                            <p>CAO’s mission is to serve as a fair, trusted, and effective independent recourse mechanism and to improve the environmental and social accountability of IFC and MIGA.</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="mid-grey-bg">
-                    <div id="section-b">
+                    <div class="section">
                         <div class="text">
-                            <h3>Foreword from World Bank Group President Jim Yong Kim</h3>
+                            <h4>Foreword from World Bank Group President Jim Yong Kim</h4>
+                        </div>
+                        <img class="left top15" src="img/letter-1.jpg">
+                        <div class="text">
                             <p class="intro">People are at the heart of the World Bank Group’s efforts to end extreme poverty and boost shared prosperity. To reach these goals, our investments must generate better jobs and lead to improvements in communities. The people in developing countries are our partners in development, and their meaningful participation in our work is critical to achieving our goals.</p>
                             <p>In this context, I emphasize the valued role of the Compliance Advisor Ombudsman (CAO), an independent mechanism through which people can voice concerns about private sector activities supported by IFC and MIGA. CAO provides a platform for peoples’ grievances to be addressed, and for companies to engage in dialogue with local stakeholders to find joint solutions for problems.</p>
                             <p>CAO also enhances public trust in the World Bank Group by conducting independent reviews of our environmental and social performance. This helps ensure that our policies meet the highest standards. As we learn from these experiences, CAO helps strengthen our development impact in new markets and challenging environments. In short, CAO is part of the value proposition that the World Bank Group&mdash;as a premier development institution&mdash;offers our project beneficiaries, our clients, our partners, our shareholders, and the public. CAO remains a valuable piece of our accountability structure, through which we can provide the Environmental, Social and Governance (ESG) value that both investors and communities expect from the World Bank Group.</p>
                             <p>CAO’s role remains important as we scale up our efforts to tackle poverty, inequality, and environmental and social sustainability through the framework of the Sustainable Development Goals. To make these goals a reality, the international community recognizes that we must achieve catalytic development solutions by unlocking the trillions of dollars in available private capital. IFC and MIGA will be at the forefront of these efforts as we work with partners to identify private sector opportunities, promote regulatory reforms, and crowd-in much needed investments in infrastructure and other priority sectors.</p>
                             <p>Scaling up development by crowding in private sector investments will require calculated risks in complex environments, including fragile and conflict-affected countries. Managing the impact of projects on people and the environment remains essential. We have strong structures in place to address these risks through our policy framework, citizen feedback mechanisms like CAO, and project-level grievance mechanisms that ensure direct engagement between our clients and the people who are impacted by their activities.</p>
                             <p>I commend CAO for its impactful work this year and thank all those who work with us to promote solutions, accountability, and learning—local communities, companies, civil society organizations, governments, and other stakeholders&mdash;who collectively contribute to our ambitious development goals.</p>
-                            <div class="bio">
-                                <img src="img/letter-1.jpg">
-                                <ul>
-                                    <li><strong>Jim Yong Kim</strong></li>
-                                    <li>President</li>
-                                    <li>October 2017</li>
-                                </ul>
-                            </div>
-                            <hr class="column-hr">
-                            <h3>Message from the Compliance Advisor Ombudsman</h3>
+                            <ul>
+                                <li><strong>Jim Yong Kim</strong></li>
+                                <li>President</li>
+                                <li>October 2017</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="light-grey-bg">
+                    <div class="section">
+                        <div class="text">
+                            <h4>Message from the Compliance Advisor Ombudsman</h4>
+                        </div>
+                        <img class="left top15" src="img/letter-2.jpg">
+                        <div class="text">
                             <p class="intro">Our 2017 report highlights the breadth of CAO’s work through its dispute resolution, compliance, and advisory functions, as well as outreach activities. We managed 51 cases in 28 countries this year, of which 12 were new complaints. Complex cases are a consistent feature, and managing this caseload effectively remains a strategic priority for CAO.</p>
                             <p>Our caseload represents just over 1 percent&mdash;a small proportion&mdash;of the overall IFC and MIGA portfolios. We believe these numbers are a healthy sign that people are accessing CAO’s services. However, many communities tell us that they do not have access to information about projects and grievance redress. Outreach is therefore an important part of our work, and we engaged over 200 organizations from 20 countries this year.</p>
                             <p>Through dispute resolution, communities and companies all over the world have reached significant agreements through dialogue. Of 21 cases in dispute resolution, 75 percent have reached full or partial agreement since CAO became involved. These include landmark agreements reached in Cambodia, Chad, and Mongolia this year between IFC clients and local communities, which are documented in these pages.</p>
@@ -106,65 +119,62 @@
                             <p>We continue to diversify CAO’s expertise, adding new staff to our dispute resolution and compliance teams, bringing the in-house team to 21 staff from 16 countries. We are also developing a cadre of qualified regional mediators to decentralize our response.</p>
                             <p>IFC and MIGA have ambitious development goals, particularly in fragile and frontier markets. CAO has a crucial role in continuing to provide a space for communities to raise their voices and promote the resolution of disputes, robust implementation of standards, and learning from experience.</p>
                             <p>I recognize the trust placed in CAO by communities, and the commitment of IFC and MIGA clients and staff to address issues through a CAO process. Together, despite the challenges, we have a shared purpose to deliver better projects and stronger development outcomes for people.</p>
-                            <div class="bio">
-                                <img src="img/letter-2.jpg">
-                                <ul>
-                                    <li><strong>Osvaldo L. Gratac&oacute;s</strong></li>
-                                    <li>President</li>
-                                    <li>October 2017</li>
-                                </ul>
-                            </div>
+                            <ul>
+                                <li><strong>Osvaldo L. Gratac&oacute;s</strong></li>
+                                <li>President</li>
+                                <li>October 2017</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
                 <div id="snapshot-content">
                     <div id="snapshot-introduction">
-                        <h2>Caseload Snapshot, FY2017</h2>
+                        <h3>Caseload Snapshot, FY2017</h3>
                         <p class="intro">This year, CAO handled 51 cases in 28 countries. Of these, 12 were new complaints, including cases for the first time from Costa Rica, Guinea, and Uzbekistan. Full details on these cases are available at <a href="http://www.cao-ombudsman.org/" class="grey">www.cao-ombudsman.org</a>.</p>
                     </div>
                     <div class="background-container white-bg">
                         <div id="infographics-container" class="black clearfix">
                             <hr>
                             <div class="info-full">
-                                <h5>Figure 1. Status of Cases, End FY2017</h5>
+                                <h5 class="noBorder">Figure 1. Status of Cases, End FY2017</h5>
                                 <p>At the end of the fiscal year, 42 percent of CAO cases were in monitoring or closed following dispute resolution or compliance processes.</p>
                                 <img src="img/snapshot-status.png">
                             </div>
                             <hr>
                             <div class="info-full clearfix">
                                 <div class="info-half">
-                                    <h5>Figure 2. Cases by institution, FY2017</h5>
+                                    <h5 class="noBorder">Figure 2. Cases by institution, FY2017</h5>
                                     <p>While IFC projects account for the majority of CAO's caseload, CAO is addressing complaints related to 4 MIGA projects in the extractive industry and hydropower sectors.</p>
                                     <img class="half" src="img/snapshot-institution.png">
                                 </div>
                                 <div class="info-half">
-                                    <h5>Figure 3. Profile of Complaints, FY2017</h5>
+                                    <h5 class="noBorder">Figure 3. Profile of Complaints, FY2017</h5>
                                     <p>The majority of new complaints to CAO were filed by individuals and community members without the support of a sivil society organization.</p>
                                     <img class="half" src="img/snapshot-complaints.png">
                                 </div>
                             </div>
                             <hr>
                             <div class="info-full">
-                                <h5>Figure 4. Cases by region, FY2017</h5>
+                                <h5 class="noBorder">Figure 4. Cases by region, FY2017</h5>
                                 <p>The majority of cases this year were in the Latin America and Sub-Saharan Africa regions. Cases from the Middle East and North Africa doubled this year.</p>
                                 <img src="img/snapshot-region.png">
                             </div>
                             <hr>
                             <div class="info-full">
-                                <h5>Figure 5. Cases by Sector, Fy2017</h5>
+                                <h5 class="noBorder">Figure 5. Cases by Sector, Fy2017</h5>
                                 <p>Extractive industries account for 25 percent of CAO's caseload, up from 19% in FY2016. Cases related to manufacturing doubled this year, accounting for 16 percent of the caseload. Infrastructure remains the largest sector for complaints at 29 percent, the majority of which concern power projects.</p>
                                 <img src="img/snapshot-sector.png">
                             </div>
                             <hr>
                             <div class="info-full">
-                                <h5>Figure 6. Environmental and social issues in complaints, FY2017</h5>
+                                <h5 class="noBorder">Figure 6. Environmental and social issues in complaints, FY2017</h5>
                                 <p>Concers about environmental and social (E&amp;S) policy compliance are articulated by complainants in 57 percent of cases. Stakeholder engagement is raised in just under fifty percent of all cases, as are community health concerns. Labor is emerging as a dominant issue, with a third of current cases&mdash;and almost 70 percent of new complaints this year&mdash;citing labor grievances related to health and safety, discrimination, wages and benefits, and forced labor, among others.</p>
                                 <img src="img/snapshot-caseload.png">
                                 <p><i>Note: Complaints typically include different environmental and social (E&amp;S) issues. Percentages therefore denote the frequency that each issue was raised in the FY2017 caseload.</i></p>
                             </div>
                             <hr>
                             <div class="info-full">
-                                <h5>Figure 7. Caseload and Budget, FY2017</h5>
+                                <h5 class="noBorder">Figure 7. Caseload and Budget, FY2017</h5>
                                 <div class="info-half">
                                     <p><strong>Operational Budget</strong><br>In FY2017, CAO had an operational budget of US$5,375,718, of which CAO expensed 99.9 percent. CAO’s operational budget covers the costs of staff salaries, consultants, travel, communications, contractual services, and other administrative expenses. It is funded by IFC and MIGA on a cost-sharing basis.</p>
                                 </div>
@@ -175,75 +185,79 @@
                                 <img src="img/snapshot-budget.png">
                             </div>
                             <hr>
-                        </div>
-                        <div id="snapshot-map">
-                            <div id="case-map">
-                                <h2>Caseload Map, FY2017</h2>
-                                <div class='tableauPlaceholder' id='viz1505601842603' style='position: relative'>
-                                    <noscript>
-                                        <a href='#'>
-                                            <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CA&#47;CAOAnnualFY17AnnualReportMapv1&#47;Dashboard1&#47;1_rss.png' style='border: none' />
-                                        </a>
-                                    </noscript>
-                                    <object class='tableauViz'  style='display:none;'>
-                                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-                                        <param name='site_root' value='' />
-                                        <param name='name' value='CAOAnnualFY17AnnualReportMapv1&#47;Dashboard1' />
-                                        <param name='tabs' value='no' />
-                                        <param name='toolbar' value='yes' />
-                                        <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CA&#47;CAOAnnualFY17AnnualReportMapv1&#47;Dashboard1&#47;1.png' />
-                                        <param name='animate_transition' value='yes' />
-                                        <param name='display_static_image' value='yes' />
-                                        <param name='display_spinner' value='yes' />
-                                        <param name='display_overlay' value='yes' />
-                                        <param name='display_count' value='yes' />
-                                    </object>
+                            <div class="info-full">
+                                <h5 class="noBorder">Figure 8. Caseload Map, FY2017</h5>
+                                <div id="case-map">
+                                    <div class='tableauPlaceholder' id='viz1505601842603' style='position: relative'>
+                                        <noscript>
+                                            <a href='#'>
+                                                <img alt='Dashboard 1 ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CA&#47;CAOAnnualFY17AnnualReportMapv1&#47;Dashboard1&#47;1_rss.png' style='border: none' />
+                                            </a>
+                                        </noscript>
+                                        <object class='tableauViz'  style='display:none;'>
+                                            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                                            <param name='site_root' value='' />
+                                            <param name='name' value='CAOAnnualFY17AnnualReportMapv1&#47;Dashboard1' />
+                                            <param name='tabs' value='no' />
+                                            <param name='toolbar' value='yes' />
+                                            <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;CA&#47;CAOAnnualFY17AnnualReportMapv1&#47;Dashboard1&#47;1.png' />
+                                            <param name='animate_transition' value='yes' />
+                                            <param name='display_static_image' value='yes' />
+                                            <param name='display_spinner' value='yes' />
+                                            <param name='display_overlay' value='yes' />
+                                            <param name='display_count' value='yes' />
+                                        </object>
+                                    </div>
+                                    <script type='text/javascript'>
+                                        var divElement = document.getElementById('viz1505601842603');
+                                        var vizElement = divElement.getElementsByTagName('object')[0];
+                                        vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
+                                        var scriptElement = document.createElement('script');
+                                        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                                        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                                    </script>
                                 </div>
-                                <script type='text/javascript'>
-                                    var divElement = document.getElementById('viz1505601842603');
-                                    var vizElement = divElement.getElementsByTagName('object')[0];
-                                    vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';
-                                    var scriptElement = document.createElement('script');
-                                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-                                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-                                </script>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div id="process" class="light-grey-bg">
-                    <h3>Explore our process</h3>
-                    <p>Introduction to the process could go here. only need a sentence or two.</p>
-                    <div id="process-icons" class="clearfix">
-                        <div class="icon brown-bg">
-                            <a class="white" href="assessment/index.html">
-                                <img src="img/icon-assessment.png">
-                                <h5>Assessment</h5>
-                            </a>
+                    <div class="section">
+                        <div class="text">
+                            <h3>Explore our process</h3>
+                            <p>Introduction to the process could go here. only need a sentence or two.</p>
                         </div>
-                        <div class="icon dr-main-bg">
-                            <a class="white" href="dispute-resolution/index.html">
-                                <img src="img/icon-agreement.png">
-                                <h5>Dispute Resolution</h5>
-                            </a>
-                        </div>
-                        <div class="icon comp-main-bg">
-                            <a class="white" href="compliance/index.html">
-                                <img src="img/icon-compliance.png">
-                                <h5>Compliance</h5>
-                            </a>
-                        </div>
-                        <div class="icon ad-main-bg">
-                            <a class="white" href="advisory/index.html">
-                                <img src="img/icon-advisory.png">
-                                <h5>Advisory</h5>
-                            </a>
-                        </div>
-                        <div class="icon out-main-bg">
-                            <a class="white" href="outreach/index.html">
-                                <img src="img/icon-outreach.png">
-                                <h5>Outreach</h5>
-                            </a>
+                        <div id="process-icons" class="clearfix">
+                            <div class="icon brown-bg">
+                                <a class="white" href="assessment/index.html">
+                                    <img src="img/icon-assessment.png">
+                                    <h4>Assessment</h4>
+                                </a>
+                            </div>
+                            <div class="icon dr-main-bg">
+                                <a class="white" href="dispute-resolution/index.html">
+                                    <img src="img/icon-agreement.png">
+                                    <h4>Dispute Resolution</h4>
+                                </a>
+                            </div>
+                            <div class="icon comp-main-bg">
+                                <a class="white" href="compliance/index.html">
+                                    <img src="img/icon-compliance.png">
+                                    <h4>Compliance</h4>
+                                </a>
+                            </div>
+                            <div class="icon ad-main-bg">
+                                <a class="white" href="advisory/index.html">
+                                    <img src="img/icon-advisory.png">
+                                    <h4>Advisory</h4>
+                                </a>
+                            </div>
+                            <div class="icon out-main-bg">
+                                <a class="white" href="outreach/index.html">
+                                    <img src="img/icon-outreach.png">
+                                    <h4>Outreach</h4>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>

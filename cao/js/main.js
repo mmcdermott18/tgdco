@@ -3,6 +3,7 @@ $(document).ready(function() {
     processHeight()
     slideOuts();
     menuSlide();
+    captionHover();
     // run function on resize of the window
     $(window).resize(function(){
       
@@ -123,5 +124,19 @@ function menuSlide() {
       }
     });
     $('.nav-menu-list').slideToggle('menu-open');
+  });
+}
+function captionHover() {
+  $('.show-caption').click(function() {
+    $( document ).on( 'keydown', function ( e ) {
+      if ( e.keyCode === 27 ) {
+        $('.hero-caption').slideUp('menu-open');
+        $('.caption-open').toggleClass('hidden');
+        $('.caption-close').toggleClass('hidden');
+      }
+    });
+    $('.hero-caption').slideToggle('menu-open');
+    $('.caption-open').toggleClass('hidden');
+    $('.caption-close').toggleClass('hidden');
   });
 }
