@@ -6,12 +6,12 @@ $(document).ready(function() {
     captionHover();
     // run function on resize of the window
     $(window).resize(function(){
-      
+      breakHeight();
+      processHeight();
     });
     // run function on scroll
     $(window).scroll(function() {
-      breakHeight();
-      processHeight();
+
     });
 });
 function slideOuts() {
@@ -106,13 +106,19 @@ function breakHeight() {
 }
 function processHeight() {
   var phh = $('#process-graphic').outerHeight();
+  console.log('#process-graphic outerHeight ' + phh);
   var phwh = $(window).height();
-  var phhh = $('header').outerHeight();
+  console.log('window Height ' + phwh);
+  var phhh = $('header').outerHeight()
+  console.log('header outerHeight ' + phhh);
   var phnh = (phwh - phhh);
+  console.log('window - header ' + phnh);
   if (phh > phwh) {
     $('#process-graphic').css('height', phnh);
+    $('#process-graphic-image').css('height', phnh);
   } else {
     $('#process-graphic').css('height',phh);
+    $('#process-graphic-image').css('height', phh);
   }
 }
 function menuSlide() {
