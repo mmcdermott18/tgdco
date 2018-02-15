@@ -1,6 +1,6 @@
 
 /*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
-
+  
 /*
  * What follows is the result of much research on cross-browser styling.
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
@@ -45,7 +45,7 @@ hr {
     display: block;
     height: 1px;
     border: 0;
-    border-top: 2px dotted black;
+    border-top: 2px dotted #2f2f2f;
     margin: 1em 0;
     padding: 0;
 }
@@ -104,13 +104,24 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.IEhtml {
+    overflow: hidden;
+    height: 100%;    
+}
+.IEbody {
+    overflow: auto;
+    height: 100%;
+}
+
+
 /*Colors*/
 .white {color: white; border-color: white;}
-.black {color: black; border-color: black;}
+.black {color: #2f2f2f; border-color: #2f2f2f;}
 .brown {color: #5C4637; border-color: #5C4637;}
 .mid-grey{color: #C4BFB9; border-color: #C4BFB9;}
 .grey {color: #AEA79F; border-color: #AEA79F;}
 .light-grey {color: #e6e4e2; border-color: #e6e4e2;}
+.ast-main {color: #e4ddcc; border-color: #e4ddcc;}
 .comp-main {color: #104A66; border-color: #104A66;}
 .comp-sec {color: #007698; border-color: #007698;}
 .comp-tert {color: #B2CFD4; border-color: #B2CFD4;}
@@ -123,11 +134,12 @@ textarea {
 .out-main {color: #B67529; border-color: #B67529;}
 .out-sec {color: #FDBF56; border-color: #FDBF56;}
 .white-bg {background-color: white;}
-.black-bg {background-color: black;}
+.black-bg {background-color: #2f2f2f;}
 .brown-bg {background-color: #5C4637;}
 .grey-bg {background-color: #AEA79F;}
 .mid-grey-bg {background-color: #C4BFB9;}
 .light-grey-bg {background-color: #e6e4e2}
+.ast-main-bg {background-color: #e4ddcc;}
 .comp-main-bg {background-color: #104A66;}
 .comp-sec-bg {background-color: #007698;}
 .comp-tert-bg {background-color: #B2CFD4;}
@@ -139,14 +151,13 @@ textarea {
 .ad-tert-bg {background-color: #FFE4CA;}
 .out-main-bg {background-color: #B67529;}
 .out-sec-bg {background-color: #FDBF56;}
-.texture{background: url(../img/texture.png) no-repeat top right;}
 
 
 
 /*links*/
 
 a {transition: color .5s ease; cursor: pointer;}
-a:hover {color: black;}
+a:hover {color: #2f2f2f;}
 .nav-logo a {text-decoration: none;}
 .nav-menu ul li a {
     color: white;
@@ -167,15 +178,38 @@ a:hover {color: black;}
     border: none;}
 .icon-link a, .icon-link a:visited {
     text-decoration: none;
-    color: white;
-    border: 2px solid white;
+    border: 2px solid;
     padding: 5px 10px;
     transition: all .5s ease;
+    color: inherit;
 }
 .icon-link a:hover {
     text-decoration: none;
+    background-color: none;
+    color: #2f2f2f;
+}
+.box-info {
+    cursor: pointer;
+}
+.box-link, .box-link:visited {
+    text-decoration: none;
+    border: 2px solid;
+    padding: 5px 10px;
+    transition: all .5s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.box-link:hover {
+    text-decoration: none;
     background-color: white;
-    color: black;
+    color: #2f2f2f;
+}
+:target:before {
+  content:"";
+  display:block;
+  height:100px; /* fixed header height*/
+  margin:-100px 0 0; /* negative fixed header height */
 }
 
 
@@ -183,9 +217,9 @@ a:hover {color: black;}
 /*type styles*/
 
 h1, h2, h3, h4 {
-  margin: 1.414em 0 0.5em;
-  font-weight: inherit;
-  line-height: 1.2;}
+    margin: 1.414em 0 0.5em;
+    font-weight: inherit;
+    line-height: 1.2;}
 h1 {
     margin-top: 0;
     font-size: 3.998rem;
@@ -204,32 +238,44 @@ h2 {
     padding: 0} 
 h3 {
     margin: 0;
-    font-size: 1.999rem;
+    font-size: 2.5rem;
     text-transform: uppercase;
     text-align: center;
     font-weight: bold;
     letter-spacing: 1px;
     padding: 0 0;
+    overflow: hidden;
 }
 h3:after {
     content: '';
     text-align: center;
     display: block;
     padding-top: 15px;
-    border-bottom: 2px dotted;
+    border-bottom: 1px solid;
     width: 110px;
     margin: 0 auto;
 }
+h3.old-h3 {font-size: 1.999rem;}
+h3.overshow {overflow: visible;}
 #hero-logo h3.ar-2017 {font-size: 3.5rem; line-height: 1rem; padding-top: 25px; padding-bottom: 25px}
-#hero-logo h3.ar-annual {font-size: 1.5rem; letter-spacing: .3rem; line-height: 1rem; font-weight: normal; padding-bottom: 5px;}
+#hero-logo h3.ar-annual {font-size: 1.5rem; letter-spacing: .3rem; line-height: 1rem; font-weight: normal; padding-bottom: 8px;}
 #hero-logo h3.ar-report {font-size: 1.6rem; letter-spacing: .3rem; line-height: 1.5rem; font-weight: normal;}
 #hero-logo h3.ar-2017:after, #hero-logo h3.ar-annual:after, #hero-logo h3.ar-report:after {padding: 0; border: none;}
 h4 {
     font-size: 1.414rem;
-    font-weight: 800;}
+    font-weight: 800;
+    letter-spacing: .5px;}
 .icon h4 {
-    font-weight: normal;
     padding-top: 5px;
+}
+h4.nir:before {
+    content: '';
+    text-align: center;
+    display: block;
+    padding-top: 15px;
+    border-top: 1px solid;
+    width: 110px;
+    margin: 0 auto;
 }
 h5 {
     text-transform: uppercase;
@@ -238,21 +284,30 @@ h5 {
     text-align: left;
     margin-bottom: .5rem;
     border-bottom: 2px dotted;
+    font-size: 1.2rem;
+    overflow: hidden;
 }
 .icon h5, .process-snapshot h5 {
     text-align: center;}
 h5.stat-head{font-size: 1.2rem;}
+.box h5 {
+    border: none;
+    font-size: 1rem;
+}
 h6 {
     text-align: left;
     font-weight: bold;
     margin: .5rem 0;
     font-size: 1rem;}
+.icon-info-alt h6 {
+    text-align: center;
+}
 p {margin-bottom: 1.3em;}
 #mission .text p {
     font-size: 1.4rem;
     line-height: 1.8rem;
     font-weight: 700;
-    padding: 50px 0;
+    padding: 0 0 50px 0;
 }
 p.intro {
     font-weight: 700;
@@ -269,8 +324,17 @@ p.intro {
     line-height: 3rem;
     margin: 0;
     padding: 0;}
-.fa-caption{font-size: 1rem}
-small, .font_small, {font-size: 0.707rem;}
+.fa-caption{
+    font-size: 1.8rem;
+    padding-bottom: 0;
+    margin-bottom: 10px;
+}
+p.chart-head {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+small, .font_small {font-size: 0.707rem;}
 .text strong, .case-highlight strong {
     font-size: .8rem;
     text-transform: uppercase;
@@ -280,9 +344,37 @@ small, .font_small, {font-size: 0.707rem;}
     font-weight: 700;
     font-size: .9rem;}
 .highlight-text {
-    font-size: 1rem;
-    font-weight: bold;}
-.highlight-number {font-size: 3rem;}
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    font-weight: bold;
+}
+.highlight-number {
+    font-size: 2.8rem;
+}
+.highlight-circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    /*z-index: 0;*/
+    /*float: left;*/
+}
+.highlight-container .highlight-stat {
+    top: 5px;
+    /*padding-left: 15px;*/
+}
+.highlight-stat {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 10px 0 0 35px;
+}
+.highlight-third {
+    padding: 10px 0;
+}
+.highlight-container {
+    margin: 0 0 25px 0;
+}
 blockquote {
     text-align: left;
     font-size: 1.2rem;
@@ -301,6 +393,10 @@ blockquote {
     position: initial;
     margin: 5px 0 25px;
 }
+.bvc blockquote {
+    width: 100%;
+}
+.box-info i {font-size: 1.2rem}
 
 
 /*container*/
@@ -309,7 +405,7 @@ html, body {
     padding: 0;
     margin: 0;
     font-family: 'Montserrat', 'Arimo', sans-serif;
-    color: black;
+    color: #2f2f2f;
     box-sizing: border-box;}
 #container {
     width: 100vw;
@@ -325,7 +421,7 @@ html, body {
     padding: 100px 0;}
 header#desktop {
     width: 100vw;
-    height: 60px;
+    height: 80px;
     position: fixed;
     top: 0;
     left: 0;
@@ -337,15 +433,15 @@ header#desktop {
     float: left;}
 .nav-menu {
     float: right;
-    padding: 14px 20px 0 0;}
+    padding: 24px 20px 0 0;}
 header#mobile {display: none;}
 #hero {
     position: fixed;
     top: 0;
     z-index: -5;
     width: 100vw;
-    height: calc(100vh - 60px);
-    margin: 60px 0 0 0;
+    height: calc(100vh - 80px);
+    margin: 80px 0 0 0;
     background: url(../img/cao-hero.jpg) no-repeat center center; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -358,23 +454,24 @@ header#mobile {display: none;}
     top: calc((100vh - 400px) / 2);
     text-align: center;
     color: white;}
-#about.process-hero {background: url(../img/cao-hero-alt.jpg) no-repeat center center;}
 #assessment.process-hero {background: url(../img/cao-assessment.jpg) no-repeat center center;}
 #advisory.process-hero {background: url(../img/cao-advisory.jpg) no-repeat center center;}
 #compliance.process-hero {background: url(../img/cao-compliance.jpg) no-repeat center center;}
 #dispute-resolution.process-hero {background: url(../img/cao-disputeresolution.jpg) no-repeat center center;}
-#outreach.process-hero {background: url(../img/cao-outreach.jpg) no-repeat center center;}
+#outreach.process-hero {background: url(../img/cao-outreach.jpg) no-repeat top center;}
 .process-hero {
     position: relative;
     width: 100vw;
-    height: calc(100vh - 60px);
-    margin: 60px 0 0 0;}
+    height: calc(100vh - 80px);
+    margin: 80px 0 0 0;}
 .hero-caption {
     display: none;
     background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6));
     width: calc(100% - 50px);
     padding: 15px 25px;}
-.caption-close, .caption-open{padding-left: 25px;}
+.caption-close, .caption-open{
+    text-align: left;
+    padding-left: 25px;}
 .show-caption{cursor: pointer;}
 .process-hero-logo {
     position: absolute;
@@ -394,14 +491,14 @@ header#mobile {display: none;}
     padding: 25px 0 0 0;
     background-color: white;}
 #snapshot-content {width: 100vw;}
-#about-content {padding-top: 60px;}
+#about-content {padding-top: 80px;}
 .about-icons {padding: 0 20vw;}
 #process-introduction {
     width: 80vw;
     margin: 0 auto;
     padding: 25px 0;}
 #mission {
-    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(../img/cao-hero-alt.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)), url(../img/cao-mission.jpg);
     background-repeat:  no-repeat;
     background-position:  center;
     background-attachment:  fixed; 
@@ -414,14 +511,15 @@ header#mobile {display: none;}
     position: relative;
 }
 #mission .text {
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 #mission .text:before, #mission .text:after {
     content: '';
     text-align: center;
     display: block;
     border-bottom: 2px dotted white;
+    /*padding: 50px 0;*/
 }
 .case-highlight {
     width: 80vw;
@@ -432,9 +530,32 @@ header#mobile {display: none;}
 #process .section{padding-bottom: 0;}
 #process-graphic {
     width: 80vw;
-    max-height: 600px;
+    /*max-height: 600px;*/
     margin: 0 auto;
-    overflow: scroll;}
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+#process-graphic::-webkit-scrollbar, #process-graphic::-moz-scrollbar,  {
+    -webkit-appearance: none;
+}
+
+#process-graphic::-webkit-scrollbar:vertical, #process-graphic::-moz-scrollbar:vertical, #process-graphic::-ms-scrollbar:vertical,  {
+    width: 0px;
+}
+
+#process-graphic::-webkit-scrollbar:horizontal, #process-graphic::-moz-scrollbar:horizontal,  {
+    height: 10px;
+}
+
+#process-graphic::-webkit-scrollbar-thumb, #process-graphic::-moz-scrollbar-thumb,  {
+    background-color: rgba(0, 0, 0, .5);
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+}
+
+#process-graphic::-webkit-scrollbar-track, #process-graphic::-moz-scrollbar-track,  {  
+    background-color: #ffffff; 
+}
 #process-icons {
     width: 40vw;
     margin: 0 auto;}
@@ -543,10 +664,17 @@ footer {
     z-index: 100;
     overflow-y: scroll;
     color: white;}
+.icon-info-alt {
+    display: none;
+    width: 50vw;
+    color: white;
+    padding: 25px;
+    }
 .icon-link {margin-top: 20px;}
 .text {
     padding: 0 20vw;
 }
+.box .text {padding: 25px 50px;}
 .case-left {
     width: calc(50% - 25px);
     float: left;
@@ -559,18 +687,74 @@ footer {
     padding: 0 0 0 25px;
     margin: 0;
 }
-.main-icon {
+.sector-img {
+    width: 25%;
+    float: left;
+    padding: 0 6.25%;
+}
+.sector-img:nth-child(3n + 1) {
+    padding: 0 6.25% 0 0;
+}
+.sector-img:nth-child(3n + 3) {
+    padding: 0 0 0 6.25%;
+}
+.box {
+    width: calc(40vw + 100px);
+    margin: 0 calc(20vw - 50px);
+    border: 2px dotted;
+}
+.box-alt {
+    position: relative;
+    margin: 25px 0 0 0;
+    /*padding-bottom: 15px;*/
+}
+.box-image {
+    float: left;
+    width: 36%;
+}
+.box-text {
+    float: left;
+    width: calc(64% - 30px);
+    padding: 15px;
+}
+.box-info {
     position: absolute;
-    right: 20vw;
-    width: 100px;
+    bottom: 10px;
+    right: 15px;
+}
+#box-1-image {
+    background: url(../img/dr-box1.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#box-2-image {
+    background: url(../img/dr-box2.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#box-3-image {
+    background: url(../img/comp-box3.jpg) no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+.box-full-text {
+    width: calc(100% - 30px);
+    padding: 15px;
 }
 
+
 /*images*/
-.nav-logo img {width: 85px;}
+.nav-logo img {width: 125px;}
 #hero-logo img {
     width: 300px;
     padding-left: 30px;}
-.text img {max-width: 80%; padding-left: 10%;}
+.text img {max-width: 100%;}
 .case-highlight img {max-width: 100%;}
 .case-highlight img.data-image {
     max-width: 400px;
@@ -588,6 +772,38 @@ footer img {
     width: 70%;
     padding: 0;}
 .icon img {width: 100px; float: left; padding: 0 15px;}
+.sector-img img {
+    max-width: 100%;
+}
+.section img {max-width: 100%;}
+img.reduced {width: 50%; padding-left: 25%;}
+img.reduced75 {width: 75%; padding-left: 12.5%;}
+img.main-icon {
+    position: absolute;
+    right: 15vw;
+    width: 200px;
+    margin-top: -45px;
+}
+img.main-icon-alt {
+    max-width: 80%;
+    padding-left: 10%;
+    margin-top: -25px;
+}
+img.main-icon-center {
+    width: 35%;
+}
+img.fig-1, img.fig-7 {
+    width: 70%;
+    padding-left: 15%
+}
+img.fig-4 {
+    width: 80%;
+    padding-left: 10%
+}
+img.fig-6 {
+    width: 65%;
+    padding-left: 17.5%;
+}
 
 
 
@@ -608,6 +824,17 @@ footer ul {
     padding: 0;
     margin: 0;}
 footer ul li {padding-bottom: 5px;}
+ul.process-pdfs {
+    margin: 0;
+    padding: 25px 0;
+}
+ul.process-pdfs li {
+    padding: 0 10px 20px 0;
+    float: left;
+}
+ul.process-pdfs li:last-of-type {
+    padding-bottom: 0;
+}
 .icon-info ol {
     padding: 0 0 0 18px;
     margin: 0;}
@@ -621,14 +848,22 @@ footer ul li {padding-bottom: 5px;}
 }
 
 
+
 /*helper styles*/
 
 .caption {
     font-size: .8em;
-    font-style: italic;}
-.text .caption {
-    margin: 0 10%;
+    font-style: italic;
+    text-align: left;
 }
+.not-italic {font-style: normal}
+.bio-helper {
+    width: 20%;
+    margin: 0;
+    float: left;
+    position: relative;
+}
+.leftAlign {text-align: left;}
 .center {text-align: center;}
 .caps {text-transform: uppercase; letter-spacing: 1px;}
 .bold {font-weight: bold;}
@@ -644,9 +879,27 @@ footer ul li {padding-bottom: 5px;}
 .noBorder {border: none;}
 .top-padding {padding-top:50px;}
 .no-margin, .caption.no-margin{margin: 0;}
-.no-top{margin-top: 0;}
+.no-top{margin-top: 0; padding-top: 0;}
+.desktop-no-top {margin-top: 0; padding-top: 0;}
+.no-bottom{margin-bottom: 0; padding-bottom: 0;}
+.top-bottom15{padding: 15px 0;}
 .top15{padding-top: 15px;}
+.top25{padding-top: 25px;}
+.top35{padding-top: 35px;}
 .bottom25{margin-bottom: 25px;}
+.hidden-text, .hidden-text-2 {display: none;}
+.mobile-quote{display: none;}
+.map-overlay {
+   background:transparent; 
+   position:relative; 
+   width:100%;
+   height:100%; /* your iframe height */
+   top:100%;  /* your iframe height */
+   margin-top:100%;  /* your iframe height */
+}
+#case-map .tableauPlaceholder{
+    pointer-events: none;
+}
 
 
 /*snapshot bevels*/
@@ -662,7 +915,7 @@ footer ul li {padding-bottom: 5px;}
     margin-bottom: 15px;
     margin-right: 40px;
 }
-
+.bvc blockquote {float:none;}
 .bvc .tr, .bvc .tl, .bvc .br, .bvc .bl { height: 0px; /*width: 100%;*/ }
 .bvc .tr, .bvc .tl { border-top: 0; }
 .bvc .br, .bvc .bl { border-bottom: 0; }
@@ -763,7 +1016,44 @@ footer ul li {padding-bottom: 5px;}
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
+@media only screen and (min-width: 1280px) {
+    .highlight-container .highlight-stat {
+        padding-left: 15px;
+    }
+    .highlight-third {
+        width: calc(33% - 16px);
+        float: left;
+        padding-right: 25px;
+    }
+    .highlight-third:last-of-type {
+        padding-right: 0;
+    }
+    .box-image {
+        float: left;
+        width: 50%;
+    }
+    .box-text {
+        float: left;
+        width: calc(50% - 30px);
+        padding: 15px;
+    }
+}
+@media only screen and (min-width: 550px) and (max-width: 768px) {
+    .highlight-container .highlight-stat {
+        padding-left: 15px;
+    }
+    .highlight-third {
+        width: calc(33% - 16px);
+        float: left;
+        padding-right: 25px;
+    }
+    .highlight-third:last-of-type {
+        padding-right: 0;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    h5.stat-head{font-size: 1rem;}
+}
 @media only screen and (max-width: 1024px) {
     /* Style adjustments for viewports that meet the condition */
     html{font-size: 14px;}
@@ -775,9 +1065,9 @@ footer ul li {padding-bottom: 5px;}
         font-size: .65rem;
     }
     .section {
-        width: 100%;
+        width: 90%;
         margin: 0 auto;
-        padding: 50px 25px;}
+        padding: 50px 0;}
     .text {
         padding: 0 25vw;
     }
@@ -790,6 +1080,12 @@ footer ul li {padding-bottom: 5px;}
         width: 20%;
         margin-right: 0;
     }
+    .icon-info-alt {
+        display: none;
+        width: 75vw;
+        color: white;
+        padding: 25px;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -797,7 +1093,8 @@ footer ul li {padding-bottom: 5px;}
     html{font-size: 14px;}
     h1 {font-size: 1.8rem;}
     h2 {font-size: 1.6rem;}
-    h3 {font-size: 1.4rem;}
+    h3 {font-size: 1.6rem;}
+    h3.old-h3 {font-size: 1.4rem;}
     h4 {font-size: 1.2rem;}
     h5 {font-size: 1rem;}
     h5.stat-head{font-size: 1.1rem;}
@@ -806,11 +1103,12 @@ footer ul li {padding-bottom: 5px;}
     blockquote {font-size: 1.2rem;}
     #hero, .process-hero {height: 400px;}
     #hero-logo {top: 100px;}
+    #hero-logo img {width: 200px; padding: 50px 0 0; margin: 0;}
     header#desktop {display: none;}
     header#mobile {
         display: block;
         width: 100vw;
-        min-height: 60px;
+        min-height: 80px;
         position: fixed;
         top: 0;
         left: 0;
@@ -822,13 +1120,21 @@ footer ul li {padding-bottom: 5px;}
         font-size: 24px;
         cursor: pointer;
     }
+    .nav-logo {
+        float: none;
+        position: fixed;
+    }
     #mobile .nav-menu {
         float: right;
         text-align: right;
-        padding: 14px 20px 0 0;
+        padding: 24px 20px 0 0;
     }
     .nav-menu-list {
         display: none;
+        /*height: 270px;
+        max-height: 270px;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling:touch; // mobile safari*/
     }
     #mobile .nav-menu ul li {
         float: none;
@@ -838,11 +1144,14 @@ footer ul li {padding-bottom: 5px;}
     .menu-open {
         display: block;
     }
+    .text-open {
+        display: inline;
+    }
     #hero {
         position: initial;
         z-index: 0;
         width: 100vw;
-        margin: 60px 0 0 0;
+        margin: 80px 0 0 0;
         background: url(../img/cao-hero.jpg) no-repeat center center; 
         -webkit-background-size: cover;
         -moz-background-size: cover;
@@ -852,13 +1161,13 @@ footer ul li {padding-bottom: 5px;}
         width: 100vw;
         margin: 0 0 0;
         padding: 15px 0;}
-    .section {
-        width: calc(100vw - 50px);
-        padding: 25px 0;
-        margin: 0 25px;
+    #mission {
+        background-attachment:  scroll; 
     }
     .text {width: 100%; margin: 0; padding: 0;}
     .text img {max-width: 100%;}
+    .text img.reduced {width: 50%; padding-left: 25%;}
+    .text img.reduced75 {width: 75%; padding-left: 12.5%;}
     .text .caption {
         margin: 0;
     }
@@ -871,7 +1180,6 @@ footer ul li {padding-bottom: 5px;}
         padding: 25px 0;
         margin: 0;
     }
-    .case-highlight .add-pad {padding-left: 25px;}
     .case-left {
         width: calc(100% - 50px);
         float: none;
@@ -900,7 +1208,7 @@ footer ul li {padding-bottom: 5px;}
     .process-hero {
         position: relative;
         width: 100vw;
-        margin: 60px 0 0 0;}
+        margin: 80px 0 0 0;}
     .hero-caption {
         background-image: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6));
         width: calc(100% - 50px);
@@ -914,12 +1222,27 @@ footer ul li {padding-bottom: 5px;}
         width: calc(100% - 50px);
         padding: 25px 25px;}
     .bvc {
-        width: 200px; /* width of overall box, variable or fixed */ 
+        width: 250px; /* width of overall box, variable or fixed */ 
         float: left;
         margin: 0;
-        background-color: white;
-        padding: 0 25px 25px 0;
+        padding: 25px 25px 25px 0;
     }
+    .bvc.bvc-alt {
+        width: 100%;
+        float: left;
+        padding: 0;
+        text-align: center;
+    }
+    .bvc.bvc-alt img {width: 150px; margin: 0; padding: 0 0 25px 0;}
+    .bvc.bvc-alt img.fullWidth {width: 100%; margin: 0; padding: 0;}
+    .bio-helper {
+        width: 100%;
+        margin: 0;
+        float: left;
+        position: relative;
+    }
+    img.main-icon-alt {width: 60%; padding-left: 20%;}
+    .text img.main-icon-center {width: 150px;}
     .left {float: none; width: 100%}
     .right {float: none; width: 100%}
     .info-half {
@@ -945,12 +1268,65 @@ footer ul li {padding-bottom: 5px;}
         position: initial;
         margin: 5px 0 25px;
     }
-    .text img {max-width: 100%; padding-left: 0;}
-    .main-icon {
+    .text img {width: 100%; padding-left: 0;}
+    img.main-icon {
         position: initial;
-        width: 100px;
-        float: left;
-        padding: 0 25px 25px 0;
+        display: inline-block;
+        width: 60%;
+        padding: 25px 20% 0;
+    }
+    .box {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: 2px dotted;
+    }
+    .box .text {
+        width: calc(100% - 30px);
+        padding: 15px;
+    }
+    .box .text h5 {margin-top: 0; padding-top: 0;}
+    blockquote {
+        width: 100%;
+        float: none;
+    }
+    .mobile-quote {display: block;}
+    .desktop-quote {display: none;}
+    img.fig-1, img.fig-7 {
+        width: 100%;
+        padding-left: 0;
+    }
+    img.fig-4 {
+        width: 100%;
+        padding-left: 0;
+    }
+    img.fig-6 {
+        width: 100%;
+        padding-left: 0;
+    }
+    .icon-info-alt {
+        display: none;
+        width: 80vw;
+        color: white;
+        padding: 25px;
+    }
+    .desktop-no-top {padding-top: 15px;}
+    .mobile-no-top{margin-top: 0; padding-top: 0;}
+    footer{font-size: 1rem;}
+}
+
+@media only screen and (max-width: 600px) {
+    .bvc {
+        width: 100%; /* width of overall box, variable or fixed */ 
+        float: none;
+        margin: 0;
+        padding: 25px 0;
+        text-align: center;
+    }
+    .bvc img {
+        max-width: 150px; 
+        padding: 0;
+        margin: 0;
     }
 }
 
