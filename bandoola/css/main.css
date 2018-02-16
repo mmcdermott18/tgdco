@@ -98,15 +98,15 @@ textarea {
    ========================================================================== */
 html {
     font-size: 16px;
-    font-family: "acta-display", serif;
+    font-family: 'Spectral', serif;
 }
-#blue {
+.blue {
     background-color: #2e5b66;
 }
-#white {
+.white {
     background-color: white;
 }
-#yellow {
+.yellow {
     background-color: #e7b00c;
 }
 #texture1 {
@@ -168,35 +168,45 @@ html {
 }
 .circle img {
     width: 80%;
-    margin: 15% 10%;
+    margin: 0 10%;
+    transition: all ease 1s;
+}
+.circle img:hover {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
 }
 .text {
-    padding: 30px 75px;
+    padding: 0 75px;
     color: #2e5b66;
 }
-.button {
-    position: relative;
-    top: 45px;
-    left: -45px;
-    width: 80px;
+#button img {
+    width: 50%;
+    margin: 0 25%;
+    transition: all ease 500ms;
+}
+#button img:hover {
+    transform: rotate(20deg);
+    -webkit-transform: rotate(20deg);
 }
 h1 {
     font-size: 4rem;
     font-weight: bold;
     letter-spacing: 2.5px;
+    line-height: 4rem;
     padding: 0;
     margin: 0;
 }
 h5 {
+    font-family: 'Work Sans', sans-serif;
     font-size: 1.9rem;
     letter-spacing: 2px;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0;
     margin: 0;
 }
 p {
     font-style: italic;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 1.2rem;
     letter-spacing: 1px;
     padding: 0;
@@ -317,7 +327,6 @@ p {
     .circle { width: 33.33%; float: left;}
     .circle img { width: 80%; margin: 15% 10%;}
     .text { padding: 30px 0 50px 75px; color: #2e5b66;}
-    .button { position: relative; top: 25px; left: -45px; width: 80px;}
     h1 { font-size: 2.6rem; letter-spacing: 1px; padding: 0; margin: 0;}
     h5 { font-size: 1.4rem; letter-spacing: 1px; padding: 0; margin: 0;}
     p { font-size: 1rem; letter-spacing: 1px; padding: 0; margin: 0;}
