@@ -169,7 +169,7 @@ html {
 .circle img {
     width: 80%;
     margin: 0 10%;
-    transition: all ease 1s;
+    transition: transform ease 1s;
 }
 .circle img:hover {
     transform: rotate(360deg);
@@ -182,7 +182,7 @@ html {
 #button img {
     width: 50%;
     margin: 0 25%;
-    transition: all ease 500ms;
+    transition: transform ease 500ms;
 }
 #button img:hover {
     transform: rotate(20deg);
