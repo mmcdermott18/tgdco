@@ -29,8 +29,5 @@ function text() {
   var tcH = $('#textHeight').outerHeight();
   var tbH = $('#textBoxHeight').height();
   var tbPT = ((tcH - tbH)/2)
-  console.log('Container height - ' + tcH);
-  console.log('Text box Height - ' + tbH);
-  console.log('Padding top - ' + tbPT);
   $('#textBoxHeight').css('padding-top', tbPT);
 }
