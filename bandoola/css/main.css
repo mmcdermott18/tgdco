@@ -433,6 +433,13 @@ button:focus {
     .circle img { width: 80%; margin: 15% 10%;}
     #button img { width: 55%; margin: 0 22.5%;}
 }
+
+@media only screen and (max-width: 330px) {
+    html {font-size: 16px}
+    .small{font-size: .7rem; line-height: 1.2rem;}
+    .text{padding: 30px 25px;}
+}
+
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),
