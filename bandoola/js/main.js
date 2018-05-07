@@ -15,6 +15,17 @@ $(document).ready(function() {
 
     });
 });
+$(window).on("load", function() {
+  button();
+  circles();
+  text();
+  logo();
+  displaySite();
+});
+
+function displaySite() {
+  $('body').removeClass('invisible');
+}
 function button() {
   var bcH = $('#button').outerHeight();
   var biH = $('#buttonImage').outerHeight();

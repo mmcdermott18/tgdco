@@ -238,6 +238,10 @@ p.small a {
 p.small a:hover {
     text-decoration: underline;
 }
+.invisible {
+    visibility: hidden;
+}
+
 /*  mailchimp styles  */
 #mc_embed_signup {
     clear:left;

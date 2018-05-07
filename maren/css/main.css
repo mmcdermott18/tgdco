@@ -1,4 +1,4 @@
-/*! HTML5 Boilerplate v5.3.0 | MIT License | https://html5boilerplate.com/ */
+/*! HTML5 Boilerplate v6.1.0 | MIT License | https://html5boilerplate.com/ */
 
 /*
  * What follows is the result of much research on cross-browser styling.
@@ -20,7 +20,9 @@ html {
  * Remove text-shadow in selection highlight:
  * https://twitter.com/miketaylr/status/12228805301
  *
- * These selection rule sets have to be separate.
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
  * Customize the background color to match your design.
  */
 
@@ -94,59 +96,169 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-body {
+* {font-family: 'Pressura', fantasy; font-weight: bold;}
+#container {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
 }
-
-#intro {
-    padding: 100px 50px 500px 50px;
+body {
+  font-size: 16px;
+  background-color: #e0e0d8;
+}
+#tophalf {
+  width: 100vw;
+  height: 66vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  z-index: -99;
+}
+.logo-box {
+  width: calc(100vw - 200px);
+  height: 75vh;
+  margin: 25px 100px;
+  background-color: #005366;
+  background: url(../img/background.png); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+#tagline {
+  width: 35%;
+  margin: 0 auto;
+  position: relative;
+  top: -75px;
+}
+#logo {
+  width: 20%;
+  margin: 0 auto;
+  padding: 25vh 0;
+}
+.cls-1,.cls-2{
+  font-size: 24px;
+  fill: #af8f52;
+  font-weight: bold;
+}
+#signup-form {
+  width: calc(100vw - 200px);
+  margin: 0 100px;
+}
+#mc_embed_signup {
+  width: 70%;
+  margin: 0 auto;
+}
+#footer {
+  width: calc(100vw - 200px);
+  margin: 50px 100px 0;
+  padding: 45px 0;
+  background-color: white;
+}
+#mark {
+  width: 50px;
+  position: relative;
+  top: 75px;
+  left: 150px;
+}
+.halfcolumn{
+  width: 50%;
+  float: left;
 }
 h1 {
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 8vw;
-    text-transform: uppercase;
-    text-align: center;
-    color: black;
-    letter-spacing: 3px;
+  padding-top: 15px;
+  color: #af8f52;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 3px;
+}
+h2 {
+  font-family: serif;
+  font-style: italic;
+  text-align: center;
+  color: #005366;
+}
+h3 {
+  color: #005366;
+  text-align: left;
+  text-transform: ;
+  font-size: 1rem;
+  letter-spacing: .5px;
+  padding: 0 25px;
+}
+a {
+  color: #005366;
+  text-decoration: none;
+  border-bottom: 2px solid #005366;
+  transition: all ease 500ms;
+}
+a:hover {
+  color: #af8f52;
+  text-decoration: none;
+  border-bottom: 2px solid #af8f52;
+}
+.mc-field-group label, .mc-field-group input, .indicates-required {
+  width: 100%;
+  font-style: italic;
+}
+.mc-field-group input {
+  background-color: rgba(0,0,0,0);
+  border: none;
+  color: #005366;
+  border-bottom: 2px solid #005366;
+  transition: all ease 500ms;
+  padding: 5px 3px;
 }
 
+.mc-field-group input::placeholder {
+  font-style: italic;
+  color: #af8f52;
+}
+.mc-field-group input:focus {
+  border-bottom: 2px solid #af8f52;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+/*.mc-field-group input:invalid {
+  border-bottom: 2px solid #dc3958;
+}*/
+.mc-field-group {
+  width: 45%;
+  float: left;
+}
+.mc-field-group:nth-child(even) {
+  margin-right: 10%;
+}
+.asterisk {color: #af8f52;}
+.clear {text-align: center;}
+.button {
+  width: 111px;
+  border: none;
+  background-color: #005366;
+  color: white;
+  margin-top: 25px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 10px 25px;
 
-#containter{
-    width: 100vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
 }
-#left{
-    width: 50vw;
-    height: 100vh;
-    padding: 0;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
+.topmargin25 {
+  margin-top: 25px;
 }
-#right{
-    width: 50vw;
-    height: 195vh;
-    padding: 0;
-    margin: 0;
-    position: fixed;
-    top: -95vh;
-    right: 0;
-    overflow: scroll;
-}
-.box {
-    width: 50vw;
-    height: 22.5vh;
-    margin: 0;
-    padding: 0;
-}
-.light {background-color: #eeeeee}
-.medium {background-color: #cccccc}
-.dark {background-color: #aaaaaa}
-h3{margin: 0; padding: 20px; text-transform: uppercase; font-size: 5vh;}
+.leftalign {text-align: left;}
+.rightalign {text-align: right;}
+
+
+
+
+
+
 
 
 
@@ -166,7 +278,11 @@ h3{margin: 0; padding: 20px; text-transform: uppercase; font-size: 5vh;}
 
 /*
  * Hide only visually, but have it available for screen readers:
- * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
  */
 
 .visuallyhidden {
@@ -178,6 +294,7 @@ h3{margin: 0; padding: 20px; text-transform: uppercase; font-size: 5vh;}
     padding: 0;
     position: absolute;
     width: 1px;
+    white-space: nowrap; /* 1 */
 }
 
 /*
@@ -194,6 +311,7 @@ h3{margin: 0; padding: 20px; text-transform: uppercase; font-size: 5vh;}
     overflow: visible;
     position: static;
     width: auto;
+    white-space: inherit;
 }
 
 /*
@@ -246,18 +364,16 @@ h3{margin: 0; padding: 20px; text-transform: uppercase; font-size: 5vh;}
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
-   http://www.phpied.com/delay-loading-your-print-css/
+   https://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
 @media print {
     *,
     *:before,
-    *:after,
-    *:first-letter,
-    *:first-line {
+    *:after {
         background: transparent !important;
-        color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
         box-shadow: none !important;
         text-shadow: none !important;
     }
@@ -285,6 +401,9 @@ h3{margin: 0; padding: 20px; text-transform: uppercase; font-size: 5vh;}
         content: "";
     }
 
+    pre {
+        white-space: pre-wrap !important;
+    }
     pre,
     blockquote {
         border: 1px solid #999;
@@ -303,10 +422,6 @@ h3{margin: 0; padding: 20px; text-transform: uppercase; font-size: 5vh;}
     tr,
     img {
         page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
     }
 
     p,
