@@ -246,7 +246,11 @@ a:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px 25px;
-
+  cursor: pointer;
+  transition: all ease 500ms;
+}
+.button:hover {
+  background-color: #af8f52;
 }
 .topmargin25 {
   margin-top: 25px;
