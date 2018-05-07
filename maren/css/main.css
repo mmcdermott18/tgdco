@@ -189,12 +189,14 @@ h3 {
   font-size: 1rem;
   letter-spacing: .5px;
   padding: 0 25px;
+  font-weight: normal;
 }
 a {
   color: #005366;
   text-decoration: none;
   border-bottom: 2px solid #005366;
   transition: all ease 500ms;
+  font-weight: normal;
 }
 a:hover {
   color: #af8f52;
