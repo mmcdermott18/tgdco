@@ -218,6 +218,7 @@ a:hover {
 
 .mc-field-group input::placeholder {
   font-style: italic;
+  font-weight: normal;
   color: #af8f52;
 }
 .mc-field-group input:focus {
