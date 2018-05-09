@@ -156,11 +156,10 @@ body {
   float: left;}
 h1 {
   padding-top: 15px;
-  /*color: #af8f52;*/
-  color: red;
+  color: #af8f52;
   text-align: center;
   text-transform: uppercase;
-  font-size: .8rem;
+  font-size: 1rem;
   letter-spacing: 3.5px;
   font-weight: bold;}
 h2 {
@@ -319,6 +318,10 @@ a:hover {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+@media only screen and (max-width: 321px) {
+  h1 {font-size: .7rem;}
+}
+
 @media only screen and (min-width: 35em) {
     /* Style adjustments for viewports that meet the condition */
   body {
