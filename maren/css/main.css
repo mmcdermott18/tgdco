@@ -194,6 +194,7 @@ a:hover {
   border: none;
   color: #005366;
   border-bottom: 2px solid #005366;
+  border-radius: 0;
   transition: all ease 500ms;
   padding: 5px 3px;}
 .mc-field-group input::placeholder {
@@ -214,6 +215,7 @@ a:hover {
 .button {
   width: 111px;
   border: 2px solid #005366;
+  border-radius: 0;
   background-color: #e0e0d8;
   color: #005366;
   margin-top: 25px;
