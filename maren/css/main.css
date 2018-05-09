@@ -346,6 +346,7 @@ a:hover {
     width: calc(100vw - 200px);
     margin: 50px 100px 0;
     padding: 45px 0;}
+  .mobile-only {display: none;}
   #mark {
     width: 50px;
     position: relative;
