@@ -159,8 +159,8 @@ h1 {
   color: #af8f52;
   text-align: center;
   text-transform: uppercase;
-  font-size: 1rem;
-  letter-spacing: 3px;
+  font-size: .9rem;
+  letter-spacing: 3.5px;
   font-weight: bold;}
 h2 {
   font-family: 'Playfair Display', serif;
@@ -391,7 +391,7 @@ a:hover {
   .leftalign {text-align: left;}
   .rightalign {text-align: right;}
   .topmargin25 {margin-top: 25px;}
-  h1 {font-size: 1.4rem;}
+  h1 {font-size: 1.4rem; letter-spacing: 6px;}
   h2 {font-size: 1.6rem;}
   h3 {font-size: .9rem;}
 }
