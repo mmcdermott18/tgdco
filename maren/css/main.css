@@ -156,10 +156,11 @@ body {
   float: left;}
 h1 {
   padding-top: 15px;
-  color: #af8f52;
+  /*color: #af8f52;*/
+  color: red;
   text-align: center;
   text-transform: uppercase;
-  font-size: .9rem;
+  font-size: .8rem;
   letter-spacing: 3.5px;
   font-weight: bold;}
 h2 {
@@ -195,6 +196,7 @@ a:hover {
   color: #005366;
   border-bottom: 2px solid #005366;
   border-radius: 0;
+  -webkit-border-radius: 0;
   transition: all ease 500ms;
   padding: 5px 3px;}
 .mc-field-group input::placeholder {
