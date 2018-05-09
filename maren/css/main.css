@@ -137,7 +137,7 @@ body {
   font-size: 24px;
   fill: #af8f52;
   font-weight: bold;}
-#signup-form {
+#signup-form, .page-column {
   width: calc(100vw - 50px);
   margin: 0 25px;}
 #footer {
@@ -320,6 +320,7 @@ a:hover {
    ========================================================================== */
 @media only screen and (max-width: 321px) {
   h1 {font-size: .7rem;}
+  .desktop-only {display: none;}
 }
 
 @media only screen and (min-width: 35em) {
@@ -343,7 +344,7 @@ a:hover {
     padding-top: 160px;}
   .cls-1,.cls-2{
     font-size: 24px;}
-  #signup-form {
+  #signup-form, .page-column {
     width: calc(100vw - 200px);
     margin: 0 100px;}
   #mc_embed_signup {
@@ -354,6 +355,7 @@ a:hover {
     margin: 50px 100px 0;
     padding: 45px 0;}
   .mobile-only {display: none;}
+  /*.desktop-only {display: block;}*/
   #mark {
     width: 50px;
     position: relative;
