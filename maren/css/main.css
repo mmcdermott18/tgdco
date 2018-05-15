@@ -116,7 +116,7 @@ body {
   z-index: -99;}
 .logo-box {
   width: calc(100vw - 50px);
-  height: 325px;
+  height: 400px;
   margin: 25px 25px;
   background-color: #005366;
   background: url(../img/background.png); 
@@ -128,11 +128,11 @@ body {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  top: -14vw;}
+  top: -19vw;}
 #logo {
   width: 200px;
   margin: 0 auto;
-  padding: 95px 0;}
+  padding: 115px 0;}
 .cls-1,.cls-2{
   font-size: 24px;
   fill: #af8f52;
