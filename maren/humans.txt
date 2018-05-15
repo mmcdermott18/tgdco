@@ -3,11 +3,8 @@
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    General Design Co. - Design and Development - www.generaldesign.co
 
-# THANKS
-
-    <name>
 
 # TECHNOLOGY COLOPHON
 
