@@ -339,8 +339,7 @@ a:hover {
    Modify as content requires.
    ========================================================================== */
 @media only screen and (max-width: 321px) {
-  h1 {font-size: .7rem;}
-  .desktop-only {display: none;}
+  
 }
 
 @media only screen and (min-width: 35em) {
