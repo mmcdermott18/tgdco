@@ -1,6 +1,6 @@
 $(document).ready(function() {
     animate();
-    newPhrase();
+    // newPhrase();
     // run function on resize of the window
     $(window).resize(function(){
      
@@ -21,12 +21,7 @@ function animate() {
 function newPhrase() {
     var phrases = [
     'Be in the know.',
-    'Keep your ear to the ground.',
-    'Laurel or Yanny?',
-    'Keep it real.',
-    'Your future self will thank you.',
-    'We only send good emails.',
-    'Living by the water isn\'t appealing?']
+    'Keep your ear to the ground.']
     var number = Math.floor(Math.random() * (phrases.length));
     var duration = Math.floor(Math.random() * 10000);
     console.log(phrases[number]);
