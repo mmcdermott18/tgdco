@@ -161,10 +161,10 @@ polygon {
 .halfcolumn{
   width: 100%;
   float: left;}
-#mrp{height: 20px; padding: 10px;}
-#frp{height: 40px; padding: 10px;}
-#ada{height: 20px; padding: 10px;}
-#eho{height: 20px; padding: 10px;}
+#mrp{height: 20px; padding: 10px; max-width: 80%;}
+#frp{height: 40px; padding: 10px; max-width: 80%;}
+#ada{height: 20px; padding: 10px; max-width: 80%;}
+#eho{height: 20px; padding: 10px; max-width: 80%;}
 #etc-logos {
   margin: 25px 25px 0;
   padding: 25px 0 0;
