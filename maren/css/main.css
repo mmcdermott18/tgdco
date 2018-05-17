@@ -133,6 +133,10 @@ body {
   width: 200px;
   margin: 0 auto;
   padding: 115px 0;}
+polygon {  
+  transition: fill 1s ease}
+#logo polygon {fill: rgba(255,255,255,0);}
+#logo:hover polygon {fill: white;}
 .cls-1,.cls-2{
   font-size: 24px;
   fill: #af8f52;
@@ -140,6 +144,9 @@ body {
 #signup-form, .page-column {
   width: calc(100vw - 50px);
   margin: 0 25px;}
+#signup-form {
+  margin-top: -50px;
+}
 #footer {
   width: calc(100vw - 50px);
   margin: 50px 25px 0;
@@ -154,20 +161,32 @@ body {
 .halfcolumn{
   width: 100%;
   float: left;}
+#mrp{height: 20px; padding: 10px;}
+#frp{height: 40px; padding: 10px;}
+#ada{height: 20px; padding: 10px;}
+#eho{height: 20px; padding: 10px;}
+#etc-logos {
+  margin: 25px 25px 0;
+  padding: 25px 0 0;
+  border-top: 2px solid #005366;
+  text-align: center;}
 h1 {
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
   padding-top: 15px;
   color: #af8f52;
   text-align: center;
-  text-transform: uppercase;
+  /*text-transform: uppercase;*/
   font-size: 1rem;
-  letter-spacing: 3.5px;
-  font-weight: bold;}
+  /*letter-spacing: 3.5px;*/
+  /*font-weight: bold;*/}
 h2 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
   font-size: 1rem;
   text-align: center;
-  color: #005366;}
+  color: #005366;
+  margin-bottom: 0;}
 h3 {
   color: #005366;
   text-align: left;
@@ -224,6 +243,7 @@ a:hover {
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 10px 25px;
+  margin-top: 50px;
   cursor: pointer;
   transition: all ease 500ms;}
 .button:hover {background-color: #005366; color: white;}
@@ -347,6 +367,9 @@ a:hover {
   #signup-form, .page-column {
     width: calc(100vw - 200px);
     margin: 0 100px;}
+    #signup-form {
+  margin-top: -50px;
+}
   #mc_embed_signup {
     width: 100%;
     margin: 0 auto;}
@@ -400,7 +423,7 @@ a:hover {
   .leftalign {text-align: left;}
   .rightalign {text-align: right;}
   .topmargin25 {margin-top: 25px;}
-  h1 {font-size: 1.4rem; letter-spacing: 6px;}
+  h1 {font-size: 1.4rem; /*letter-spacing: 6px;*/}
   h2 {font-size: 1.6rem;}
   h3 {font-size: .9rem;}
 }
