@@ -120,10 +120,15 @@ body {
   margin: 25px 25px;
   background-color: #005366;
   background: url(../img/background.png); 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;}
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
+.logo-box h3 {
+  color: #af8f52;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 1rem;}
 #tagline {
   width: 100%;
   margin: 0 auto;
@@ -147,6 +152,11 @@ polygon {
 #signup-form {
   margin-top: -50px;
 }
+#signup-form h3 {
+  padding-top: 25px;
+  text-align: center;
+  font-size: 1.2rem;
+}
 #footer {
   width: calc(100vw - 50px);
   margin: 50px 25px 0;
@@ -161,10 +171,10 @@ polygon {
 .halfcolumn{
   width: 100%;
   float: left;}
-#mrp{height: 20px; padding: 10px; max-width: 80%;}
-#frp{height: 40px; padding: 10px; max-width: 80%;}
-#ada{height: 20px; padding: 10px; max-width: 80%;}
-#eho{height: 20px; padding: 10px; max-width: 80%;}
+#mrp{height: 25px; padding: 10px; max-width: 80%;}
+#frp{height: 45px; padding: 10px; max-width: 80%;}
+#ada{height: 25px; padding: 10px; max-width: 80%;}
+#eho{height: 25px; padding: 10px; max-width: 80%;}
 #etc-logos {
   margin: 25px 25px 0;
   padding: 25px 0 0;
@@ -173,12 +183,13 @@ polygon {
 h1 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
-  padding-top: 15px;
+  /*padding-top: 15px;*/
   color: #af8f52;
+  /*color: white;*/
   text-align: center;
   /*text-transform: uppercase;*/
   font-size: 1.4rem;
-  /*letter-spacing: 3.5px;*/
+  letter-spacing: 1px;
   /*font-weight: bold;*/}
 h2 {
   font-family: 'Playfair Display', serif;
@@ -205,6 +216,7 @@ a:hover {
   color: #af8f52;
   text-decoration: none;
   border-bottom: 2px solid #af8f52;}
+#footer h3 a, #footer h3 a:hover {border: none;}
 .mc-field-group label, .mc-field-group input, .indicates-required {
   width: 100%;
   font-style: italic;}
@@ -233,7 +245,6 @@ a:hover {
 .mc-field-group:nth-child(even) {margin-right: 10%;}
 .asterisk {color: #af8f52;}
 .button {
-  width: 111px;
   border: 2px solid #005366;
   border-radius: 0;
   background-color: #e0e0d8;
@@ -352,13 +363,13 @@ a:hover {
     height: 500px;}
   .logo-box {
     width: calc(100vw - 200px);
-    height: 500px;
-    margin: 25px 100px;}
+    height: 600px;
+    margin: 100px 100px 25px;}
   #tagline {
     width: 500px;
     top: -80px;}
   #logo {
-    width: 225px;
+    width: 300px;
     margin: 0 auto;
     padding-top: 160px;}
   .cls-1,.cls-2{
@@ -422,7 +433,7 @@ a:hover {
   .leftalign {text-align: left;}
   .rightalign {text-align: right;}
   .topmargin25 {margin-top: 25px;}
-  h1 {font-size: 1.4rem; /*letter-spacing: 6px;*/}
+  h1 {font-size: 1.2rem; /*letter-spacing: 6px;*/}
   h2 {font-size: 1.6rem;}
   h3 {font-size: .9rem;}
 }
