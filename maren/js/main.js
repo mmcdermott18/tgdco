@@ -1,5 +1,6 @@
 $(document).ready(function() {
     animate();
+    waves();
     // newPhrase();
     // run function on resize of the window
     $(window).resize(function(){
@@ -31,4 +32,17 @@ function newPhrase() {
         $('#phraseInput').text(phrases[number]);
         newPhrase();
     }, duration)
+}
+
+function waves() {
+    $(".waterwave-canvas").waterwave({
+      // parent container
+      parent : '#tophalf',
+      // color of waves
+      color : '#e0e0d8',
+      // or 'down'
+      direction: 'up',
+      // background color
+      background: ''
+    });
 }
