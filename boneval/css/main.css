@@ -260,7 +260,8 @@ h3 {
         left: calc((100vw - 35vw) / 2);
         top: calc((100vh - 45vh) / 2);
         z-index: 2;
-        transition: all .5s ease;}
+        transition: all .5s ease;
+    }
     #rendering {
         width: 100vw;
         height: 100vh;
@@ -271,7 +272,7 @@ h3 {
         top: 0;
         left: 25vw;
         z-index: -1;
-        transition: all .5s ease;}
+        transition: all .5s ease;
     }
     .render-animate {
         left: 0 !important;

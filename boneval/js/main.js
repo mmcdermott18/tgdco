@@ -26,7 +26,6 @@ function slide() {
     var show = "See Full Rendering";
     var hide = "Back to Site";
     var txt = $("#button-text").text();
-    console.log('txt is ' + txt);
     if (txt == show) {
       $("#button-text").text(hide);
     } else {
