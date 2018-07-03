@@ -37,7 +37,7 @@
                 else {
                     waterwave.attr({
                         width: $(parent).width() + "px",
-                        height: $(parent).height() + "px"
+                        height: "200px"
                     });
                 }
             }
@@ -88,7 +88,9 @@
                 ctx.beginPath();
                 ctx.moveTo(0, cy);
                 for (var i = 0, endi = 1 / res; i <= endi; i++) {
-                    var _y = cy + Math.sin((i + inc) * TAU * res * density) * cy * Math.sin(i * TAU * res * density * outerScale);
+                    // original _y variable expression below
+                    // var _y = cy + Math.sin((i + inc) * TAU * res * density) * cy * Math.sin(i * TAU * res * density * outerScale);
+                    var _y = cy + Math.sin((i + inc) * 5 * res) * 50;
                     var _x = i * segmentWidth;
                     ctx.lineTo(_x, _y);
                 }
