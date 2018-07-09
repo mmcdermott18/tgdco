@@ -16,7 +16,6 @@ function logo() {
   var wH = $('#rendering').outerHeight();
   var lO = ((wH - lH)/2);
   $('#desktop-logo').css('top', lO);
-  console.log($('#imageOne').css('background-image'));
 }
 
 function slide() {
