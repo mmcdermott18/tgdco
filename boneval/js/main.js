@@ -13,8 +13,11 @@ $(document).ready(function() {
 
 function logo() {
   var lH = $('#desktop-logo').outerHeight();
-  var wH = $('#rendering').outerHeight();
+  var wH = window.innerHeight;
   var lO = ((wH - lH)/2);
+  console.log("lH = " + lH);
+  console.log("wH = " + wH);
+  console.log("l0 = " + lO);
   $('#desktop-logo').css('top', lO);
 }
 
@@ -33,3 +36,7 @@ function slide() {
     }
   }); 
 }
+
+lH = 257.094
+wH = 521.094
+l0 = 132.00000000000003

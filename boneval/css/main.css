@@ -109,16 +109,78 @@ textarea {
     background-size: cover;
     overflow: hidden;
 }
-#content, #footer {padding: 25px;}
+#content, footer {padding: 25px;}
 #content {}
 #mobile-logo {
     width: 80%;
     margin: 50px auto;
 }
-#signup-form {}
-#footer {
-    background-color: #E7DED4;
+#signup-form {width: 100%;}
+#boneval-form{}
+#boneval-form .fields .form-control {
+    font-family: mr-eaves-modern, sans-serif;
+    font-size: .8rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+    margin: 15px 0 18px;
+    padding: 5px 0;
+    border: none;
+    background: none;
+    border-bottom: 1px solid black;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    color: black;
+    -webkit-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    transition: all 0.2s linear;
 }
+.fields input::placeholder {
+    font-family: mr-eaves-modern, sans-serif;
+    font-size: .8rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-weight: 700;
+    color: #cccccc;}
+.fields input:focus {
+  border-bottom: 1px solid black;
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;}
+
+input:invalid:not(:focus):not(:placeholder-shown) {
+    color: #FF4136 !important;
+    border-color: red !important;
+}
+button {
+  border: 1px solid black;
+  border-radius: 0;
+  background: none;
+  color: black;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 8px;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: all ease 500ms;}
+button:hover {background-color: black; color: white;}
+footer {background-color: #E7DED4;}
+#supporting-logos{
+    width: 280px; 
+    margin: 0 auto;
+    padding: 25px 25px;
+    border: 1px solid black;
+}
+footer img {
+    float: left;
+    padding: 0 25px 0 0;
+}
+footer img:last-of-type {padding: 0;}
+[src*="URB"] {width: 100px;}
+[src*="CMT"] {width: 100px;}
+[src*="EHO"] {width: 30px;}
 h1, h2, h3 {text-align: center;}
 h1, h2 {
     font-family: minion-3-display, serif;
@@ -256,7 +318,7 @@ h3 {
     #desktop-logo {
         display: block;
         width: 35vw;
-        position: fixed;
+        position: absolute;
         left: calc((100vw - 35vw) / 2);
         top: calc((100vh - 45vh) / 2);
         z-index: 2;
@@ -303,19 +365,23 @@ h3 {
     .fade {
         opacity: 0;
     }
-    #content, #footer {padding: 25px;}
+    #content, footer {padding: 25px;}
     #content {
         height: calc(100vh - 50px);
         position: relative;}
     #mobile-logo {display: none;}
     #signup-form {
         position: absolute;
-        bottom: 0;
+        bottom: 25px;
+        width: calc(100% - 50px);
     }
-    #footer {
+    footer {
         background-color: #E7DED4;
     }
-    h1, h2, h3 {text-align: left;}
+    #supporting-logos {
+        width: 280px;
+    }
+    h1, h3 {text-align: left;}
     h1, h2 {
         font-family: minion-3-display, serif;
         font-style: normal;
@@ -327,6 +393,7 @@ h3 {
         letter-spacing: .3rem;
     }
     h2 {
+        text-align: center;
         font-size: .9rem;
         letter-spacing: .2rem;
     }
@@ -343,10 +410,6 @@ h3 {
         margin: 0;
         padding: 13px 15px;
         border: 2px solid #333;}
-    #logo-svg {
-        -webkit-filter: drop-shadow( 0px 0px 4px #fff ); 
-            filter: drop-shadow( 0px 0px 4px #fff );
-    }
     .cls-1 {
         fill: #333;
     }
