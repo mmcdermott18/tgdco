@@ -119,7 +119,7 @@ textarea {
 #boneval-form{}
 #boneval-form .fields .form-control {
     font-family: mr-eaves-modern, sans-serif;
-    font-size: .8rem;
+    font-size: 1rem;
     font-weight: 700;
     display: block;
     width: 100%;
@@ -137,7 +137,7 @@ textarea {
 }
 .fields input::placeholder {
     font-family: mr-eaves-modern, sans-serif;
-    font-size: .8rem;
+    font-size: .9rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-weight: 700;
@@ -146,11 +146,15 @@ textarea {
   border-bottom: 1px solid black;
   outline: none;
   -webkit-box-shadow: none;
-  box-shadow: none;}
-
+  box-shadow: none;
+}
+.mismatch {background-color: #ffecea !important; border-color: #FF4136;}
 input:invalid:not(:focus):not(:placeholder-shown) {
     color: #FF4136 !important;
     border-color: red !important;
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 button {
   border: 1px solid black;
@@ -164,14 +168,19 @@ button {
   margin-top: 8px;
   padding: 10px 50px;
   cursor: pointer;
-  transition: all ease 500ms;}
+  transition: all ease 500ms;
+}
 button:hover {background-color: black; color: white;}
+button:focus {
+  outline: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 footer {background-color: #E7DED4;}
-#supporting-logos{
-    width: 280px; 
+#supporting-logos {
+    width: 280px;
+    padding-top: 25px;
     margin: 0 auto;
-    padding: 25px 25px;
-    border: 1px solid black;
 }
 footer img {
     float: left;
@@ -365,7 +374,7 @@ h3 {
     .fade {
         opacity: 0;
     }
-    #content, footer {padding: 25px;}
+    #content, footer {padding: 25px 50px;}
     #content {
         height: calc(100vh - 50px);
         position: relative;}
@@ -373,8 +382,10 @@ h3 {
     #signup-form {
         position: absolute;
         bottom: 25px;
-        width: calc(100% - 50px);
+        width: calc(100% - 100px);
     }
+    #boneval-form .fields .form-control {font-size: .9rem;}
+    .fields input::placeholder {font-size: .7rem;}
     footer {
         background-color: #E7DED4;
     }
@@ -414,6 +425,15 @@ h3 {
         fill: #333;
     }
     .desktop-only {display: block;}
+}
+
+@media only screen and (min-width: 1024px) {
+    #content, footer {padding: 25px 100px;}
+    #signup-form {
+        position: absolute;
+        bottom: 25px;
+        width: calc(100% - 200px);
+    }
 }
 
 @media print,

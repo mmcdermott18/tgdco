@@ -1,6 +1,7 @@
 $(document).ready(function() {
   logo();
   slide();
+  confirmEmail();
     // run function on resize of the window
     $(window).resize(function(){
       logo();
@@ -15,9 +16,6 @@ function logo() {
   var lH = $('#desktop-logo').outerHeight();
   var wH = window.innerHeight;
   var lO = ((wH - lH)/2);
-  console.log("lH = " + lH);
-  console.log("wH = " + wH);
-  console.log("l0 = " + lO);
   $('#desktop-logo').css('top', lO);
 }
 
@@ -37,6 +35,36 @@ function slide() {
   }); 
 }
 
-lH = 257.094
-wH = 521.094
-l0 = 132.00000000000003
+function confirmEmail() {
+  var email 
+  var confemail
+  $("#confirmEmail").focusin(function() {
+    $('#confirmEmail').removeClass('mismatch');
+  });
+  $("#primaryEmail").focusin(function() {
+    $('#primaryEmail').removeClass('mismatch');
+  });
+  $("#confirmEmail").focusout(function() {
+    var email = document.getElementById("primaryEmail").value
+    var confemail = document.getElementById("confirmEmail").value
+    if(email != confemail) {
+      alert('Email addresses do not match.');
+      $('#primaryEmail').addClass('mismatch');
+      $('#confirmEmail').addClass('mismatch');
+    }
+    if(email == confemail) {
+      $('#primaryEmail').removeClass('mismatch');
+      $('#confirmEmail').removeClass('mismatch');
+    }
+  });
+  $("#submit-form").click(function() {
+    var email = document.getElementById("primaryEmail").value
+    var confemail = document.getElementById("confirmEmail").value
+    if(email != confemail) {
+      event.preventDefault();
+      alert('Email addresses do not match.');
+      $('#primaryEmail').addClass('mismatch');
+      $('#confirmEmail').addClass('mismatch');
+    }
+  })
+}
