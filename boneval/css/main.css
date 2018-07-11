@@ -178,7 +178,7 @@ button:focus {
 }
 footer {background-color: #E7DED4;}
 #supporting-logos {
-    width: 280px;
+    width: 257px;
     padding-top: 25px;
     margin: 0 auto;
 }
@@ -187,9 +187,9 @@ footer img {
     padding: 0 25px 0 0;
 }
 footer img:last-of-type {padding: 0;}
-[src*="URB"] {width: 100px;}
-[src*="CMT"] {width: 100px;}
-[src*="EHO"] {width: 30px;}
+[src*="URB"] {width: 90px;}
+[src*="CMT"] {width: 90px;}
+[src*="EHO"] {width: 27px;}
 h1, h2, h3 {text-align: center;}
 h1, h2 {
     font-family: minion-3-display, serif;
@@ -392,6 +392,9 @@ h3 {
     #supporting-logos {
         width: 280px;
     }
+    [src*="URB"] {width: 100px;}
+    [src*="CMT"] {width: 100px;}
+    [src*="EHO"] {width: 30px;}
     h1, h3 {text-align: left;}
     h1, h2 {
         font-family: minion-3-display, serif;
