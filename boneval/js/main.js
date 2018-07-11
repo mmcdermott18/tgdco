@@ -38,8 +38,8 @@ function slide() {
 function confirmEmail() {
   var email 
   var confemail
-  $("#confirmEmail").focusin(function() {this.removeClass('mismatch');});
-  $("#primaryEmail").focusin(function() {this.removeClass('mismatch');});
+  $("#confirmEmail").focusin(function() {$(this).removeClass('mismatch');});
+  $("#primaryEmail").focusin(function() {$(this).removeClass('mismatch');});
   $("#confirmEmail").focusout(function() {
     var email = document.getElementById("primaryEmail").value
     var confemail = document.getElementById("confirmEmail").value
@@ -47,8 +47,7 @@ function confirmEmail() {
       alert('Email addresses do not match.');
       $('#primaryEmail').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
-    }
-    if(email == confemail) {
+    } else {
       $('#primaryEmail').removeClass('mismatch');
       $('#confirmEmail').removeClass('mismatch');
     }
