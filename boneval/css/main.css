@@ -141,7 +141,7 @@ textarea {
     text-transform: uppercase;
     letter-spacing: .2rem;
     font-weight: 700;
-    color: #cccccc;}
+    color: #aaaaaa;}
 .fields input:focus {
   border-bottom: 1px solid black;
   outline: none;
@@ -182,7 +182,7 @@ footer {background-color: #E7DED4;}
     padding-top: 25px;
     margin: 0 auto;
 }
-footer img {
+footer a {
     float: left;
     padding: 0 25px 0 0;
 }
@@ -374,7 +374,7 @@ h3 {
     .fade {
         opacity: 0;
     }
-    #content, footer {padding: 25px 50px;}
+    #content {padding: 25px 50px;}
     #content {
         height: calc(100vh - 50px);
         position: relative;}
@@ -388,6 +388,7 @@ h3 {
     .fields input::placeholder {font-size: .7rem;}
     footer {
         background-color: #E7DED4;
+        padding: 25px;
     }
     #supporting-logos {
         width: 280px;
@@ -408,7 +409,7 @@ h3 {
     }
     h2 {
         text-align: center;
-        font-size: .9rem;
+        font-size: .8rem;
         letter-spacing: .2rem;
     }
     #signup-form h2 {text-align: left;}
