@@ -38,12 +38,8 @@ function slide() {
 function confirmEmail() {
   var email 
   var confemail
-  $("#confirmEmail").focusin(function() {
-    $('#confirmEmail').removeClass('mismatch');
-  });
-  $("#primaryEmail").focusin(function() {
-    $('#primaryEmail').removeClass('mismatch');
-  });
+  $("#confirmEmail").focusin(function() {this.removeClass('mismatch');});
+  $("#primaryEmail").focusin(function() {this.removeClass('mismatch');});
   $("#confirmEmail").focusout(function() {
     var email = document.getElementById("primaryEmail").value
     var confemail = document.getElementById("confirmEmail").value
