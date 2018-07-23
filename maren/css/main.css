@@ -103,7 +103,8 @@ textarea {
   padding: 0;}
 body {
   font-size: 16px;
-  background-color: #e0e0d8;}
+  /*background-color: #e0e0d8;*/
+  background-color: white;}
 #tophalf {
   width: 100vw;
   height: 400px;
@@ -130,7 +131,21 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;*/}
+  background-size: cover;*/
+}
+.shadow {
+    -webkit-filter: drop-shadow( 0px 0px 5px #000 ); 
+            filter: drop-shadow( 0px 0px 5px #000 );
+}
+#marbling {
+  width: 100%;
+  height: 50px;
+  margin-top: 50px;
+  background: url(../img/marbling.jpg) center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;}
 .logo-box h3 {
   color: #af8f52;
   text-align: center;
@@ -151,9 +166,6 @@ polygon {
 #signup-form, .page-column {
   width: calc(100vw - 50px);
   margin: 0 25px;}
-#signup-form {
-  margin-top: -50px;
-}
 #signup-form h3 {
   padding-top: 25px;
   text-align: center;
@@ -161,9 +173,9 @@ polygon {
 }
 #footer {
   width: calc(100vw - 50px);
-  margin: 50px 0 0;
+  margin: 0 25px;
   padding: 45px 0;
-  background-color: white;
+  background-color: ;
   border-top: 2px #005366 solid;
 }
 #mark {
@@ -172,13 +184,14 @@ polygon {
 .halfcolumn{
   width: 100%;
   float: left;}
-#mrp{height: 20px; padding: 10px 25px; max-width: 80%;}
-#frp{height: 40px; padding: 10px 25px; max-width: 80%; border-left: 2px #005366 solid; border-right: 2px #005366 solid;}
-#ada{height: 25px; padding: 10px 0 10px 10px; max-width: 80%;}
-#eho{height: 25px; padding: 10px 25px; max-width: 80%;}
+#mrp{height: 14px; padding: 10px 15px 10px 0; max-width: 80%;}
+#frp{height: 28px; padding: 10px 15px; max-width: 80%; border-left: 2px #005366 solid; border-right: 2px #005366 solid;}
+#ada{height: 18px; padding: 10px 0 10px 10px; max-width: 80%;}
+#eho{height: 18px; padding: 10px 15px; max-width: 80%;}
 #etc-logos {
-  margin: 25px 0 0;
-  text-align: right;}
+  width: 315px;
+  margin: 25px auto 0;
+  text-align: left;}
 h1 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
@@ -206,6 +219,7 @@ h3 {
   padding: 0;
   font-weight: bold;}
 h3.tagline {
+  font-size: 1rem;
   text-align: center;
   text-transform: uppercase;
   color: #af8f52;
@@ -236,7 +250,7 @@ a:hover {
   background-color: rgba(0,0,0,0);
   border: none;
   color: #005366;
-  border-bottom: 2px solid #005366;
+  border-bottom: 2px solid #af8f52;
   border-radius: 0;
   -webkit-border-radius: 0;
   transition: all ease 500ms;
@@ -244,9 +258,10 @@ a:hover {
 .mc-field-group input::placeholder {
   font-style: italic;
   font-weight: normal;
-  color: #af8f52;}
+  color: #005366;
+  letter-spacing: .5px}
 .mc-field-group input:focus {
-  border-bottom: 2px solid #af8f52;
+  border-bottom: 2px solid #005366;
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;}
@@ -257,6 +272,7 @@ a:hover {
 .mc-field-group:nth-child(even) {margin-right: 10%;}
 .asterisk {color: #af8f52;}
 .button {
+  font-weight: bold;
   border: 2px solid #005366;
   border-radius: 0;
   background-color: none;
@@ -365,7 +381,7 @@ a:hover {
   
 }
 
-@media only screen and (min-width: 35em) {
+@media only screen and (min-width: 560px) {
     /* Style adjustments for viewports that meet the condition */
   body {
     font-size: 16px;
@@ -388,15 +404,18 @@ a:hover {
   .cls-1,.cls-2{
     font-size: 24px;}
   #signup-form {
-    width: calc(100vw - 200px);
-    margin: 50px 100px 0;}
+    width: calc(100vw - 100px);
+    margin: 50px 50px 0;}
   #mc_embed_signup {
     width: 100%;
     margin: 0 auto;}
   #footer {
-    width: calc(100vw - 200px);
-    margin: 50px 100px 0;
+    width: calc(100vw - 100px);
+    margin: 0 50px;
     padding: 45px 0;}
+  #etc-logos {
+    width: 315px;
+    margin: 25px 0 0;}
   .mobile-only {display: none;}
   /*.desktop-only {display: block;}*/
   #mark:hover {
@@ -427,10 +446,10 @@ a:hover {
     50% { -webkit-transform: translatex(calc(100vw - 350px)); transform: translatex(calc(100vw - 350px));}
   }*/
   .quartercolumn{
-    width: 25%;
+    width: 100%;
     float: left;}
   .threequartercolumn{
-    width: 75%;
+    width: 100%;
     float: right;}
   .mc-field-group {
     width: 45%;
@@ -447,12 +466,38 @@ a:hover {
 }
 
 @media only screen and (min-width: 768px) {
+  #signup-form {
+    width: calc(100vw - 200px);
+    margin: 50px 100px 0;}
+  #footer {
+    width: calc(100vw - 200px);
+    margin: 0 100px;
+    padding: 45px 0;}
   #mc_embed_signup {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;}
+  .quartercolumn{
+    width: 35%;
+    float: left;}
+  .threequartercolumn{
+    width: 65%;
+    float: right;}
+  #etc-logos{width: 378px; margin: 25px 0 0; float: right;}
+  #mrp{height: 15px; padding: 10px 25px 10px 0; max-width: 80%;}
+  #frp{height: 30px; padding: 10px 25px; max-width: 80%; border-left: 2px #005366 solid; border-right: 2px #005366 solid;}
+  #ada{height: 18px; padding: 10px 0 10px 10px; max-width: 80%;}
+  #eho{height: 18px; padding: 10px 25px; max-width: 80%;}
 }
-
-
+@media only screen and (min-width: 850px;) {
+  #etc-logos {
+    width: 460px;
+    margin: 25px 0 0;
+    float: right;}
+  #mrp{height: 20px; padding: 10px 25px 10px 0; max-width: 80%;}
+  #frp{height: 40px; padding: 10px 25px; max-width: 80%; border-left: 2px #005366 solid; border-right: 2px #005366 solid;}
+  #ada{height: 25px; padding: 10px 0 10px 10px; max-width: 80%;}
+  #eho{height: 25px; padding: 10px 25px; max-width: 80%;}
+}
 @media print,
        (-webkit-min-device-pixel-ratio: 1.25),
        (min-resolution: 1.25dppx),

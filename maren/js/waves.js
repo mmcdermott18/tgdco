@@ -89,12 +89,14 @@
                 ctx.moveTo(0, cy);
                 var screenWidth = $(window).width();
                 if (screenWidth >= '768') {
-
+                    //distange between peaks - smaller number = wider
                     var singleDigit = 3;
+                    //height of wave - larger number = shorter
                     var doubleDigit = 20;
                 } else {
-
-                    var singleDigit = 7;
+                    //distange between peaks - smaller number = wider
+                    var singleDigit = 3;
+                    //height of wave - larger number = shorter
                     var doubleDigit = 10;
                 }
                 for (var i = 0, endi = 1 / res; i <= endi; i++) {
