@@ -87,10 +87,20 @@
                 }
                 ctx.beginPath();
                 ctx.moveTo(0, cy);
+                var screenWidth = $(window).width();
+                if (screenWidth >= '768') {
+
+                    var singleDigit = 3;
+                    var doubleDigit = 20;
+                } else {
+
+                    var singleDigit = 7;
+                    var doubleDigit = 10;
+                }
                 for (var i = 0, endi = 1 / res; i <= endi; i++) {
                     // original _y variable expression below
                     // var _y = cy + Math.sin((i + inc) * TAU * res * density) * cy * Math.sin(i * TAU * res * density * outerScale);
-                    var _y = cy + Math.sin((i + inc) * 5 * res) * 50;
+                    var _y = cy + Math.sin((i + inc) * singleDigit * res) * doubleDigit;
                     var _x = i * segmentWidth;
                     ctx.lineTo(_x, _y);
                 }

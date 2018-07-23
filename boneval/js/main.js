@@ -36,32 +36,29 @@ function slide() {
 }
 
 function confirmEmail() {
-  var email 
-  var confemail
+  var email; 
+  var confemail;
   $("#confirmEmail").focusin(function() {$(this).removeClass('mismatch');});
   $("#primaryEmail").focusin(function() {$(this).removeClass('mismatch');});
   $("#confirmEmail").focusout(function() {
-    email = document.getElementById("primaryEmail").value
-    confemail = document.getElementById("confirmEmail").value
+    email = document.getElementById("primaryEmail").value;
+    confemail = document.getElementById("confirmEmail").value;
     if(email != confemail) {
-      alert('Email addresses do not match.');
+      $('#badEmails').removeClass('hidden');
       $('#primaryEmail').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
     } else {
+      $('#badEmails').addClass('hidden');
       $('#primaryEmail').removeClass('mismatch');
       $('#confirmEmail').removeClass('mismatch');
     }
   });
   $("#submit-form").click(function(e) {
-    document.querySelector( "input" ).addEventListener( "invalid",
-      function( e ) {
-          e.preventDefault();
-      });
-    email = document.getElementById("primaryEmail").value
-    confemail = document.getElementById("confirmEmail").value
-    if((email != confemail) && (email = valid)) {
+    email = document.getElementById("primaryEmail").value;
+    confemail = document.getElementById("confirmEmail").value;
+    if((email != confemail)) {
       e.preventDefault();
-      alert('Email addresses do not match.');
+      $('#badEmails').removeClass('hidden');
       $('#primaryEmail').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
     }

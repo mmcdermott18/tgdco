@@ -118,13 +118,14 @@ textarea {
 #signup-form {width: 100%;}
 #boneval-form{}
 #boneval-form .fields .form-control {
-    font-family: mr-eaves-modern, sans-serif;
-    font-size: 1rem;
-    font-weight: 700;
+    font-family: "minion-3", serif;
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    font-weight: 400;
     display: block;
     width: 100%;
-    margin: 15px 0 18px;
-    padding: 5px 0;
+    margin: 10px 0 12px;
+    padding: 7px 0 2px;
     border: none;
     background: none;
     border-bottom: 1px solid black;
@@ -155,6 +156,13 @@ input:invalid:not(:focus):not(:placeholder-shown) {
     outline: none;
     -webkit-box-shadow: none;
     box-shadow: none;
+}
+.emailAlert {
+    font-family: mr-eaves-modern, sans-serif;
+    font-size: .8rem;
+    color: #FF4136;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
 }
 button {
   border: 1px solid black;
@@ -384,7 +392,7 @@ h3 {
         bottom: 25px;
         width: calc(100% - 100px);
     }
-    #boneval-form .fields .form-control {font-size: .9rem;}
+    #boneval-form .fields .form-control {font-size: 1.3rem; line-height: 2rem; letter-spacing: 1px;}
     .fields input::placeholder {font-size: .7rem;}
     footer {
         background-color: #E7DED4;
@@ -398,7 +406,7 @@ h3 {
     [src*="EHO"] {width: 30px;}
     h1, h3 {text-align: left;}
     h1, h2 {
-        font-family: minion-3-display, serif;
+        font-family: "minion-3-display", serif;
         font-style: normal;
         font-weight: 700;
         text-transform: uppercase;
@@ -442,7 +450,7 @@ h3 {
 @media only screen and (max-height: 500px) and (min-width: 768px) {
     #signup-form {
         position: static;
-        width: calc(100% - 100px);
+        width: 100%;
         padding: 25px 0;
     }
     #content {

@@ -106,8 +106,12 @@ body {
   background-color: #e0e0d8;}
 #tophalf {
   width: 100vw;
-  height: 300px;
-  background-color: white;
+  height: 400px;
+  background: url(../img/background.jpg) bottom left; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -119,25 +123,19 @@ body {
   position: absolute;
   bottom: 0;}
 .logo-box {
-  width: calc(100vw - 50px);
+  width: 100vw;
   height: 400px;
-  margin: 25px 25px;
-  background-color: #005366;
-  background: url(../img/background.png); 
+  /*background-color: #005366;
+  background: url(../img/background.jpg) top left; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;}
+  background-size: cover;*/}
 .logo-box h3 {
   color: #af8f52;
   text-align: center;
   letter-spacing: 2px;
   font-size: 1rem;}
-#tagline {
-  width: 100%;
-  margin: 0 auto;
-  position: relative;
-  top: -19vw;}
 #logo {
   width: 200px;
   margin: 0 auto;
@@ -163,27 +161,24 @@ polygon {
 }
 #footer {
   width: calc(100vw - 50px);
-  margin: 50px 25px 0;
+  margin: 50px 0 0;
   padding: 45px 0;
-  background-color: white;}
+  background-color: white;
+  border-top: 2px #005366 solid;
+}
 #mark {
   width: 50px;
-  position: relative;
-  top: 75px;
-  left: 0;
   margin: 0 auto;}
 .halfcolumn{
   width: 100%;
   float: left;}
-#mrp{height: 25px; padding: 10px; max-width: 80%;}
-#frp{height: 45px; padding: 10px; max-width: 80%;}
-#ada{height: 25px; padding: 10px; max-width: 80%;}
-#eho{height: 25px; padding: 10px; max-width: 80%;}
+#mrp{height: 20px; padding: 10px 25px; max-width: 80%;}
+#frp{height: 40px; padding: 10px 25px; max-width: 80%; border-left: 2px #005366 solid; border-right: 2px #005366 solid;}
+#ada{height: 25px; padding: 10px 0 10px 10px; max-width: 80%;}
+#eho{height: 25px; padding: 10px 25px; max-width: 80%;}
 #etc-logos {
-  margin: 25px 25px 0;
-  padding: 25px 0 0;
-  border-top: 2px solid #005366;
-  text-align: center;}
+  margin: 25px 0 0;
+  text-align: right;}
 h1 {
   font-family: 'Playfair Display', serif;
   font-style: italic;
@@ -206,20 +201,33 @@ h3 {
   color: #005366;
   text-align: left;
   text-transform: uppercase;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  padding: 0;
+  font-weight: bold;}
+h3.tagline {
+  text-align: center;
+  text-transform: uppercase;
+  color: #af8f52;
+}
+h3 a {
   font-size: 1rem;
   letter-spacing: .5px;
-  padding: 0 25px;
-  font-weight: normal;}
+  text-transform: lowercase;
+  color: #af8f52;
+}
 a {
-  color: #005366;
+  color: #af8f52;
   text-decoration: none;
-  border-bottom: 2px solid #005366;
+  border-bottom: 2px solid #af8f52;
   transition: all ease 500ms;
   font-weight: normal;}
 a:hover {
-  color: #af8f52;
+  color: #005366;
   text-decoration: none;
-  border-bottom: 2px solid #af8f52;}
+  border-bottom: 2px solid #005366;}
+#footer a {color: #005366; text-transform: uppercase;}
+#footer a:hover {color: #af8f52;}
 #footer h3 a, #footer h3 a:hover {border: none;}
 .mc-field-group label, .mc-field-group input, .indicates-required {
   width: 100%;
@@ -251,7 +259,7 @@ a:hover {
 .button {
   border: 2px solid #005366;
   border-radius: 0;
-  background-color: #e0e0d8;
+  background-color: none;
   color: #005366;
   margin-top: 25px;
   font-size: 1rem;
@@ -361,14 +369,15 @@ a:hover {
     /* Style adjustments for viewports that meet the condition */
   body {
     font-size: 16px;
-    background-color: #e0e0d8;}
+    /*background-color: #e0e0d8;*/
+    background-color: white;}
   #tophalf {
     width: 100vw;
-    height: 500px;}
+    height: 600px;}
   .logo-box {
-    width: calc(100vw - 200px);
+    width: 100vw;
     height: 600px;
-    margin: 100px 100px 25px;}
+    margin: }
   #tagline {
     width: 500px;
     top: -80px;}
@@ -378,12 +387,9 @@ a:hover {
     padding-top: 160px;}
   .cls-1,.cls-2{
     font-size: 24px;}
-  #signup-form, .page-column {
+  #signup-form {
     width: calc(100vw - 200px);
-    margin: 0 100px;}
-    #signup-form {
-  margin-top: -50px;
-}
+    margin: 50px 100px 0;}
   #mc_embed_signup {
     width: 100%;
     margin: 0 auto;}
@@ -393,12 +399,6 @@ a:hover {
     padding: 45px 0;}
   .mobile-only {display: none;}
   /*.desktop-only {display: block;}*/
-  #mark {
-    width: 50px;
-    position: relative;
-    top: 75px;
-    left: 150px;
-    margin: 0;}
   #mark:hover {
     cursor: pointer;
   }
@@ -410,25 +410,28 @@ a:hover {
     background-color: none;}
 
   #mark.ani-trans::after {
-    animation: upDown 1.5s alternate infinite ease-in-out;}
+    animation: upDown 4.25s alternate infinite ease-in-out;}
 
   .ani-trans {animation: translate 15s infinite linear;}
 
   @-webkit-keyframes upDown {
-    50% { -webkit-transform: translatey(20px); transform: translatey(20px);}
+    50% { -webkit-transform: translatey(-40px); transform: translatey(-40px);}
   }
   @keyframes upDown {
-    50% { -webkit-transform: translatey(20px); transform: translatey(20px);}
+    50% { -webkit-transform: translatey(-40px); transform: translatey(-40px);}
   }
-  @-webkit-keyframes translate {
+  /*@-webkit-keyframes translate {
     50% { -webkit-transform: translatex(calc(100vw - 350px)); transform: translatex(calc(100vw - 350px));}
   }
   @keyframes translate {
     50% { -webkit-transform: translatex(calc(100vw - 350px)); transform: translatex(calc(100vw - 350px));}
-  }
-  .halfcolumn{
-    width: 50%;
+  }*/
+  .quartercolumn{
+    width: 25%;
     float: left;}
+  .threequartercolumn{
+    width: 75%;
+    float: right;}
   .mc-field-group {
     width: 45%;
     float: left;}
@@ -440,12 +443,10 @@ a:hover {
   h1 {font-size: 1.2rem; /*letter-spacing: 6px;*/}
   h2 {font-size: 1.6rem;}
   h3 {font-size: .9rem;}
+  #footer a {font-size: .9rem; letter-spacing: 1px;}
 }
 
 @media only screen and (min-width: 768px) {
-  #tagline {
-    width: 700px;
-    top: -110px;}
   #mc_embed_signup {
     width: 70%;
     margin: 0 auto;}
