@@ -11,7 +11,7 @@
         // DEFAULT OPTIONS
         var settings = $.extend({
             parent : '',
-            color : '#fff',
+            color : '#e0e0d8',
             direction: 'up',
             background: ''
         }, options );
@@ -37,7 +37,7 @@
                 else {
                     waterwave.attr({
                         width: $(parent).width() + "px",
-                        height: "200px"
+                        height: "100px"
                     });
                 }
             }
