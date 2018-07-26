@@ -392,8 +392,12 @@ a:hover {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-@media only screen and (max-width: 321px) {
-  
+@media only screen and (max-width: 400px) {
+  #etc-logos{width: 100%; margin: 25px 0 0; float: none;}
+  #mrp{width: 70%; padding: 10px 15% 20px;}
+  #frp{height: 30px; padding: 10px 25px 10px 0; max-width: 80%; border-left: none; border-right: 2px #005366 solid;}
+  #ada{height: 18px; padding: 10px 0 10px 10px; max-width: 80%;}
+  #eho{height: 18px; padding: 10px 25px; max-width: 80%;}
 }
 
 @media only screen and (min-width: 560px) {
