@@ -40,7 +40,7 @@
         </div>
         <div id="signup-form">
           <h2>Stay Updated</h2>
-          <form method="POST" enctype="application/x-www-form-urlencoded" action="http://www.mylasso.com/registrant_signup/test" id="boneval-form">
+          <form method="POST" enctype="application/x-www-form-urlencoded" action="http://app.lassocrm.com/registrant_signup/" id="boneval-form">
             <input type="hidden" name="domainAccountId" value="LAS-674305-18" tag="https://www.boneval.com">
             <input type="hidden" name="guid" value="">
             <input type="hidden" name="registrationPageIdentifier" value="Online">
@@ -49,13 +49,16 @@
             <input type="hidden" name="lassoUID" value="e{A9XcjXPU">
             <input type="hidden" name="SignupThankyouLink" value="DO NOT REDIRECT">
             <div class="fields">
-              <input type="text" name="FirstName" class="form-control" id="FirstName" placeholder="First Name">
-              <input type="text" name="LastName" class="form-control" id="LastName" placeholder="Last Name">
-              <input type="email" name="Emails[Primary]" class="form-control" id="primaryEmail" placeholder="Email" required="">
-              <input type="email" name="Emails[Confirm]" class="form-control" id="confirmEmail" placeholder="Confirm Email" required="">
+              <input type="text" name="FirstName" class="form-control" id="FirstName" placeholder="First Name" autocomplete="given-name">
+              <input type="text" name="LastName" class="form-control" id="LastName" placeholder="Last Name" autocomplete="family-name">
+              <input type="email" name="Emails[Primary]" class="form-control" id="primaryEmail" placeholder="Email" required="" autocomplete="email">
+              <input type="email" name="Emails[Confirm]" class="form-control" id="confirmEmail" placeholder="Confirm Email" required="" autocomplete="email">
             </div>
             <div id="badEmails" class="hidden">
-              <p class="emailAlert">Email addresses do not match</p>
+              <p class="emailAlert">Email addresses do not match.</p>
+            </div>
+            <div id="needEmails" class="hidden">
+              <p class="emailAlert">Please enter valid email addresses.</p>
             </div>
             <button id="submit-form" type="submit">Submit</button>
           </form>

@@ -38,6 +38,7 @@ function slide() {
 function confirmEmail() {
   var email; 
   var confemail;
+  $('input').focusin(function() {$('#needEmails').addClass('hidden');});
   $("#confirmEmail").focusin(function() {$(this).removeClass('mismatch');});
   $("#primaryEmail").focusin(function() {$(this).removeClass('mismatch');});
   $("#confirmEmail").focusout(function() {
@@ -45,6 +46,7 @@ function confirmEmail() {
     confemail = document.getElementById("confirmEmail").value;
     if(email != confemail) {
       $('#badEmails').removeClass('hidden');
+      $('#needEmails').addClass('hidden');
       $('#primaryEmail').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
     } else {
@@ -56,11 +58,22 @@ function confirmEmail() {
   $("#submit-form").click(function(e) {
     email = document.getElementById("primaryEmail").value;
     confemail = document.getElementById("confirmEmail").value;
-    if((email != confemail)) {
+    if(email != confemail) {
       e.preventDefault();
       $('#badEmails').removeClass('hidden');
+      $('#needEmails').addClass('hidden');
       $('#primaryEmail').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
+    } else if($('#primaryEmail').is(':invalid')) {
+      e.preventDefault();
+      $('#needEmails').removeClass('hidden');
+      $('#primaryEmail').addClass('mismatch');
+      $('#confirmEmail').addClass('mismatch');
+    } else {
+      $('#submit-form').text("Thank you!");
+      $('input').val("");
+      $('.fields').addClass('hidden');
+      $('#signup-form h2').text('Your information was successfully submitted.')
     }
   })
 }
