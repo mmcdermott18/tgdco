@@ -4,6 +4,7 @@ $(document).ready(function() {
     boxShow();
     boxHeight();
     mapClick();
+    test();
     // run function on resize of the window
     $(window).resize(function(){
       boxHeight();
@@ -16,6 +17,10 @@ $(document).ready(function() {
 function menuSlide() {
   $('.menu-bars').click(function() {
     console.log('clicked');
+function test() {
+  console.log('test');
+  $('#a-1').click(function() {
+    console.log('test');
     $( document ).on( 'keydown', function ( e ) {
       if ( e.keyCode === 27 ) {
         $('.nav-menu-list').slideUp('menu-open');
