@@ -46,7 +46,7 @@ $lead->sendAssignmentNotification();
 
 $submitter = new RegistrantSubmitter();
 $curl      = $submitter->submit('https://api.lassocrm.com/registrants', $lead, $apiKey);
-header("Location: http://www.boneval.com/boneval/thankyou.html",TRUE,303);
+header("Location: http://www.boneval.com/boneval/thankyou.php",TRUE,303);
 
 /*
  * ---------------------------------------------------------------
