@@ -39,7 +39,8 @@
           <img src="img/logo.svg">
         </div>
         <div id="signup-form">
-          <h2>Thank you. Your information was successfully submited.</h2>
+          <h2>Welcome <?php echo $_GET["FirstName"]; ?><br>
+Your email address is: <?php echo $_GET["primaryEmail"]; ?>. Your information was successfully submited.</h2>
           </form>
         </div>
       </div>
