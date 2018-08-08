@@ -14,6 +14,22 @@
   <link rel="stylesheet" href="https://use.typekit.net/fbr6mzm.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
+  <script type = 'text/javascript'>
+  function register() {
+    jQuery.ajax({
+      type: "POST",
+      url: '../signup.php',
+      data: {
+        firstName: document.getElementById('FirstName').value,
+        lastName: document.getElementById('LastName').value,
+        email: document.getElementById('Emails[Primary]').value
+      },
+      success: function(arguments){
+        console.log(arguments);
+      }
+    });
+  };
+  </script>
 </head>
 
 <body>
@@ -60,7 +76,7 @@
             <div id="needEmails" class="hidden">
               <p class="emailAlert">Please enter valid email addresses.</p>
             </div>
-            <button id="submit-form" type="submit">Submit</button>
+            <button id="submit-form" type="submit" onClick="register()">Submit</button>
           </form>
         </div>
       </div>
