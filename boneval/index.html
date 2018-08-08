@@ -14,22 +14,6 @@
   <link rel="stylesheet" href="https://use.typekit.net/fbr6mzm.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
-  <script type = 'text/javascript'>
-  function register() {
-    jQuery.ajax({
-      type: "POST",
-      url: '/signup.php',
-      data: {
-        firstName: document.getElementById('FirstName').value,
-        lastName: document.getElementById('LastName').value,
-        email: document.getElementById('Emails[Primary]').value
-      },
-      success: function(arguments){
-        console.log(arguments);
-      }
-    });
-  };
-  </script>
 </head>
 
 <body>
@@ -56,7 +40,7 @@
         </div>
         <div id="signup-form">
           <h2>Stay Updated</h2>
-          <form method="POST" enctype="application/x-www-form-urlencoded" action="" id="boneval-form">
+          <form method="POST" enctype="application/x-www-form-urlencoded" action="signup.php" id="boneval-form">
             <input type="hidden" name="domainAccountId" value="LAS-674305-18" tag="https://www.boneval.com">
             <input type="hidden" name="guid" value="">
             <input type="hidden" name="registrationPageIdentifier" value="Online">
@@ -76,7 +60,7 @@
             <div id="needEmails" class="hidden">
               <p class="emailAlert">Please enter valid email addresses.</p>
             </div>
-            <button id="submit-form" type="submit" onClick="register()">Submit</button>
+            <button id="submit-form" type="submit">Submit</button>
           </form>
         </div>
       </div>

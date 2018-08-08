@@ -29,7 +29,7 @@ $lead = new LassoLead($_REQUEST['firstName'],
     $_REQUEST['lastName'],
     $projectId,
     $clientId);
-$lead->addEmail($_REQUEST['email']);
+$lead->addEmail($_REQUEST['emails']);
 
 $lead->sendAssignmentNotification();
 // $lead->setWebsiteTracking("LAS-674305-18", "8FD6985D-D82C-4D4A-AF21-69989C933959");
