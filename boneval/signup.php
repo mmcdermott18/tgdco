@@ -28,8 +28,9 @@ if (empty($clientId) || empty($projectId) || empty($apiKey)) {
 $lead = new LassoLead($_REQUEST['FirstName'],
     $_REQUEST['LastName'],
     $projectId,
-    $clientId);
-$lead->addEmail($_REQUEST['Emails[Primary]']);
+    $clientId),
+	$_REQUEST['Emails[Primary]'],;
+// $lead->addEmail($_REQUEST['Emails[Primary]']);
 
 $lead->sendAssignmentNotification();
 // $lead->setWebsiteTracking("LAS-674305-18", "8FD6985D-D82C-4D4A-AF21-69989C933959");
