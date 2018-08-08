@@ -53,34 +53,34 @@ function confirmEmail() {
   var confemail;
   $('input').focusin(function() {$('#needEmails').addClass('hidden');});
   $("#confirmEmail").focusin(function() {$(this).removeClass('mismatch');});
-  $("#primaryEmail").focusin(function() {$(this).removeClass('mismatch');});
+  $("#Emails[Primary]").focusin(function() {$(this).removeClass('mismatch');});
   $("#confirmEmail").focusout(function() {
-    email = document.getElementById("primaryEmail").value;
+    email = document.getElementById("Emails[Primary]").value;
     confemail = document.getElementById("confirmEmail").value;
     if(email != confemail) {
       $('#badEmails').removeClass('hidden');
       $('#needEmails').addClass('hidden');
-      $('#primaryEmail').addClass('mismatch');
+      $('#Emails[Primary]').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
     } else {
       $('#badEmails').addClass('hidden');
-      $('#primaryEmail').removeClass('mismatch');
+      $('#Emails[Primary]').removeClass('mismatch');
       $('#confirmEmail').removeClass('mismatch');
     }
   });
   $("#submit-form").click(function(e) {
-    email = document.getElementById("primaryEmail").value;
+    email = document.getElementById("Emails[Primary]").value;
     confemail = document.getElementById("confirmEmail").value;
     if(email != confemail) {
       e.preventDefault();
       $('#badEmails').removeClass('hidden');
       $('#needEmails').addClass('hidden');
-      $('#primaryEmail').addClass('mismatch');
+      $('#Emails[Primary]').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
-    } else if($('#primaryEmail').is(':invalid')) {
+    } else if($('#Emails[Primary]').is(':invalid')) {
       e.preventDefault();
       $('#needEmails').removeClass('hidden');
-      $('#primaryEmail').addClass('mismatch');
+      $('#Emails[Primary]').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
     } else {
       // register();
