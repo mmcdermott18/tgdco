@@ -34,20 +34,20 @@ function slide() {
     }
   }); 
 }
-function register() {
-    jQuery.ajax({
-      type: "POST",
-      url: '../signup.php',
-      data: {
-        firstName: document.getElementById('first_name').value,
-        lastName: document.getElementById('last_name').value,
-        email: document.getElementById('email').value
-      },
-      success: function(arguments){
-        console.log(arguments);
-      }
-    });
-};
+// function register() {
+//     jQuery.ajax({
+//       type: "POST",
+//       url: '../signup.php',
+//       data: {
+//         firstName: document.getElementById('first_name').value,
+//         lastName: document.getElementById('last_name').value,
+//         email: document.getElementById('email').value
+//       },
+//       success: function(arguments){
+//         console.log(arguments);
+//       }
+//     });
+// };
 function confirmEmail() {
   var email; 
   var confemail;
@@ -83,11 +83,11 @@ function confirmEmail() {
       $('#primaryEmail').addClass('mismatch');
       $('#confirmEmail').addClass('mismatch');
     } else {
-      register();
+      // register();
       $('#submit-form').text("Thank you!");
       $('input').val("");
       $('.fields').addClass('hidden');
-      $('#signup-form h2').text('Your information was successfully submitted.')
+      $('#signup-form h2').text('Your information was successfully submitted.');
     }
   })
 }
