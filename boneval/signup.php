@@ -29,7 +29,7 @@ $lead = new LassoLead($_REQUEST['FirstName'],
     $_REQUEST['LastName'],
     $projectId,
     $clientId);
-$lead->addEmail($_REQUEST['primaryEmail']);
+$lead->addEmail($_REQUEST['email']);
 
 $lead->sendAssignmentNotification();
 // $lead->setWebsiteTracking("LAS-674305-18", "8FD6985D-D82C-4D4A-AF21-69989C933959");
@@ -46,7 +46,7 @@ $lead->sendAssignmentNotification();
 
 $submitter = new RegistrantSubmitter();
 $curl      = $submitter->submit('https://api.lassocrm.com/registrants', $lead, $apiKey);
-// header("Location: http://www.boneval.com/boneval/thankyou.html",TRUE,303);
+header("Location: http://www.boneval.com/thankyou.html",TRUE,303);
 
 /*
  * ---------------------------------------------------------------
@@ -55,10 +55,10 @@ $curl      = $submitter->submit('https://api.lassocrm.com/registrants', $lead, $
  */
 
 /* Viewing the submission body */
-echo json_encode($lead->toArray());
+// echo json_encode($lead->toArray());
 
 /* Getting the response servers response code */
-echo curl_getinfo($curl, CURLINFO_HTTP_CODE);
+// echo curl_getinfo($curl, CURLINFO_HTTP_CODE);
 
 /* Getting all details of the cUrl request */
-print_r(curl_getinfo($curl));
+// print_r(curl_getinfo($curl));
