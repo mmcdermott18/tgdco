@@ -119,6 +119,19 @@ body {
   margin: 0;
   padding: 0;
   z-index: -99;}
+#rightarrow, #leftarrow {
+  position: absolute;
+  top: 175px;
+  color: white;
+  font-size: 30px;
+  transition: color 500ms ease;
+}
+#rightarrow:hover, #leftarrow:hover {
+  color: #af8f52;
+  cursor: pointer;
+}
+#rightarrow {right: 25px;}
+#leftarrow {left: 25px;}
 .waterwave-canvas {
   height: 100px;
   position: absolute;
@@ -420,6 +433,16 @@ a:hover {
   #tophalf {
     width: 100vw;
     height: 600px;}
+    #rightarrow, #leftarrow {
+      top: 295px;
+      font-size: 30px;
+    }
+    #rightarrow:hover, #leftarrow:hover {
+      color: #af8f52;
+      cursor: pointer;
+    }
+    #rightarrow {right: 25px;}
+    #leftarrow {left: 25px;}
   .logo-box {
     width: 100vw;
     height: 600px;
