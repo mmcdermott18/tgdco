@@ -127,7 +127,7 @@ body {
   transition: color 500ms ease;
 }
 #rightarrow:hover, #leftarrow:hover {
-  color: #af8f52;
+  color: white;
   cursor: pointer;
 }
 #rightarrow {right: 25px;}
