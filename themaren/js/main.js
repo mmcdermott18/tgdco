@@ -51,13 +51,35 @@ function slider() {
 function slideshow() {
   var slides = ["img/background.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
   var i = 0;
+  var ap = true
+  var time = 6000;
+  var auto;
+  autoplay();
   function slide() {
-    console.log('i is ' + i);
+    // console.log('i is ' + i);
     $("#tophalf").stop().animate({opacity: 0},1500,function(){
       $("#tophalf").css({'background-image': "url(" + slides[i] + ")"}).animate({opacity: 1},{duration:1500});
     });
+    if (ap) {
+      autoplay();
+    } else {
+
+    }
+  }
+  function autoplay() {
+    auto = setTimeout(function(){
+      i++;
+      if (i > 4 ) {
+        i = 0;
+        slide();
+      } else {
+        slide();
+      }
+    }, time);
   }
   $('#leftarrow').click(function() {
+    ap = false;
+    clearTimeout(auto);
     i--;
     if (i < 0 ) {
       i = 4;
@@ -67,6 +89,8 @@ function slideshow() {
     }
   });
   $('#rightarrow').click(function() {
+    ap = false;
+    clearTimeout(auto);
     i++;
     if (i > 4 ) {
       i = 0;

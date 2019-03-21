@@ -435,7 +435,7 @@ a:hover {
     height: 600px;}
     #rightarrow, #leftarrow {
       top: 295px;
-      font-size: 30px;
+      font-size: 50px;
     }
     #rightarrow:hover, #leftarrow:hover {
       color: #af8f52;
