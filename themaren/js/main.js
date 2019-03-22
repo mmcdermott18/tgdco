@@ -52,7 +52,7 @@ function slideshow() {
   var slides = ["img/background.jpg", "img/1.jpg", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
   var i = 0;
   var ap = true
-  var time = 6000;
+  var time = 3000;
   var auto;
   autoplay();
   function slide() {
