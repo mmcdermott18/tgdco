@@ -53,14 +53,16 @@ function slideshow() {
   var i = 0;
   var ap = true
   var time = 3000;
+  var fadeTime = 1500;
   var auto;
   autoplay();
   function slide() {
     // console.log('i is ' + i);
-    $("#tophalf").stop().animate({opacity: 0},1500,function(){
-      $("#tophalf").css({'background-image': "url(" + slides[i] + ")"}).animate({opacity: 1},{duration:1500});
+    $("#tophalf").stop().animate({opacity: 0},fadeTime,function(){
+      $("#tophalf").css({'background-image': "url(" + slides[i] + ")"}).animate({opacity: 1},{duration:fadeTime});
     });
     if (ap) {
+      time = 4500;
       autoplay();
     } else {
 
